@@ -11,15 +11,15 @@ function coinToss() {
       value += 2
       side += ' heads'
     }
-    console.log('value=' + value + '\nside=' + side)
+    console.log('value=' + value + 'side=' + side)
   }
   var results = ''
-  results = '  ' + side + '   ' + value.toString()
+  results = '&nbsp;&nbsp;' + side + '&nbsp;&nbsp;&nbsp;' + value.toString()
   if (value % 2 === 0) {
-    lines.push(results + '   -------   -------')
+    lines.push(results + '&nbsp;&nbsp;&nbsp;-------&nbsp;&nbsp;&nbsp;-------')
     sequence.push(0)
   } else {
-    lines.push(results + '   -----------------')
+    lines.push(results + '&nbsp;&nbsp;&nbsp;-----------------')
     sequence.push(1)
   }
   console.log('sequence=' + sequence)
@@ -31,11 +31,13 @@ function createHex() {
   }
   lines.reverse()
   for (var i = 0; i < 6; i++) {
-    console.log('\n')
+    console.log('<br>')
     console.log(lines[i])
-    console.log('\n')
-  }
-  send('\n```' + lines[0] + '\n' + lines[1] + '\n' + lines[2] + '\n' + lines[3] + '\n' + lines[4] + '\n' + lines[5] + '```')
+    console.log('<br>')
+  } var output = document.getElementById('output')
+  output.innerHTML=lines[0] + '<br>' + lines[1] + '<br>' + lines[2] + '<br>' + lines[3] + '<br>' + lines[4] + '<br>' + lines[5]
 }
 
-createHex()
+function run() {
+  createHex()
+}

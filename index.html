@@ -23,8 +23,29 @@
       font-size: 35px;
       color: white;
     }
+
+    .container{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-evenly;
+    }
+
+    .child{
+      flex:1;
+    }
+    #green {
+      background-color:green;
+    }
+    #red {
+      background-color:red;
+    }
+    #output{
+      font-family:"Courier"
+    }
     </style>
   </head>
+
+
   <body>
     <center><h1>Sup mf</h1></center>
 
@@ -39,7 +60,11 @@
         <li>http://radio.garden/</li>
         <li>http://vimm.net/</li>
         <li>http://submarinecablemap.com/</li>
-        <li>add more and make the links clickable</li>
+        <li>http://sometimesredsometimesblue.com/</li>
+        <li>http://zombo.com/</li>
+        <li>http://thispersondoesnotexist.com/</li>
+        <li>http://thiscatdoesnotexist.com/</li>
+        <li>http://omegle.com/</li>
       </ul>
     </p>
 
@@ -55,11 +80,18 @@
       </ul>
     </p>
 
-    <aside>
-      <p>MACHINE GIRL http://machinegirl.bandcamp.com/</p>
-      <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
-    </aside>
+    <div id="output"></div>
+    <script type="text/javascript" src="./javascript/app.js"></script>
 
-    <script src="javascript/app.js"></script>
+    <button onClick="run()">i ching</button>
+
+    <p>MACHINE GIRL http://machinegirl.bandcamp.com/</p>
+    <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
+
+    <div class="container">
+      <div class="child" id="green">sup</div>
+      <div class="child" id="green">mufucka</div>
+    </div>
+
   </body>
 </html>
