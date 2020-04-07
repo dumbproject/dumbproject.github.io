@@ -14,12 +14,12 @@ function coinToss() {
     console.log('value=' + value + 'side=' + side)
   }
   var results = ''
-  results = '&nbsp;&nbsp;' + side + '&nbsp;&nbsp;&nbsp;' + value.toString()
+  results = side + '&nbsp;&nbsp;' + value.toString()
   if (value % 2 === 0) {
-    lines.push(results + '&nbsp;&nbsp;&nbsp;-------&nbsp;&nbsp;&nbsp;-------')
+    lines.push(results + '&nbsp;&nbsp;-------&nbsp;&nbsp;&nbsp;-------')
     sequence.push(0)
   } else {
-    lines.push(results + '&nbsp;&nbsp;&nbsp;-----------------')
+    lines.push(results + '&nbsp;&nbsp;-----------------')
     sequence.push(1)
   }
   console.log('sequence=' + sequence)
