@@ -17,80 +17,125 @@
     }
 
     header {
-      background-color: #ace;
+      background-color: #c9f;
       padding: 30px;
       text-align: center;
       font-size: 35px;
       color: white;
     }
 
-    .container{
-      display:flex;
-      flex-direction:row;
-      justify-content:space-evenly;
+    .containerRow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .containerColumn{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .child{
-      flex:1;
+      flex: 1;
     }
+
     #green {
-      background-color:green;
+      background-color: green;
     }
     #red {
-      background-color:red;
+      background-color: red;
     }
-    #output{
-      font-family:"Courier"
+    #monospace{
+      font-family: "Courier";
+      height: 200px;
     }
     </style>
   </head>
 
 
+
+
+
   <body>
-    <center><h1>Sup mf</h1></center>
+    <div class="containerRow">
+      <center><h1>Sup mf</h1></center>
+
+<!-- the date -->
+      <div id="monospace">
+        <br>april &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020
+        <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
+        <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4
+        <br>&nbsp;5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp;10&nbsp;11
+        <br>12&nbsp;13&nbsp;14&nbsp;15&nbsp;16&nbsp;17&nbsp;18
+        <br>19&nbsp;20&nbsp;21&nbsp;22&nbsp;23&nbsp;24&nbsp;25
+        <br>26&nbsp;27&nbsp;28&nbsp;29&nbsp;30
+      </div>
+    </div>
 
     <header>
-      <h2>ion know what to put here yet but <font size-4 color-"red">ima put some mf shit here</font></h2>
+      <h2>ion know what to put here yet<br><font color="red">but ima put some mf shit here</font></h2>
     </header>
 
     <center><img src="intro.png" /></center>
 
-    <p>good sites:
-      <ul>
-        <li>http://radio.garden/</li>
-        <li>http://vimm.net/</li>
-        <li>http://submarinecablemap.com/</li>
-        <li>http://sometimesredsometimesblue.com/</li>
-        <li>http://zombo.com/</li>
-        <li>http://thispersondoesnotexist.com/</li>
-        <li>http://thiscatdoesnotexist.com/</li>
-        <li>http://omegle.com/</li>
-      </ul>
-    </p>
 
-    <p>to do list:
-      <ul>
-        <li>change site name</li>
-        <li>add different pages [interests/links/knowledge/to do lists/updates]</li>
-        <li>pictures?</li>
-        <li>tired</li>
-        <li>schedule?</li>
-        <li>how far am i trying to go with this</li>
-        <li>IMPORTANT PEOPLE</li>
-      </ul>
-    </p>
 
-    <div id="output"></div>
-    <script type="text/javascript" src="./javascript/app.js"></script>
 
-    <button onClick="run()">i ching</button>
 
-    <p>MACHINE GIRL http://machinegirl.bandcamp.com/</p>
-    <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
 
-    <div class="container">
+    <div class="containerRow">
+      <div class="containerColumn">
+
+        <div>
+          <p>good sites:
+            <ul>
+              <li><a href="http://radio.garden/">radio.garden</a><br>- worldwide radio</li><br>
+              <li><a href="https://vimm.net/">vimm.net</a><br>- every single video game before 2006 for free</li><br>
+              <li><a href="http://submarinecablemap.com/">submarinecablemap.com</a><br>- how you connect to websites overseas</li><br>
+              <li><a href="http://sometimesredsometimesblue.com/">sometimesredsometimesblue.com</a><br>- very important</li><br>
+              <li><a href="http://zombo.com/">zombo.com</a><br>- even more important</li><br>
+              <li><a href="http://thispersondoesnotexist.com/">thispersondoesnotexist.com</a><br>- pictures of my friends</li><br>
+              <li><a href="http://thiscatdoesnotexist.com/">thiscatdoesnotexist.com</a><br>- my pets</li><br>
+              <li><a href="http://thiswaifudoesnotexist.net/">thiswaifudoesnotexist.com</a><br>- ai continued</li><br>
+              <li><a href="http://omegle.com/">omegle.com</a><br>- a site to talk to lonely people</li>
+            </ul>
+          </p>
+        </div>
+
+
+<!-- i ching -->
+        <button onClick="run()">i ching</button>
+        <div id="monospace"></div>
+        <script type="text/javascript" src="./javascript/app.js"></script>
+
+
+        <div>
+          <p>to do list:
+            <ul>
+              <li>change site name</li>
+              <li>add different pages [interests/links/knowledge/to do lists/updates]</li>
+              <li>pictures?</li>
+              <li>tired</li>
+              <li>schedule?</li>
+              <li>how far am i trying to go with this</li>
+              <li>IMPORTANT PEOPLE</li>
+            </ul>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="containerColumn">
+        <p><a href="https://machinegirl.bandcamp.com/"><font size=16>MACHINE GIRL</font></a></p>
+        <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
+      </div>
+    </div>
+
+    <div class="containerRow">
       <div class="child" id="green">sup</div>
-      <div class="child" id="green">mufucka</div>
+      <div class="child" id="red">mufucka</div>
+      <div class="child"><a href="dream.html">psst</a></div>
     </div>
 
   </body>
