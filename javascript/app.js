@@ -34,7 +34,9 @@ function createHex() {
     console.log('<br>')
     console.log(lines[i])
     console.log('<br>')
-  } var output = document.getElementById('output')
+  }
+  var output = document.getElementById('output')
+  console.log("output=", output)
   output.innerHTML=lines[0] + '<br>' + lines[1] + '<br>' + lines[2] + '<br>' + lines[3] + '<br>' + lines[4] + '<br>' + lines[5]
 }
 

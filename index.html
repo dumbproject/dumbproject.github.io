@@ -14,6 +14,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
     }
 
     header {
@@ -24,20 +25,27 @@
       color: white;
     }
 
-    .containerRow{
+    .wireframe {
+      border: 2px solid green;
+    }
+
+    .containerRow {
+      border: 2px solid black;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
+      width: 1000px;
+      margin: 0 auto;
     }
 
-    .containerColumn{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .child{
+    .child {
       flex: 1;
+      border: 1px solid red;
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
     }
 
     #green {
@@ -46,7 +54,8 @@
     #red {
       background-color: red;
     }
-    #monospace{
+
+    .monospace{
       font-family: "Courier";
       height: 200px;
     }
@@ -62,7 +71,7 @@
       <center><h1>Sup mf</h1></center>
 
 <!-- the date -->
-      <div id="monospace">
+      <div class="monospace">
         <br>april &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020
         <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
         <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4
@@ -77,16 +86,32 @@
       <h2>ion know what to put here yet<br><font color="red">but ima put some mf shit here</font></h2>
     </header>
 
-    <center><img src="intro.png" /></center>
+<!-- dumb picture -->
+    <center><img src="intro.png" width="auto" height="auto" /></center>
 
 
 
-
-
+<!-- start of page content -->
 
     <div class="containerRow">
-      <div class="containerColumn">
+      <div class="child">
 
+<!-- to do -->
+        <div>
+          <p>to do list:
+            <ul>
+              <li>change site name</li>
+              <li>add different pages [interests/links/knowledge/to do lists/updates]</li>
+              <li>pictures?</li>
+              <li>tired</li>
+              <li>schedule?</li>
+              <li>how far am i trying to go with this</li>
+              <li>IMPORTANT PEOPLE</li>
+            </ul>
+          </p>
+        </div>
+
+<!-- good sites -->
         <div>
           <p>good sites:
             <ul>
@@ -103,30 +128,18 @@
           </p>
         </div>
 
-
 <!-- i ching -->
-        <button onClick="run()">i ching</button>
-        <div id="monospace"></div>
-        <script type="text/javascript" src="./javascript/app.js"></script>
-
-
-        <div>
-          <p>to do list:
-            <ul>
-              <li>change site name</li>
-              <li>add different pages [interests/links/knowledge/to do lists/updates]</li>
-              <li>pictures?</li>
-              <li>tired</li>
-              <li>schedule?</li>
-              <li>how far am i trying to go with this</li>
-              <li>IMPORTANT PEOPLE</li>
-            </ul>
-          </p>
+        <div class="wireframe">
+          <br>
+          <center><button onClick="run()">i ching</button></center>
+          <br>
+          <center><div id="output" class="monospace"></div></center>
+          <script type="text/javascript" src="./javascript/app.js"></script>
         </div>
 
       </div>
 
-      <div class="containerColumn">
+      <div class="child right">
         <p><a href="https://machinegirl.bandcamp.com/"><font size=16>MACHINE GIRL</font></a></p>
         <iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
       </div>
