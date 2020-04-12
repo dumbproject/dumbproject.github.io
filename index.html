@@ -39,9 +39,14 @@
     }
 
     .child {
+/* aka container column */
       flex: 1;
       border: 1px solid red;
       text-align: left;
+    }
+
+    .center {
+      text-align: center;
     }
 
     .right {
@@ -64,10 +69,11 @@
 
 
 
-
-
   <body>
+
     <div class="containerRow">
+
+<!-- opening thesis -->
       <center><h1>Sup mf</h1></center>
 
 <!-- the date -->
@@ -80,15 +86,26 @@
         <br>19&nbsp;20&nbsp;21&nbsp;22&nbsp;23&nbsp;24&nbsp;25
         <br>26&nbsp;27&nbsp;28&nbsp;29&nbsp;30
       </div>
+
     </div>
 
     <header>
       <h2>ion know what to put here yet<br><font color="red">but ima put some mf shit here</font></h2>
     </header>
 
-<!-- dumb picture -->
-    <center><img src="intro.png" width="auto" height="auto" /></center>
+    <div class="containerRow">
 
+      <!-- dumb picture -->
+      <center><img src="intro.png" width="auto" height="auto" /></center>
+
+      <!-- i ching -->
+      <div class="wireframe">
+        <br><center><button onClick="run()">i ching</button></center>
+        <br><center><div id="output" class="monospace"></div></center>
+        <script type="text/javascript" src="./javascript/app.js"></script>
+      </div>
+
+    </div>
 
 
 <!-- start of page content -->
@@ -101,7 +118,7 @@
           <p>to do list:
             <ul>
               <li>change site name</li>
-              <li>add different pages [interests/links/knowledge/to do lists/updates]</li>
+              <li>add different pages <i>[interests/links/knowledge/updates]</i></li>
               <li>pictures?</li>
               <li>tired</li>
               <li>schedule?</li>
@@ -112,29 +129,20 @@
         </div>
 
 <!-- good sites -->
-        <div>
+        <div class="center wireframe">
           <p>good sites:
             <ul>
-              <li><a href="http://radio.garden/">radio.garden</a><br>- worldwide radio</li><br>
-              <li><a href="https://vimm.net/">vimm.net</a><br>- every single video game before 2006 for free</li><br>
-              <li><a href="http://submarinecablemap.com/">submarinecablemap.com</a><br>- how you connect to websites overseas</li><br>
-              <li><a href="http://sometimesredsometimesblue.com/">sometimesredsometimesblue.com</a><br>- very important</li><br>
-              <li><a href="http://zombo.com/">zombo.com</a><br>- even more important</li><br>
-              <li><a href="http://thispersondoesnotexist.com/">thispersondoesnotexist.com</a><br>- pictures of my friends</li><br>
-              <li><a href="http://thiscatdoesnotexist.com/">thiscatdoesnotexist.com</a><br>- my pets</li><br>
-              <li><a href="http://thiswaifudoesnotexist.net/">thiswaifudoesnotexist.com</a><br>- ai continued</li><br>
-              <li><a href="http://omegle.com/">omegle.com</a><br>- a site to talk to lonely people</li>
+              <li><a href="http://radio.garden/">radio.garden</a><br><i>worldwide radio</i></li><br>
+              <li><a href="https://vimm.net/">vimm.net</a><br><i>every single video game before 2006 for free</i></li><br>
+              <li><a href="http://submarinecablemap.com/">submarinecablemap.com</a><br><i>how you connect to websites overseas</i></li><br>
+              <li><a href="http://sometimesredsometimesblue.com/">sometimesredsometimesblue.com</a><br><i>very important</i></li><br>
+              <li><a href="http://zombo.com/">zombo.com</a><br><i>even more important</i></li><br>
+              <li><a href="http://thispersondoesnotexist.com/">thispersondoesnotexist.com</a><br><i>pictures of my friends</i></li><br>
+              <li><a href="http://thiscatdoesnotexist.com/">thiscatdoesnotexist.com</a><br><i>my pets</i></li><br>
+              <li><a href="http://thiswaifudoesnotexist.net/">thiswaifudoesnotexist.com</a><br><i>ai continued</i></li><br>
+              <li><a href="http://omegle.com/">omegle.com</a><br><i>a site to talk to lonely people</i></li>
             </ul>
           </p>
-        </div>
-
-<!-- i ching -->
-        <div class="wireframe">
-          <br>
-          <center><button onClick="run()">i ching</button></center>
-          <br>
-          <center><div id="output" class="monospace"></div></center>
-          <script type="text/javascript" src="./javascript/app.js"></script>
         </div>
 
       </div>
