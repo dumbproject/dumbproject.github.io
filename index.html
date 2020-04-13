@@ -26,11 +26,11 @@
     }
 
     .wireframe {
-      border: 2px solid green;
+      border: 1px solid green;
     }
 
     .containerRow {
-      border: 2px solid black;
+      border: 1px solid black;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -60,9 +60,14 @@
       background-color: red;
     }
 
-    .monospace{
-      font-family: "Courier";
+    .monospace {
+      /* font-family: "Courier"; */
+      font-family: "Lucida Console";
       height: 200px;
+    }
+
+    .hiddentext {
+      display: none;
     }
     </style>
   </head>
@@ -75,15 +80,18 @@
 <!-- opening thesis -->
       <center><h1>Sup mf</h1></center>
 
+<!-- earth thing -->
+      <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5p1na3do498&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+
 <!-- the date -->
       <div class="monospace">
         <br>april &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020
         <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
-        <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4
-        <br>&nbsp;5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp;10&nbsp;11
+        <br><strike><span style="color:gray">29&nbsp;30&nbsp;31</span>&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4</strike>
+        <br><strike>&nbsp;5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp;10&nbsp;11</strike>
         <br>12&nbsp;13&nbsp;14&nbsp;15&nbsp;16&nbsp;17&nbsp;18
         <br>19&nbsp;20&nbsp;21&nbsp;22&nbsp;23&nbsp;24&nbsp;25
-        <br>26&nbsp;27&nbsp;28&nbsp;29&nbsp;30
+        <br>26&nbsp;27&nbsp;28&nbsp;29&nbsp;30<span style="color:gray">&nbsp; 1&nbsp; 2</span>
       </div>
 
     </div>
@@ -130,8 +138,8 @@
         </div>
 
 <!-- good sites -->
-        <div class="center wireframe">
-          <p>good sites:
+        <div class="wireframe">
+          <center><p>good sites:
             <ul>
               <li><a href="http://radio.garden/">radio.garden</a><br><i>worldwide radio</i></li><br>
               <li><a href="https://vimm.net/">vimm.net</a><br><i>every single video game before 2006 for free</i></li><br>
@@ -143,7 +151,7 @@
               <li><a href="http://thiswaifudoesnotexist.net/">thiswaifudoesnotexist.com</a><br><i>ai continued</i></li><br>
               <li><a href="http://omegle.com/">omegle.com</a><br><i>a site to talk to lonely people</i></li>
             </ul>
-          </p>
+          </p></center>
         </div>
 
 <!-- learning href -->
@@ -162,7 +170,7 @@
     <div class="containerRow">
       <div class="child" id="green">sup</div>
       <div class="child" id="red">mufucka</div>
-      <div class="child"><a href="dream.html">psst</a></div>
+      <div class="child hiddentext"><a href="dream.html">psst</a></div>
     </div>
 
   </body>
