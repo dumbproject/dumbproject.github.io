@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>this is how much money i make</title>
+  <style>
+  body {
+    background-color: red;
+  }
+  .size {
+    text-align: center;
+    width: 250px;
+  }
+  .wireframe {
+    border: 1px solid black;
+  }
+  </style>
 </head>
 
 <body>
   <center>
-    <h1>this is how much money i make<br>at the rate that i make it</h1><br>
-
+    <h1>this is how much money i make<br>at the rate that i make it</h1>
     i make $16.30 an hour<br><br>
-    <button onClick="count()">click here to start my shift</button>
-    <div id="paycheck" style="font-family: Courier" style="text-align: right"></div>
+  <div class="size wireframe">
+    <!-- <center> -->
+    <br>
+    <button onClick="run()" style="background-color:red">click here to start my shift</button>
+    <div id="paycheck" style="font-family:Courier;"></div>
     <script type="text/javascript" src=".\javascript\money.js"></script>
-  </center>
-
+    <br>
+    <!-- </center> -->
+  </div>
+</center>
 </body>
 </html>
