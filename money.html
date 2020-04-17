@@ -7,29 +7,51 @@
   body {
     background-color: red;
   }
-  .size {
+  .square {
+    text-align:center;
+    width:270px;
+    height:270px;
+  }
+  .button {
+    /* background-color: red; */
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* margin: 4px 2px; */
+    border: 0;
+    background-color: red;
+    color: black  ;
+    padding: 0;
     text-align: center;
-    width: 250px;
+    font-size: 16px;
+    cursor: pointer;
   }
   .wireframe {
-    border: 1px solid black;
+    border: 200px solid black;
   }
   </style>
 </head>
 
+
 <body>
-  <center>
+<!-- start of page -->
+<center>
+  <a href=".\index.html">home</a>
+
+  <div class="columnRow">
     <h1>this is how much money i make<br>at the rate that i make it</h1>
     i make $16.30 an hour<br><br>
-  <div class="size wireframe">
-    <!-- <center> -->
-    <br>
-    <button onClick="run()" style="background-color:red">click here to start my shift</button>
-    <div id="paycheck" style="font-family:Courier;"></div>
-    <script type="text/javascript" src=".\javascript\money.js"></script>
-    <br>
-    <!-- </center> -->
+
+    <div class="square wireframe">
+      <br>
+      <button onClick="run()" class="button">click here to start my shift</button>
+      <div id="paycheck" style="font-family:Courier;"></div>
+      <script type="text/javascript" src=".\javascript\money.js"></script>
+      <br>
+    </div>
+
+
   </div>
 </center>
+
 </body>
 </html>
