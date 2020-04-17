@@ -1,5 +1,6 @@
 var lines = []
 var sequence = []
+
 function coinToss() {
   var value = 0
   var side = ''
