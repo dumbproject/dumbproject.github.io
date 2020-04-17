@@ -30,9 +30,13 @@ function count() {
                         Math.floor(minutes * 1000) / 1000 + ' minutes<br>&nbsp;' +
                         Math.floor(hours * 100000) / 100000 + ' hours<br><br>&nbsp;' +
                         Math.floor(shift * 1000000) / 1000000 + '% of 8hr shift<br><br>$' +
-                        ratesec.toFixed(6) + ' a second<br>$' +
-                        ratemin.toFixed(4) + ' a minute<br>$' +
-                        rate.toFixed(2) + ' an hour'
+                        ratesec.toFixed(6) + ' / second<br>$' +
+                        ratemin.toFixed(4) + ' / minute<br>$' +
+                        rate.toFixed(2) + ' / hour<br>$' +
+                        rate * 8 + ' / day<br>$' +
+                        rate * 40 + ' / week<br>$' +
+                        rate * 40 * 4 + ' / month<br>$' +
+                        rate * 40 * 52 + ' / year<br>'
 }
 
 function stop() {
