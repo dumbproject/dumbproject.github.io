@@ -10,8 +10,24 @@ var minutes
 var hours
 var shift
 
+
+function handleChange(e) {
+  // e.preventDefault()
+  var inputRate = e.target.value
+  console.log(e.target, inputRate)
+}
+
+var rateInput = document.getElementById('rateinput')
+console.log('rateInput', rateInput)
+rateInput.addEventListener('change', (event) => {
+  console.log(event.target.value)
+  rate = event.target.value
+});
+
 function run() {
   // document.getElementById("button").style.display = "none";
+  var button = document.getElementById("button")
+  button.classList.add("invisible")
   stop()
   x = setInterval(count, 100) // every hundredth of a second
 }
@@ -35,6 +51,7 @@ function count() {
                         rate.toFixed(2) + ' / hour<br>$' +
                         rate * 8 + ' / day<br>$' +
                         rate * 40 + ' / week<br>$' +
+                        rate * 40 * 2 + ' / bi-weekly<br>$' +
                         rate * 40 * 4 + ' / month<br>$' +
                         rate * 40 * 52 + ' / year<br>'
 }
