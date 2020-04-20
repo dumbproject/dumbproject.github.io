@@ -43,7 +43,7 @@
       border: 1px solid green;
     }
     .iching {
-      margin-top: 50px;
+      margin-top: 5px;
       width: 400px;
       height: 200px;
     }
@@ -84,10 +84,10 @@
 
 <!-- table of contents -->
       <div class="tableofcontents wireframe" id="red">
-        table of contents<br><span style="color:grey;">or index or whatever</span>
-        <br><br>
+        table of contents<br><span style="color:grey;">or index or whatever</span><br><br>
+        <a href=".\mood.html">moodboard</a><br><br>
         <a href=".\wishlist.html">things i need to buy</a><br><br>
-        <a href=".\money.html">the speed of my death</a><br>
+        <a href=".\money.html">the speed of my death</a><br><br>
       </div>
       <div class="containerRow" style="width:1400px;height:140px;">
 
@@ -118,19 +118,34 @@
     </header>
 
 
-    <div class="containerRow">
 
+    <div class="containerRow">
 
 <!-- dumb picture -->
       <center><img src="intro.png" width="500" height="323" /></center>
 <!-- <center><img src="intro.png" width="auto" height="auto" /></center> -->
 
+      <div>
 <!-- i ching -->
-      <div class="wireframe iching">
-        <br><center><button onClick="run()" style="color:red">i ching</button></center>
-        <br><center><div id="output" class="monospace"></div></center>
-        <script type="text/javascript" src="./javascript/app.js"></script>
+        <div class="wireframe iching" style="background-color:green">
+          <br><center><button onClick="run()" style="color:green">i ching</button></center>
+          <br><center><div id="output" class="monospace"></div></center>
+          <script type="text/javascript" src="./javascript/app.js"></script>
+        </div>
+
+<!-- learning href -->
+        <br><center><button><a href="javascript:alert('Hello');" style="color:black;text-decoration:none;">click here to say hi</a></button><center>
+        <div id="imgbox1">
+          <button onclick="removeElement()">click here to remove this entirely</button>
+        </div>
+        <div id="imgbox2">
+          <button onclick="changeVisibility()">click here to be unable to see this</button>
+        </div>
+        <div>
+          <button onclick="resetElement()">click here to reset the above buttons</button>
+        </div>
       </div>
+
 
 <!-- earth thing -->
       <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
@@ -139,15 +154,15 @@
     </div>
 
 
-<!-- start of page content -->
 
+<!-- start of page content -->
     <div class="containerRow">
       <div class="child">
 
         <div class="containerRow">
 <!-- to do -->
           <div class="wireframe" style="padding:5px;">
-            <p>to do list:<br>
+            <p><center>to do list:</center><br>
               for myself:
               <ul>
                 <li>fix my resume</li>
@@ -222,17 +237,16 @@
           </p></center>
         </div>
 
-<!-- learning href -->
-        <br><center><button><a href="javascript:alert('Hello');">click here to say hi</a></button><center>
-
       </div>
 
 <!-- MACHINE GIRL -->
       <div class="child right">
-        <p><a href="https://machinegirl.bandcamp.com/"><font size=16>MACHINE GIRL</font></a></p>
-        <iframe style="border: 0; width: 170px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
-        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
-        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
+        <center><a href="https://machinegirl.bandcamp.com/"><font size=16>MACHINE GIRL</font></a></center>
+        <div class="containerRow">
+          <iframe style="border: 0; width: 170px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
+          <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
+          <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
+        </div>
       </div>
     </div>
 
@@ -244,5 +258,19 @@
       <!-- <div class="child hiddentext"><a href="dream.html">psst</a></div> -->
     </div>
 
+    <script>
+    function removeElement() {
+      document.getElementById("imgbox1").style.display = "none";
+    }
+
+    function changeVisibility() {
+      document.getElementById("imgbox2").style.visibility = "hidden";
+    }
+
+    function resetElement() {
+      document.getElementById("imgbox1").style.display = "block";
+      document.getElementById("imgbox2").style.visibility = "visible";
+    }
+    </script>
   </body>
 </html>

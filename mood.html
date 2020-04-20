@@ -11,6 +11,15 @@
             display: grid;
             height: 100%;
         }
+        .containerRow {
+          border: 1px solid black;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          /* width: 1000px; */
+          /* width: auto; */
+        }
         .center-fit {
             max-width: 100%;
             max-height: 100vh;
@@ -18,15 +27,20 @@
         }
     </style>
 </head>
+
 <body>
-<div class="imgbox">
-  <img class="center-fit" src='.\moodboard\1.jpg'>
-  <img class="center-fit" src='.\moodboard\2.jpg'>
-  <img class="center-fit" src='.\moodboard\3.jpg'>
-  <img class="center-fit" src='.\moodboard\4.jpg'>
-  <img class="center-fit" src='.\moodboard\5.jpg'>
-  <img class="center-fit" src='.\moodboard\6.jpg'>
-  <img class="center-fit" src='.\moodboard\7.jpg'>
+<div class="containerRow">
+  <div class="imgbox">
+    <img class="center-fit" src='.\moodboard\1.jpg'>
+    <img class="center-fit" src='.\moodboard\2.jpg'>
+    <img class="center-fit" src='.\moodboard\3.jpg'>
+  </div>
+  <div class="imgbox">
+    <img class="center-fit" src='.\moodboard\4.jpg'>
+    <img class="center-fit" src='.\moodboard\5.jpg'>
+    <img class="center-fit" src='.\moodboard\6.jpg'>
+    <img class="center-fit" src='.\moodboard\7.jpg'>
+  </div>
 </div>
 </body>
 </html>
