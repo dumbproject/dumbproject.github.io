@@ -14,13 +14,13 @@ var shift
 function handleChange(e) {
   // e.preventDefault()
   var inputRate = e.target.value
-  console.log(e.target, inputRate)
+  // console.log(e.target, inputRate)
 }
 
-var rateInput = document.getElementById('rateinput')
-console.log('rateInput', rateInput)
-rateInput.addEventListener('change', (event) => {
-  console.log(event.target.value)
+var customRate = document.getElementById('rateinput')
+// console.log('rateInput', rateInput)
+customRate.addEventListener('change', (event) => {
+  // console.log(event.target.value)
   rate = event.target.value
 });
 
