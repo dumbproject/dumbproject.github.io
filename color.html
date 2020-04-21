@@ -4,11 +4,18 @@
 </head>
 
 <body>
-
 <script>
-  <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
-  document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
-</script>
+var array = "0123456789abcdef"
+var colorCode = '#'
 
+for (i=0; i<6; i++) {
+  colorCode += array[Math.floor(Math.random() * array.length)]
+  console.log(colorCode)
+}
+
+document.bgColor = colorCode
+  // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
+  // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
+</script>
 </body>
 </html>
