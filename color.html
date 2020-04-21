@@ -4,6 +4,7 @@
 </head>
 
 <body>
+<center><div id="code"></div></center>
 <script>
 var array = "0123456789abcdef"
 var colorCode = '#'
@@ -12,8 +13,9 @@ for (i=0; i<6; i++) {
   colorCode += array[Math.floor(Math.random() * array.length)]
   console.log(colorCode)
 }
-
 document.bgColor = colorCode
+var code = document.getElementById("code")
+code.innerHTML = '<h1>' + colorCode + '</h1>'
   // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
   // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
 </script>
