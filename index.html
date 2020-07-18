@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="css/app.css"> -->
+    <link rel="icon" type="image/png" sizes="16x16" href=".\favicon-16x16.png">
     <style>
     * {
       box-sizing: border-box;
@@ -16,7 +17,6 @@
       text-align: center;
       margin: 0;
       padding: 0;
-      /* width: 1920px; */
     }
     /* header {
       background-color: #c9f;
@@ -71,8 +71,15 @@
       display: none;
     }
     .tableofcontents {
-      align:left;
-      width:200px;
+      text-align:left;
+      width:400px;
+    }
+    .tableofcontents a {
+      color: #000
+      text-decoration: none;
+    }
+    .tableofcontents a:hover {
+      text-decoration: underline;
     }
     </style>
   </head>
@@ -83,13 +90,18 @@
     <div class="containerRow">
 
 <!-- table of contents -->
-      <div class="tableofcontents wireframe" id="red">
-        <br>table of contents<br>
-        <span style="color:grey;">or index or whatever</span><br>
+      <div class="tableofcontents wireframe" style="background-color: teal">
+        table of contents <span style="color:grey">or index or whatever</span><br>
         <ul>
-          <li><a href=".\mood.html">moodboard</a></li>
-          <li><a href=".\wishlist.html">things i need to buy</a></li>
           <li><a href=".\money.html">hourly rate of death</a></li>
+          <li><a href=".\color.html">a random color</a></li>
+          <li><a href=".\purple.html">purple.com dedication page</a></li>
+          <li><a href=".\mood.html">moodboard</a></li>
+          <li><a href=".\goodpictures.html">some good pictures</a></li>
+          <li><a href=".\movies.html">movies i think are good</a></li>
+          <li><a href=".\wishlist.html">things i need to buy</a></li>
+          <li><a href=".\alarm.mp4">me when i wake up every day</a></li>
+          <li><a href=".\howto.html">how to make this</a></li>
         </ul>
       </div>
 
@@ -130,7 +142,7 @@
         <div class="wireframe iching" style="background-color:green">
           <br><center><button onClick="run()" style="color:green">i ching</button></center>
           <br><center><div id="output" class="monospace"></div></center>
-          <script type="text/javascript" src="./javascript/app.js"></script>
+          <script type="text/javascript" src="./javascript/iching.js"></script>
         </div>
 
 <!-- learning href -->
@@ -166,9 +178,41 @@
               for myself:
               <ul>
                 <li>fix my resume</li>
-                <li>fix my bike</li>
-                <li>fix my life</li>
+                <li><strike>fix my bike</strike> FIXED</li>
+                <li>fix my <strike>life</strike> eating habits and eat more</li>
                 <li></li>
+
+                <!-- learn about
+
+                span tag
+                links/href
+                input tag
+                section tag
+                and video and alert
+
+                css .class selector
+                css selectors
+                css pseudo classes
+                css inline styles
+                https://css-tricks.com/4-css-grid-properties-and-one-value-for-most-of-your-layout-needs/
+                https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+                js object constructors
+
+                watch a react tutorial
+                and a php tutorial
+                and an express tutorial
+                and server side rendering
+
+                how to send sms/email from my website
+                how email works/what it is
+
+
+                https://b-ok.cc/
+                https://www.bpearthwatch.com/
+
+                autumnally-charged -->
+
               </ul>
               for the site:
               <ul>
@@ -242,11 +286,13 @@
 <!-- MACHINE GIRL -->
       <div class="child right">
         <center><a href="https://machinegirl.bandcamp.com/"><font size=16>MACHINE GIRL</font></a></center>
+        <center>
         <div class="containerRow">
-          <iframe style="border: 0; width: 170px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
-          <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
-          <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
+          <iframe style="border: 0; width: 85px; height: 360px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
+          <iframe style="border: 0; width: 175px; height: 360px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
+          <iframe style="border: 0; width: 175px; height: 360px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
         </div>
+        </center>
       </div>
     </div>
 

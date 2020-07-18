@@ -1,20 +1,16 @@
 <!doctype html>
 <head>
 </head>
-
 <body>
-
-<button onclick="playPause()">Play/Pause</button>
-
-<video autoplay muted>
+<!-- <button onclick="playPause()">Play/Pause</button> -->
+<video controls autoplay loop width="304" height="540">
   <source id="video1" src="alarm.mp4" type="video/mp4">
 </video>
 <!-- <script>
     document.getElementById("vid").volume=1;
 </script> -->
-<script>
+<!-- <script>
 var myVideo = document.getElementById("video1");
-
 function playPause() {
   if (myVideo.paused) {
     myVideo.get(0).pause()
@@ -23,6 +19,6 @@ function playPause() {
     myVideo.get(0).play()
   }
 }
-</script>
+</script> -->
 </body>
 </html>

@@ -1,21 +1,34 @@
 <!-- random color -->
 <!doctype html>
 <head>
+<title>a random color</title>
+<!-- <META HTTP-EQUIV="refresh" CONTENT=".001"> -->
+<link rel="stylesheet" type="text/css" href=".\css\styles.css"></link>
 </head>
-
 <body>
-<center><div id="code"></div></center>
+
+<center><a href=".\index.html">home</a>
+<div id="code"></div></center>
+
+<script src="autorefresh.js"></script>
+<button id="spaz" onClick="refresh()">Refresh Page</button>
+
 <script>
-var array = "0123456789abcdef"
+var string = "0123456789abcdef"
 var colorCode = '#'
+var colorOpposite = '#'
 
 for (i=0; i<6; i++) {
-  colorCode += array[Math.floor(Math.random() * array.length)]
-  console.log(colorCode)
+  var x = Math.floor(Math.random() * string.length)
+  var y = 15 - x
+  colorCode += string[x]
+  colorOpposite += string[y]
+  // console.log(colorCode, colorOpposite)
 }
+
 document.bgColor = colorCode
 var code = document.getElementById("code")
-code.innerHTML = '<h1>' + colorCode + '</h1>'
+code.innerHTML = '<div style="color:' + colorOpposite + '"><h2 style="' + colorOpposite + '">' + colorCode + '</h2><font size=1px>(text color: ' + colorOpposite + ')</font></div>'
   // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
   // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
 </script>
