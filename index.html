@@ -27,7 +27,7 @@
       color: white;
     } */
     .containerRow {
-      border: 1px solid black;
+      /* border: 1px solid black; */
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -38,7 +38,7 @@
     .child {
     /* aka container column */
       flex: 1;
-      border: 1px solid red;
+      /* border: 1px solid red; */
       text-align: left;
     }
     .wireframe {
@@ -88,10 +88,10 @@
 
   <body>
 <!-- top of site -->
-    <div class="containerRow">
+    <div class="containerRow" style="background-color:gray">
 
 <!-- table of contents -->
-      <div class="tableofcontents wireframe" style="background-color: teal">
+      <div class="tableofcontents" style="background-color: teal">
         table of contents <span style="color:grey">or index or whatever</span><br>
         <ul>
           <li><a href=".\money.html">hourly rate of death</a></li>
@@ -101,20 +101,20 @@
           <li><a href=".\goodpictures.html">some good pictures</a></li>
           <li><a href=".\movies.html">movies i think are good</a></li>
           <li><a href=".\wishlist.html">things i need to buy</a></li>
-          <li><a href=".\alarm.mp4">me when i wake up every day</a></li>
+          <li><a href=".\alarm.html">me when i wake up every day</a></li>
           <li><a href=".\howto.html">how to make this</a></li>
         </ul>
       </div>
 
 <!-- opening thesis -->
-      <div class="containerRow" style="width:1320px;height:170px;">
+      <div class="containerRow" style="width:1320px;height:170px;background-color:yellow">
         <h1><br>Sup mf</h1>
 
         <div class="purple" style="width:800px;">
           <h2><br>i'm makin this shit look ugly af<br>but it's just temporary</h2>
         </div>
 <!-- the date -->
-        <div class="monospace wireframe">
+        <div class="monospace" style="border:1px solid black; margin:10">
           <br>july&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020
           <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
           <br><strike><span style="color:gray">28&nbsp;29&nbsp;30</span>&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4</strike>
@@ -132,7 +132,7 @@
 
 
 
-    <div class="containerRow">
+    <div class="containerRow" style="background-color:maroon">
 
 <!-- dumb picture -->
       <center><img src="intro.png" width="500" height="323" /></center>
@@ -151,7 +151,7 @@
           <button onclick="resetElement()">click here to reset the above buttons</button>
         </div>
 <!-- i ching -->
-        <div class="wireframe iching" style="background-color:navy">
+        <div class="iching" style="background-color:navy">
           <br><center><button onClick="run()" style="color:green">i ching</button></center>
           <br><center><div id="output" class="monospace" style="color:green"></div></center>
           <script type="text/javascript" src="./javascript/iching.js"></script>
@@ -175,8 +175,8 @@
         <div class="containerRow">
 
 <!-- to do -->
-          <div class="wireframe" style="width:340px">
-            <div class="wireframe" style="background-color:red">
+          <div style="width:340px">
+            <div style="background-color:red">
               <center>to do list:</center>
             </div>
             <div class="wireframe" style="background-color:pink">
@@ -235,7 +235,7 @@
           </div>
 
 <!-- html color codes -->
-          <div class="wireframe monospace" style="background-color:white; width:300px; height:147px">
+          <div class="wireframe monospace" style="background-color:white; width:300px; height:150px">
             <center style="background-color:teal">color codes for html</center>
             <div class="containerRow">
               <div>
@@ -292,13 +292,15 @@
       </div>
 
 <!-- MACHINE GIRL -->
-      <div class="child right" style="background-color:green">
-        <center><a href="https://machinegirl.bandcamp.com/"><font size=16>MACHINE GIRL</font></a></center>
+      <div class="child right" style="background-image: url('https://f4.bcbits.com/img/a1638146004_10.jpg'); background-size:contain; background-color:green">
+        <a href="https://machinegirl.bandcamp.com/" style="color:red"><font size=16>MACHINE GIRL</font></a>
+
         <center>
         <div class="containerRow">
-          <iframe style="border: 0; width: 85px; height: 360px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
-          <iframe style="border: 0; width: 175px; height: 360px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
-          <iframe style="border: 0; width: 175px; height: 360px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
+          <!-- <iframe style="border: 0; width: 170px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe> -->
+          <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
+          <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
+          <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
         </div>
         </center>
       </div>
