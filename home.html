@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>thanks for stopping by</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="css/app.css"> -->
+  <link rel="icon" type="image/png" sizes="16x16" href=".\favicon-16x16.png">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  /* header {
+    background-color: #c9f;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  } */
+  .containerRow {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    /* width: 1000px; */
+    /* width: auto; */
+  }
+  .child {
+  /* aka container column */
+    flex: 1;
+    /* border: 1px solid red; */
+    text-align: left;
+  }
+  .wireframe {
+    border: 1px solid green;
+  }
+  .iching {
+    margin-top: 5px;
+    width: 400px;
+    height: 200px;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+  }
+  .monospace {
+    /* font-family: "Courier"; */
+    font-family: "Lucida Console";
+  }
+  .hiddentext {
+    display: none;
+  }
+  .tableofcontents {
+    text-align:left;
+    width:400px;
+  }
+  .tableofcontents a {
+    color: #000
+    text-decoration: none;
+  }
+  .tableofcontents a:hover {
+    text-decoration: underline;
+  }
+  .purple {
+    color: purple;
+  }
+  #green {
+    background-color: green;
+  }
+  #red {
+    background-color: red;
+  }
+  </style>
+</head>
+<body>
+  <!-- top of site -->
+  <div class="containerRow" style="background-color:gray">
+
+    <!-- table of contents -->
+    <div class="tableofcontents" style="background-color: teal">
+      table of contents <span style="color:grey">or index or whatever</span><br>
+      <ul>
+        <li><a href=".\alarm.html">me when i wake up every day</a></li>
+        <li><a href=".\money.html" style="background-color:red">hourly rate of death</a></li>
+        <li><a href=".\mood.html" style="background-color:black">moodboard</a></li>
+        <li><a href=".\color.html" style="background-color:pink">a random color</a></li>
+        <li><a href=".\purple.html" style="background-color:#7d26cd">purple.com dedication page</a></li>
+        <li><a href=".\goodpictures.html">some good pictures</a> (delete/revise this)</li>
+        <li><a href=".\movies.html">movies i think are good</a></li>
+        <li><a href=".\wishlist.html">things i need to buy</a></li>
+        <li><a href=".\howto.html" style="background-color:white">how to make this</a></li>
+      </ul>
+    </div>
+
+    <!-- opening thesis -->
+    <div class="containerRow" style="width:1320px;height:170px;background-color:yellow">
+      <h1><br>sup mf</h1>
+
+      <div class="purple" style="width:800px;">
+        <h2><br>i'm makin this shit look ugly af<br>but it's just temporary</h2>
+      </div>
+
+      <!-- the date -->
+      <div class="monospace" style="border:1px solid black; margin:10">
+        <br>july&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020
+        <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
+        <br><strike><span style="color:gray">28&nbsp;29&nbsp;30</span>&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4</strike>
+        <br><strike>&nbsp;5&nbsp; 6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp;10&nbsp;11</strike>
+        <br><strike>12&nbsp;13&nbsp;14&nbsp;15&nbsp;16&nbsp;17&nbsp;18</strike>
+        <br><strike>19</strike>&nbsp;20&nbsp;21&nbsp;22&nbsp;23&nbsp;24&nbsp;25
+        <br>26&nbsp;27&nbsp;28&nbsp;29&nbsp;30&nbsp;31<span style="color:gray">&nbsp; 1</span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br><font color="red">but ima put some mf shit here</font></h6>
+
+
+  <!-- picture, iching, revolvermaps -->
+  <div class="containerRow" style="background-color:maroon">
+
+    <div style="padding-top:35px">
+      <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260" height="260" />
+    </div>
+
+    <!-- dumb picture -->
+    <center><img src="intro.png" width="500" height="323" /></center>
+    <!-- <center><img src="intro.png" width="auto" height="auto" /></center> -->
+
+    <div>
+      <!-- learning href -->
+      <br><center><button><a href="javascript:alert('Hello');" style="color:black;text-decoration:none;">click here to say hi</a></button><center>
+      <div id="imgbox1">
+        <button onclick="removeElement()">click here to remove this entirely</button>
+      </div>
+      <div id="imgbox2">
+        <button onclick="changeVisibility()">click here to be unable to see this</button>
+      </div>
+      <div>
+        <button onclick="resetElement()">click here to reset the above buttons</button>
+      </div>
+      <!-- i ching -->
+      <div class="iching" style="background-color:navy">
+        <br><center><button onClick="run()" style="color:green">i ching</button></center>
+        <br><center><div id="output" class="monospace" style="color:green"></div></center>
+        <script type="text/javascript" src="./javascript/iching.js"></script>
+      </div>
+    </div>
+
+    <!-- earth thing -->
+    <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
+    <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
+
+  </div>
+
+
+  <!-- start of page content -->
+  <div class="containerRow" style="background-color:blue">
+
+    <div class="child">
+      <div class="containerRow">
+
+        <!-- to do -->
+        <div class="child" style="width:340px">
+          <div style="background-color:red">
+            <center>to do list:</center>
+          </div>
+          <div class="wireframe" style="background-color:pink">
+            <br>for myself:
+            <ul>
+              <li>fix my resume</li>
+              <li><strike>fix my bike</strike> FIXED</li>
+              <li>fix my <strike>life</strike> eating habits and eat more</li>
+              <li></li>
+            </ul>
+
+            </div>
+            <div class="wireframe" style="background-color:fuchsia">
+              <br>for the site:
+              <ul>
+                <li>change site name</li>
+                <li>add interests, knowledge, updates</li>
+                <li>schedule?</li>
+                <li>how far am i trying to go with this</li>
+                <li>IMPORTANT PEOPLE</li>
+              </ul>
+            </div>
+        </div>
+
+<!-- html color codes -->
+        <div class="monospace wireframe" style="background-color:white; width:300px; height:150px">
+          <center style="background-color:teal">color codes for html</center>
+          <div class="containerRow">
+            <div>
+              <span style="color:white;background-color:black;">#FFFFFF white</span>
+              <br><span style="color:silver;">#C0C0C0 silver</span>
+              <br><span style="color:gray;">#808080 gray</span>
+              <br><span style="color:black;">#000000 black</span>
+
+              <br><span style="color:red;">#FF0000 red</span>
+              <br><span style="color:blue;">#0000FF blue</span>
+              <br><span style="color:green;">#008000 green</span>
+              <br><span style="color:yellow;background-color:gray">#FFFF00 yellow</span>
+            </div>
+            <div>
+              <span style="color:aqua;">#00FFFF aqua</span>
+              <br><span style="color:lime;">#00FF00 lime</span>
+              <br><span style="color:fuchsia;">#FF00FF fuchsia</span>
+              <br><span style="color:purple;">#800080 purple</span>
+
+              <br><span style="color:maroon;">#800000 maroon</span>
+              <br><span style="color:teal;">#008080 teal</span>
+              <br><span style="color:navy;">#000080 navy</span>
+              <br><span style="color:olive;">#808000 olive</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+<!-- good sites -->
+      <div class="containerRow wireframe" style="background-color:aqua">
+        <div class="child wireframe">
+          <p>
+            <center>good sites:</Center>
+            <ul>
+              <li><a href="http://radio.garden/">radio.garden</a><br><i>worldwide radio</i></li><br>
+              <li><a href="https://vimm.net/">vimm.net</a><br><i>every single video game before 2006 for free</i></li><br>
+              <li><a href="http://submarinecablemap.com/">submarinecablemap.com</a><br><i>how you connect to websites overseas</i></li><br>
+              <li><a href="http://sometimesredsometimesblue.com/">sometimesredsometimesblue.com</a><br><i>very important</i></li><br>
+              <li><a href="http://zombo.com/">zombo.com</a><br><i>even more important</i></li><br>
+              <li><a href="http://thispersondoesnotexist.com/">thispersondoesnotexist.com</a><br><i>pictures of my friends</i></li><br>
+              <li><a href="http://thiscatdoesnotexist.com/">thiscatdoesnotexist.com</a><br><i>my pets</i></li><br>
+              <li><a href="http://thiswaifudoesnotexist.net/">thiswaifudoesnotexist.com</a><br><i>ai continued</i></li><br>
+              <li><a href="http://omegle.com/">omegle.com</a><br><i>a site to talk to usually terrible people</i></li>
+            </ul>
+          </p>
+        </div>
+        <div class="child wireframe" style="background-color:teal">
+          <p>
+            <center>sites i use a lot<center><br><br>
+            whosampled.com<br>
+            genius.com<br>
+            discogs.com<br>
+            ezstems.com<br>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+<!-- MACHINE GIRL -->
+    <div class="child right" style="background-image: url('https://f4.bcbits.com/img/a1638146004_10.jpg'); background-size:contain; background-color:green">
+      <a href="https://machinegirl.bandcamp.com/" style="color:red"><font size=16>MACHINE GIRL</font></a>
+
+      <center>
+      <div class="containerRow">
+        <!-- <iframe style="border: 0; width: 170px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe> -->
+        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
+        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
+        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
+      </div>
+      </center>
+    </div>
+  </div>
+
+<!-- bottom of page -->
+  <div class="containerRow">
+    <div class="child" id="green">sup</div>
+    <div class="child" id="red">mufucka</div>
+    <div class="child" id="red"><a href="dream.html" style="color:red">psst</a></div>
+    <!-- <div class="child hiddentext"><a href="dream.html">psst</a></div> -->
+  </div>
+
+  <script>
+  function removeElement() {
+    document.getElementById("imgbox1").style.display = "none";
+  }
+  function changeVisibility() {
+    document.getElementById("imgbox2").style.visibility = "hidden";
+  }
+  function resetElement() {
+    document.getElementById("imgbox1").style.display = "block";
+    document.getElementById("imgbox2").style.visibility = "visible";
+  }
+  </script>
+</body>
+</html>
