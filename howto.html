@@ -9,85 +9,153 @@
   <!-- <link rel="stylesheet" href="css/app.css"> -->
   <style>
   * {
-   box-sizing: border-box;
+    box-sizing: border-box;
   }
   body {
-   /* font-family: Arial, Helvetica, sans-serif;
-   text-align: center;
-   margin: 0;
-   padding: 0; */
+    background-color: black;
+    color: green;
+    font-size: 20px;
+    /* font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0; */
   }
   header {
-   background-color: #c9f;
-   padding: 30px;
-   text-align: center;
-   font-size: 35px;
-   color: white;
+    background-color: #c9f;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
   }
   .containerRow {
-   border: 1px solid black;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   /* width: 1000px; */
-   /* width: auto; */
-   margin: 0 auto;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* width: 1000px; */
+    /* width: auto; */
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .child {
+  /* aka container column */
+    border: 1px solid green;
+    padding: 10px;
+    margin: 10px;
+    flex: 1;
+    /* border: 1px solid red; */
+    text-align: left;
   }
   .wireframe {
-   border: 1px solid green;
+    border: 1px solid green;
   }
   .monospace {
-   /* font-family: "Courier"; */
-   font-family: "Lucida Console";
-   height: 200px;
+    /* font-family: "Courier"; */
+    font-family: "Lucida Console";
+    height: 200px;
+  }
+  .code {
+    font-family: "Lucida Console";
+    border:none!important;
+    background-color:#fff;
+    padding:5px!important;
+    display:inline-block;
+    max-height:400px;
+    overflow-x:auto;
+    max-width:600px;
+    margin:0
   }
   </style>
 </head>
 
 
 <body>
-<div style="width:400px;">
-  <br>
-  shit is easy af bruh<br><br>
-  you just gotta get like the general idea of<br>
-  what the sections are<br>
+  <div class="containerRow" style="width: 300px">
+    <center><br>
+    shit is easy af!!!! bruh<br><br>
+    you just gotta get the general<br>
+    idea of what the sections are<br><br>
+    and after THAT you can learn<br>
+    how to make it look pretty or<br>
+    literally legible at all<br><br>
+    </center>
+  </div>
 
-  <p>how i made this website
-  </p>
-  <ol>
-    <li>create/have a github account</li>
-    <li>make a folder for this project, open the folder in cmd/terminal and type git init</li>
-    <li>make a text file and name it index.html or something</li>
-  </ol>
+  <div class="containerRow">
+    <div class="child">
+      <p>how i made this website
+      </p>
+      <ol>
+        <li>create/have a github account</li>
+        <li>install git</li>
+        <li>make a folder for this project, open the folder in cmd/terminal, and type <div class="code">git init</div></li>
+        <li>make a text file and name it index.html</li>
+      </ol>
+    </div>
+    <div class="containerRow">
+      <div class="child">
+        <br>
+        so every .html file needs &lt;!doctype html&gt;<br>
+        so the computer knows what kind of file it is<br>
+        then, make opening and closing &lt;html&gt; tags<br>
+        and you put &lt;html lang="en"&gt;<br><br>
 
-  <br>
-  so every .html file needs<br>
-  &lt;!doctype html&gt;<br>
-  so the computer knows what kind of file it is<br>
-  and then you write opening and closing &lt;html&gt; tags<br>
-  and you put &lt;html lang="en"&gt;<br><br>
+        then you put opening and closing &lt;head&gt; and &lt;body&gt; tags inside the &lt;html&gt; tag<br>
+        and inside the head you put a &lt;title&gt;title for your page&lt;/title&gt;<br>
+        and also &lt;style&gt;css styles&lt;/style&gt; to make your page look fancy<br>
+      </div>
+      <div class="child">
+        <div class="code">
+          &lt;!doctype html&gt;<br>
+          &lt;head&gt;<br>
+          &nbsp;&nbsp;&lt;title&gt;example title&lt;/title&gt;<br>
+          &lt;/head&gt;<br>
+          &lt;body&gt;<br>
+          &nbsp;&nbsp;here is me saying things in my example html page<br>
+          &lt;/body&gt;<br>
+          &lt;/html&gt;
+        </div>
+        <br><a href=".\example.html" style="color:red">view the example here</a>
+        <br>note to self: don't forget to copy and paste this into example.html
+      </div>
+    </div>
+  </div>
 
-  then you put opening and closing &lt;head&gt; and &lt;body&gt; tags inside the &lt;html&gt; tag<br>
-  and inside the head you put<br><br>
+  <div class="containerRow">
+    <div class="child">
+      &lt;b&gt;<b>this is how to bold text</b>&lt;b&gt;<br>
+      &lt;i&gt;<i>this is how to italicize text</i>&lt;i&gt;<br>
+      &lt;u&gt;<u>this is how to underline text</u>&lt;u&gt;<br>
+      &lt;strike&gt;<strike>this is how to strike things</strike>&lt;/strike&gt;<br>
+      &lt;sub&gt;<sub>this is how to make subscript text</sub>&lt;sub&gt;<br>
+      &lt;sup&gt;<sup>this is how to make superscript text</sup>&lt;sup&gt;<br>
+      apparently strike is no longer supported in HTML5 and you use del or s instead<br><br><br>
+      <center><div style="border: 1px solid blue; padding: 5px; width: 300px">
+        <center>special characters in html are used like this:<br>
+        <b>&</b><i>[character code]</i><b>;</b><br>
+        <a href="https://www.ascii-code.com/">list of ascii character codes</a></center><br>
+        < = lt<br>
+        > = gt<br>
+        ' ' = nbsp<br><br>
+      </div></center>
+    </div>
 
-  &lt;strike&gt;<strike>this is how to strike things</strike>&lt;/strike&gt;<br>
+    <div class="child">
+      <br><br><br><center>
+      here i am putting this as a placeholder<br><br>
+      something i need to learn DESPERATELY is flex, a css property(?)<br>
+      </center>
+    </div>
+  </div>
 
-
-  special characters in html are used like this<br>
-  &[character code];<br>
-  < = lt<br>
-  > = gt<br>
-  ' ' = nbsp<br><br>
-  <a href="https://www.ascii-code.com/">all(?) ascii character codes</a>
-
-
-
-  <br><br>
-  this was useful for learning git<br>
-  <a href="https://rogerdudler.github.io/git-guide/">git - the simple guide - no deep shit!</a>
-
-  <br>
-  i use w3schools.com a lot to understand tags for html better
-</div>
+  <div class="containerRow">
+    <div class="child">
+      this was useful for learning git: <a href="https://rogerdudler.github.io/git-guide/">git - the simple guide - no deep shit!</a><br>
+    </div>
+    <div class="child">
+      i use <a href="https://w3schools.com/">w3schools.com</a> a lot to understand tags for html better<br><br>
+    </div>
+    links were being weird??? gonna learn and figure it out :|
+  </div>
 </body>
 </html>
