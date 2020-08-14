@@ -73,12 +73,13 @@
   <center><a href=".\home.html" style="color:fuchsia">home</a></center>
   <div class="containerRow" style="width: 300px">
     <center><br>
-    shit is <span style="color:red">easy af!!!!</span> bruh<br><br>
+    shit is <span style="color:red">easy af!!!!</span><br><br>
     you just gotta get the general<br>
     idea of what the sections are<br><br>
     and after THAT you can learn<br>
     how to make it look pretty or<br>
-    literally legible at all<br><br>
+    literally legible at all<br>
+    (very much unlike my site)<br><br>
     </center>
   </div>
 
@@ -89,14 +90,21 @@
       <ol>
         <li>create a <a href="https://github.com/" style="color:fuchsia">github</a> account</li>
         <li>install <a href="https://git-scm.com/" style="color:fuchsia">git</a></li>
-        <li>make a folder for this project, open the folder in cmd/terminal, and type <div class="code">git init</div></li>
+        <li>make a folder for this project, open the folder in cmd/terminal, and type <span class="code">git init</span></li>
         <li>make a text file, save it as index.html</li>
-      </ol>
+        <li>open the project folder in terminal/cmd</li>
+        <li>type <span class="code">git status</span> (optional, helpful)</li>
+        <li><span class="code">git add</span> the files you create</li>
+        <li><span class="code">git commit</span> the changes you made</li>
+        <li><span class="code">git push</span> your updated version to github</li>
+        <li>wait a few minutes for the changes to take effect and browse your own site at sitename.github.io</li>
+      </ol><br>
+      this section needs to be revamped a lot
     </div>
     <div class="containerRow">
       <div class="child">
-        every .html file needs <div class="code">&lt;!doctype html&gt;</div> at the top,<br>
-        so the computer knows what kind of file it is.<br>
+        every .html file starts with <span class="code">&lt;!doctype html&gt;</span> at the top<br>
+        this tells the computer what kind of file it is<br>
         make a closing &lt;html&gt; tag at the bottom<br><br>
 
         put an opening and closing &lt;head&gt; tag in between the two<br>
@@ -106,7 +114,7 @@
         and also &lt;style&gt;css styles&lt;/style&gt; to make your page look fancy<br>
       </div>
       <div class="child">
-        <div class="code">
+        <span class="code">
           &lt;!doctype html&gt;<br>
           &lt;head&gt;<br>
           &nbsp;&nbsp;&lt;title&gt;example title&lt;/title&gt;<br>
@@ -115,7 +123,7 @@
           &nbsp;&nbsp;here is me saying things in my example html page<br>
           &lt;/body&gt;<br>
           &lt;/html&gt;
-        </div>
+        </span>
         <br><a href=".\example.html" style="color:fuchsia">view the example here</a>
         <br>note to self: don't forget to copy and paste this into example.html
       </div>
@@ -124,37 +132,49 @@
 
   <div class="containerRow">
     <div class="child">
-      &lt;b&gt;<b>this is how to bold text</b>&lt;b&gt;<br>
-      &lt;i&gt;<i>this is how to italicize text</i>&lt;i&gt;<br>
-      &lt;u&gt;<u>this is how to underline text</u>&lt;u&gt;<br>
-      &lt;strike&gt;<strike>this is how to strike things</strike>&lt;/strike&gt;<br>
-      &lt;sub&gt;<sub>this is how to make subscript text</sub>&lt;sub&gt;<br>
-      &lt;sup&gt;<sup>this is how to make superscript text</sup>&lt;sup&gt;<br>
-      apparently strike is no longer supported in HTML5 and you use del or s instead<br><br><br>
+      <center>
+        &lt;b&gt;<b>this is how to bold text</b>&lt;b&gt;<br>
+        &lt;i&gt;<i>this is how to italicize text</i>&lt;i&gt;<br>
+        &lt;u&gt;<u>this is how to underline text</u>&lt;u&gt;<br>
+        &lt;strike&gt;<strike>this is how to strike things</strike>&lt;/strike&gt;<br>
+        &lt;sub&gt;<sub>this is how to make subscript text</sub>&lt;sub&gt;<br>
+        &lt;sup&gt;<sup>this is how to make superscript text</sup>&lt;sup&gt;<br>
+      </center><br>
+      apparently strike is no longer supported in HTML5 and you use del or s instead<br><br>
       <center><div style="border: 1px solid blue; padding: 5px; width: 300px">
-        <center>special characters in html are used like this:<br>
-        <b>&</b><i>[character code]</i><b>;</b><br>
+        <center>special characters in html<br>are used like this:<br>
+        <span style="border:1px solid white;padding:3px"><b>&</b><i>[character code]</i><b>;</b></span><br>
         <a href="https://www.ascii-code.com/" style="color:fuchsia">list of ascii character codes</a></center><br>
-        < = lt<br>
-        > = gt<br>
-        ' ' = nbsp<br><br>
+        < = &amp;lt;<br>
+        > = &amp;gt;<br>
+        ' ' = &amp;nbsp;<br>
+        & = &amp;amp;<br>
       </div></center>
     </div>
 
     <div class="child">
       <br><br><br><center>
-      here i am putting this as a placeholder<br><br>
+      - notes -<br><br>
+      i am putting this here as a placeholder<br><br>
       something i need to learn DESPERATELY is flex, a css property(?)<br>
+      also learn a better understanding of clean code<br><br>
+      margin = space outside a box<br>
+      padding = space inside a box<br><br>
+      learn to use span instead of div<br>
       </center>
     </div>
   </div>
 
   <div class="containerRow">
     <div class="child">
-      this was useful for learning git: <a href="https://rogerdudler.github.io/git-guide/" style="color:fuchsia">git - the simple guide - no deep shit!</a><br>
+      <center>
+        this was useful for learning git: <a href="https://rogerdudler.github.io/git-guide/" style="color:fuchsia">git - the simple guide - no deep shit!</a><br>
+      </center>
     </div>
     <div class="child">
-      i use <a href="https://w3schools.com/" style="color:fuchsia">w3schools.com</a> a lot to understand tags for html better<br><br>
+      <center>
+        i use <a href="https://w3schools.com/" style="color:fuchsia">w3schools.com</a> a lot to understand tags for html better<br><br>
+      </center>
     </div>
     links were being weird??? gonna learn and figure it out :|
   </div>
