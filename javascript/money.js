@@ -9,7 +9,7 @@ var seconds = 0
 var minutes
 var hours
 var shift
-
+var day = rate * 8
 
 function handleChange(e) {
   // e.preventDefault()
@@ -49,7 +49,7 @@ function count() {
                         ratesec.toFixed(6) + ' / second<br>$' +
                         ratemin.toFixed(4) + ' / minute<br>$' +
                         rate.toFixed(2) + ' / hour<br>$' +
-                        rate * 8 + ' / day<br>$' +
+                        day.toFixed(2) + ' / day<br><br>$' +
                         rate * 40 + ' / week<br>$' +
                         rate * 40 * 2 + ' / bi-weekly<br>$' +
                         rate * 40 * 4 + ' / month<br>$' +
