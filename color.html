@@ -7,28 +7,41 @@
 </head>
 <body>
 
-  <center><a href=".\home.html">home</a>
-  <div id="code"></div></center>
+  <center>
+    <a href=".\home.html" style="background-color:white;padding:2px">home</a><br><br>
+    <button onclick="randColor()">random color please</button><br>
+    <button onclick="spaz()">spaz please</button><br>
+    <div id="code"></div>
+  </center>
 
   <script src="autorefresh.js"></script>
   <button id="spaz" onClick="refresh()">Refresh Page</button>
 
   <script>
-    var string = "0123456789abcdef"
-    var colorCode = '#'
-    var colorOpposite = '#'
+    function randColor() {
+      var string = "0123456789abcdef"
+      var colorCode = '#'
+      var colorOpposite = '#'
 
-    for (i=0; i<6; i++) {
-      var x = Math.floor(Math.random() * string.length)
-      var y = 15 - x
-      colorCode += string[x]
-      colorOpposite += string[y]
-      // console.log(colorCode, colorOpposite)
+      for (i=0; i<6; i++) {
+        var x = Math.floor(Math.random() * string.length)
+        var y = 15 - x
+        colorCode += string[x]
+        colorOpposite += string[y]
+        // console.log(colorCode, colorOpposite)
+      }
+
+      document.bgColor = colorCode
+      var code = document.getElementById("code")
+      code.innerHTML = '<div style="color:' + colorOpposite + '"><h2 style="' + colorOpposite + '">' + colorCode + '</h2><font size=1px>(text color: ' + colorOpposite + ')</font></div>'
     }
 
-    document.bgColor = colorCode
-    var code = document.getElementById("code")
-    code.innerHTML = '<div style="color:' + colorOpposite + '"><h2 style="' + colorOpposite + '">' + colorCode + '</h2><font size=1px>(text color: ' + colorOpposite + ')</font></div>'
+    function spaz() {
+      for (i=0;i<100;i++) {
+        setTimeout(randColor(), 10)
+      }
+    }
+
       // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
       // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
   </script>

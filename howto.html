@@ -130,6 +130,21 @@
     </div>
   </div>
 
+  <div class="containerRow" style="width:400px">
+    <div>
+      <center><button><a href="javascript:alert('Hello');" style="color:black;text-decoration:none;">click here to say hi</a></button><center>
+      <div id="imgbox1">
+        <button onclick="removeElement()">click here to remove this entirely</button>
+      </div>
+      <div id="imgbox2">
+        <button onclick="changeVisibility()">click here to be unable to see this</button>
+      </div>
+      <div>
+        <button onclick="resetElement()">click here to reset the above buttons</button>
+      </div>
+    </div>
+  </div>
+
   <div class="containerRow">
     <div class="child">
       <center>
@@ -158,8 +173,8 @@
       i am putting this here as a placeholder<br><br>
       something i need to learn DESPERATELY is flex, a css property(?)<br>
       also learn a better understanding of clean code<br><br>
-      margin = space outside a box<br>
-      padding = space inside a box<br><br>
+      padding = space inside a box<br>
+      margin = space outside a box<br><br>
       learn to use span instead of div<br>
       </center>
     </div>
@@ -178,5 +193,20 @@
     </div>
     links were being weird??? gonna learn and figure it out :|
   </div>
+
+
+
+  <script>
+  function removeElement() {
+    document.getElementById("imgbox1").style.display = "none";
+  }
+  function changeVisibility() {
+    document.getElementById("imgbox2").style.visibility = "hidden";
+  }
+  function resetElement() {
+    document.getElementById("imgbox1").style.display = "block";
+    document.getElementById("imgbox2").style.visibility = "visible";
+  }
+  </script>
 </body>
 </html>
