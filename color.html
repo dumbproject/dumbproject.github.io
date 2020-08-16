@@ -4,18 +4,29 @@
 <title>a random color</title>
 <!-- <META HTTP-EQUIV="refresh" CONTENT=".001"> -->
 <link rel="stylesheet" type="text/css" href=".\css\styles.css"></link>
+<style>
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
 </head>
 <body>
+  <div class="center">
+    <center>
+      <a href=".\home.html" style="background-color:white;padding:2px">home</a><br><br>
+      <button onclick="randColor()">random color please</button><br>
+      <!-- <button onclick="spaz()">spaz please</button><br> -->
+      <div id="code"></div>
+    </center>
+  </div>
 
-  <center>
-    <a href=".\home.html" style="background-color:white;padding:2px">home</a><br><br>
-    <button onclick="randColor()">random color please</button><br>
-    <button onclick="spaz()">spaz please</button><br>
-    <div id="code"></div>
-  </center>
-
-  <script src="autorefresh.js"></script>
-  <button id="spaz" onClick="refresh()">Refresh Page</button>
+  <!-- <script src="autorefresh.js"></script> -->
+  <!-- <button id="spaz" onClick="refresh()">Refresh Page</button> -->
 
   <script>
     function randColor() {
@@ -33,7 +44,7 @@
 
       document.bgColor = colorCode
       var code = document.getElementById("code")
-      code.innerHTML = '<div style="color:' + colorOpposite + '"><h2 style="' + colorOpposite + '">' + colorCode + '</h2><font size=1px>(text color: ' + colorOpposite + ')</font></div>'
+      code.innerHTML = '<div style="color:' + colorOpposite + '"><h2 style="' + colorOpposite + '">' + colorCode + '</h2><font size=3px>(text color: ' + colorOpposite + ')</font></div>'
     }
 
     function spaz() {

@@ -27,31 +27,91 @@
     <center>
       <a href=".\home.html" style="background-color:white;padding:2px">home</a><br><br>
       <button onclick="randGradient()">random gradient please</button><br>
+      <button onclick="randGradient2()">2 random gradients please</button><br>
+      <button onclick="randGradient3()">3 random gradients please</button><br>
       <div id="code"></div>
     </center>
   </div>
 
   <script>
-    function randGradient() {
-      var string = "0123456789abcdef"
-      var color1 = '#'
-      var color2 = '#'
-      var direction = Math.floor(Math.random() * 180)
-      // also to bottom, to left, to right, to top
+  function randGradient() {
+    var string = "0123456789abcdef"
+    var color1 = '#'
+    var color2 = '#'
+    var direction = Math.floor(Math.random() * 180)
+    var percent = Math.floor(Math.random() * 90) + 10
+    // also to bottom, to left, to right, to top
 
-      for (i=0; i<6; i++) {
-        var x = Math.floor(Math.random() * string.length)
-        var y = 15 - x
-        color1 += string[x]
-        color2 += string[y]
-        // console.log(colorCode, colorOpposite)
-      }
-
-      document.body.style.background = 'linear-gradient(' + direction + 'deg, ' + color1 + ' 0%, ' + color2 + ' 100%)'
-      var code = document.getElementById("code")
-      code.innerHTML = '<h2><span style="color:' + color1 + '">color1: ' + color1 + '</span><br><span style="color:' + color2 + '">color2: ' + color2 + '</span></h2>'
-      console.log(document.body.style.background)
+    for (i=0; i<6; i++) {
+      var x = Math.floor(Math.random() * string.length)
+      var y = 15 - x
+      color1 += string[x]
+      color2 += string[y]
+      // console.log(colorCode, colorOpposite)
     }
+
+    document.body.style.background = 'linear-gradient(' + direction + 'deg, ' + color1 + ' 0%, ' + color2 + ' ' + percent + '%)'
+    var code = document.getElementById("code")
+    code.innerHTML = '<h2><span style="color:' + color1 + '">color1: ' + color1 + '</span><br><span style="color:' + color2 + '">color2: ' + color2 + ' ' + percent + '%</span></h2>'
+    console.log(document.body.style.background)
+  }
+
+
+
+
+  function randGradient2() {
+    var string = "0123456789abcdef"
+    var color1 = '#'
+    var color2 = '#'
+    var color3 = '#'
+    var direction = Math.floor(Math.random() * 180)
+    // var percent = Math.floor(Math.random() * 90) + 10
+
+    for (i=0; i<6; i++) {
+      var x = Math.floor(Math.random() * string.length)
+      var y = Math.floor(Math.random() * string.length)
+      var z = Math.floor(Math.random() * string.length)
+      color1 += string[x]
+      color2 += string[y]
+      color3 += string[z]
+      console.log(color1, color2, color3)
+    }
+
+    document.body.style.background = 'linear-gradient(' + direction + 'deg, ' + color1 + ' 0%, ' + color2 + ' 50%, ' + color3 + ' 100%)'
+    var code = document.getElementById("code")
+    code.innerHTML = '<h2><span style="color:' + color1 + '">color1: ' + color1 + '</span><br><span style="color:' + color2 + '">color2: ' + color2 + '</span><br><span style="color:' + color3 + '">color3: ' + color3 + '</span></h2>'
+    console.log(document.body.style.background)
+  }
+
+
+
+
+  function randGradient3() {
+    var string = "0123456789abcdef"
+    var color1 = '#'
+    var color2 = '#'
+    var color3 = '#'
+    var color4 = '#'
+    var direction = Math.floor(Math.random() * 180)
+    // var percent = Math.floor(Math.random() * 90) + 10
+
+    for (i=0; i<6; i++) {
+      var w = Math.floor(Math.random() * string.length)
+      var x = Math.floor(Math.random() * string.length)
+      var y = Math.floor(Math.random() * string.length)
+      var z = Math.floor(Math.random() * string.length)
+      color1 += string[w]
+      color2 += string[x]
+      color3 += string[y]
+      color4 += string[z]
+      console.log(color1, color2, color3, color4)
+    }
+
+    document.body.style.background = 'linear-gradient(' + direction + 'deg, ' + color1 + ' 0%, ' + color2 + ' 33.3%, ' + color3 + ' 66.6%, ' + color4 + ' 100%)'
+    var code = document.getElementById("code")
+    code.innerHTML = '<h2><span style="color:' + color1 + '">color1: ' + color1 + '</span><br><span style="color:' + color2 + '">color2: ' + color2 + '</span><br><span style="color:' + color3 + '">color3: ' + color3 + '</span><br><span style="color:' + color4 + '">color3: ' + color4 + '</span></h2>'
+    console.log(document.body.style.background)
+  }
 
       // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
       // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
