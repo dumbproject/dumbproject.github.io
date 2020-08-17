@@ -8,3 +8,18 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.containerRow {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  /* width: 1000px; */
+  /* width: auto; */
+}
+.child {
+/* aka container column */
+  flex: 1;
+  /* border: 1px solid red; */
+  text-align: left;
+}
