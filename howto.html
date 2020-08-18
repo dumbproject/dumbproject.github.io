@@ -15,39 +15,31 @@
     background-color: black;
     color: lime;
     font-size: 20px;
-    /* font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0; */
-  }
-  header {
-    background-color: #c9f;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
   }
   .containerRow {
     border: 1px solid white;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* width: 1000px; */
-    /* width: auto; */
     margin: 10px auto;
     padding: 10px;
   }
+  .containerRow:hover {
+    background-color:white;
+    color:black;
+  }
   .child {
-  /* aka container column */
     border: 1px solid green;
+    background-color: black;
+    color: lime;
     padding: 10px;
     margin: 10px;
     flex: 1;
-    /* border: 1px solid red; */
     text-align: left;
   }
-  .wireframe {
-    border: 1px solid green;
+  .child:hover {
+    background-color:lime;
+    color:black;
   }
   .monospace {
     /* font-family: "Courier"; */
@@ -57,21 +49,21 @@
   .code {
     font-family: "Lucida Console";
     color: black;
-    border:none!important;
     background-color:#fff;
+    border:none!important;
     padding:5px!important;
-    display:inline-block;
+    margin:0;
     max-height:400px;
-    overflow-x:auto;
     max-width:600px;
-    margin:0
+    display:inline-block;
+    overflow-x:auto;
   }
   </style>
 </head>
 
 <body>
   <center><a href=".\home.html" style="color:fuchsia">home</a></center>
-  <div class="containerRow" style="width: 300px">
+  <div class="containerRow" style="width:300px;height:300px;border-radius:200px">
     <center><br>
     shit is <span style="color:red">easy af!!!!</span><br><br>
     you just gotta get the general<br>
