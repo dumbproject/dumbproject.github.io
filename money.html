@@ -9,28 +9,29 @@
     background: linear-gradient(red, black 100%)
   }
   body {
-    display:flex;
-    align-items:center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center;
+    vertical-align: middle
+    display: table-cell; */
   }
   .square {
-    text-align:center;
-    width:350px;
-    height:530px;
+    border: 2px solid black;
     background: linear-gradient(white, black 100%);
+    text-align: center;
+    width: 350px;
+    height: 530px;
   }
   .buttons {
     /* display: inline-block; */
-    margin: 4px;
-    /* padding: 100px; */
+    /* text-align: center; */
     border: 1px solid white;
     background-color: black;
     color: red;
-    text-align: center;
+    padding: 10px;
     font-size: 16px;
-    cursor: pointer;
-  }
-  .wireframe {
-    border: 2px solid black;
+    cursor: crosshair;
   }
   .invisible {
     display:none;
@@ -46,12 +47,11 @@
     <h1>this is how much money i make<br>at the rate that i make it</h1>
     i make $16.30 an hour<br><br>
 
-    <div class="square wireframe">
+    <div class="square">
       <br>
       i make <span style="background-color:white;color:black;padding:0px 0px 2px 0px">$</span><input type="number" id="rateInput" placeholder="0.00" style="width:50px"/> an hour<br><br>
       <button class="buttons" onClick="handleButtonClick(event)">clock in</button>
       <button class="buttons" onClick="stop()">clock out</button>
-      <!-- <button id="button" onClick="run()" class="button">click here to start my shift</button> -->
 
       <div id="paycheck" style="font-family:Courier;"></div>
       <script type="text/javascript" src=".\javascript\money.js"></script>
