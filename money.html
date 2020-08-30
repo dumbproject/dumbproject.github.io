@@ -1,31 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>this is how much money i make</title>
+  <!-- <meta charset="utf-8"> -->
+  <title>how much $$$ i make</title>
   <style>
+  html, body {
+    height: 100%;
+    background: linear-gradient(red, black 100%)
+  }
   body {
-    background-color: red;
+    display:flex;
+    align-items:center
   }
   .square {
     text-align:center;
     width:350px;
-    height:350px;
+    height:530px;
+    background: linear-gradient(white, black 100%);
   }
-  .button {
-    /* text-decoration: none; */
+  .buttons {
     /* display: inline-block; */
-    /* margin: 4px 2px; */
-    border: 0;
-    background-color: red;
-    color: black;
-    padding: 0;
+    margin: 4px;
+    /* padding: 100px; */
+    border: 1px solid white;
+    background-color: black;
+    color: red;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
   }
   .wireframe {
-    border: 200px solid black;
+    border: 2px solid black;
   }
   .invisible {
     display:none;
@@ -33,9 +38,7 @@
   </style>
 </head>
 
-
 <body>
-<!-- start of page -->
 <center>
   <a href=".\home.html">home</a>
 
@@ -44,9 +47,12 @@
     i make $16.30 an hour<br><br>
 
     <div class="square wireframe">
-      <input type="number" id="rateinput" placeholder="rate"/>
+      <br>
+      i make <span style="background-color:white;color:black;padding:0px 0px 2px 0px">$</span><input type="number" id="rateInput" placeholder="0.00" style="width:50px"/> an hour<br><br>
+      <button class="buttons" onClick="handleButtonClick(event)">clock in</button>
+      <button class="buttons" onClick="stop()">clock out</button>
+      <!-- <button id="button" onClick="run()" class="button">click here to start my shift</button> -->
 
-      <button id="button" onClick="run()" class="button">click here to start my shift</button>
       <div id="paycheck" style="font-family:Courier;"></div>
       <script type="text/javascript" src=".\javascript\money.js"></script>
       <br>

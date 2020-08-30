@@ -52,6 +52,7 @@
         <button onclick="randGradient2()">2 random gradients please</button><br>
         <button onclick="randGradient3()">3 random gradients please</button><br>
         <button onclick="randGradient4()">4 random gradients please</button><br>
+        <button onclick="randRadialGradient4()">4 random radial gradients please</button><br>
       </center>
     </div>
     <div class="child" style="width:200px; height:auto; border: 1px solid white">
@@ -191,6 +192,42 @@
 
     document.body.style.background = 'linear-gradient(' + direction + 'deg, ' +
                                                           color1 + ' 0%, ' +
+                                                          color2 + ' 25%, ' +
+                                                          color3 + ' 50%, ' +
+                                                          color4 + ' 75%, ' +
+                                                          color5 + ' 100%)'
+    var code = document.getElementById("code")
+    code.innerHTML = '<h2><span style="color:' + color1 + '">color1: ' + color1 +
+              '</span><br><span style="color:' + color2 + '">color2: ' + color2 +
+              '</span><br><span style="color:' + color3 + '">color3: ' + color3 +
+              '</span><br><span style="color:' + color4 + '">color4: ' + color4 +
+              '</span><br><span style="color:' + color5 + '">color5: ' + color5 + '</span></h2>'
+    console.log(document.body.style.background)
+  }
+  function randRadialGradient4() {
+    var string = "0123456789abcdef"
+    var color1 = '#'
+    var color2 = '#'
+    var color3 = '#'
+    var color4 = '#'
+    var color5 = '#'
+    // var direction = Math.floor(Math.random() * 180)
+
+    for (i=0; i<6; i++) {
+      var a = Math.floor(Math.random() * string.length)
+      var b = Math.floor(Math.random() * string.length)
+      var c = Math.floor(Math.random() * string.length)
+      var d = Math.floor(Math.random() * string.length)
+      var e = Math.floor(Math.random() * string.length)
+      color1 += string[a]
+      color2 += string[b]
+      color3 += string[c]
+      color4 += string[d]
+      color5 += string[e]
+      console.log(color1, color2, color3, color4, color5)
+    }
+
+    document.body.style.background = 'radial-gradient(' + color1 + ' 0%, ' +
                                                           color2 + ' 25%, ' +
                                                           color3 + ' 50%, ' +
                                                           color4 + ' 75%, ' +

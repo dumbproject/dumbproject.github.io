@@ -12,9 +12,8 @@
     /* width: auto; */
   }
   .child {
-  /* aka container column */
     flex: 1;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     text-align: left;
   }
   </style>
@@ -24,9 +23,9 @@
     <a href=".\home.html">home</a><br><br>
     i really need a place to put all my tabs,<br>
     so i'm creating a tab dump here<br><br>
-    youtube:
-    <div class="containerRow" style="background-color: black">
-      <div class="child">
+    <button onclick="showYoutube()">youtube:</button>
+    <div id="youtube" class="containerRow" style="background-color:black;">
+      <div class="child" style="width:560px">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/aq5xw4Qsy5M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Jj_E5UImoyo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Qa3k3z-31C8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -36,7 +35,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ittWA52LWZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/cnzICutH_sE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div class="child">
+      <div class="child" style="width:560px">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ihNEoJU1BJQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qAUjGyMVhqw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/yecFTeMVSlo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -46,7 +45,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/AAxm60KLhmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Gz_mUdc12h0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div class="child">
+      <div class="child" style="width:560px">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/gMEB4HNNZ2I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/zODNnOc4odQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/xgMD6efugcU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -65,5 +64,16 @@
     </video>
 
   </center>
+
+  <script>
+  function showYoutube() {
+    console.log(document.getElementById("youtube").style.display)
+    if (document.getElementById("youtube").style.display == "none") {
+      document.getElementById("youtube").style.display = "block"
+    } else if (document.getElementById("youtube").style.display == "block") {
+      document.getElementById("youtube").style.display = "none"
+    }
+  }
+  </script>
 </body>
 </html>
