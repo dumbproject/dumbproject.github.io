@@ -33,7 +33,7 @@ function count() {
   inputvalue = rate
   inputvalue = customRate
   var paycheck = document.getElementById('paycheck')
-  paycheck.innerHTML = '<br><span style="background-color:green;color:white;">$' +
+  paycheck.innerHTML = '<br><span style="background-color:green;color:white;font-size:25px;padding:5px;">$' +
                         profit.toFixed(2) + '</span><br><br>&nbsp;<span style="color:red;background-color:black;">' +
                         seconds.toFixed(2) + ' seconds</span><br>&nbsp;' +
                         minutes.toFixed(4) + ' minutes<br>&nbsp;' +
