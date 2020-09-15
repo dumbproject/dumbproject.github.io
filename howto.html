@@ -16,6 +16,9 @@
     color: lime;
     font-size: 20px;
   }
+  body a {
+    color: fuchsia;
+  }
   .containerRow {
     border: 1px solid white;
     display: flex;
@@ -58,20 +61,40 @@
     display:inline-block;
     overflow-x:auto;
   }
+
+
+  .pointerContainer {
+    color: black;
+    text-align: center;
+    display: table-row;
+    margin: 20px
+  }
+  .pointerContainer p {
+    border: 1px solid black;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    display: table-cell;
+    align-items: center;
+    vertical-align: middle
+  }
+
   </style>
 </head>
 
 <body>
-  <center><a href=".\home.html" style="color:fuchsia">home</a></center>
+  <center><a href=".\home.html">home</a></center>
   <div class="containerRow" style="width:300px;height:300px;border-radius:200px">
     <center><br>
-    shit is <span style="color:red">easy af!!!!</span><br><br>
+    shit is <span style="color:red">easy af!!!!</span>
+    <br><br>
     you just gotta get the general<br>
-    idea of what the sections are<br><br>
+    idea of what the sections are<br>
+    <br>
     and after THAT you can learn<br>
     how to make it look pretty or<br>
     literally legible at all<br>
-    (very much unlike my site)<br><br>
+    (very much unlike my site)
     </center>
   </div>
 
@@ -80,8 +103,8 @@
       <p>how i made this website
       </p>
       <ol>
-        <li>create a <a href="https://github.com/" style="color:fuchsia">github</a> account</li>
-        <li>install <a href="https://git-scm.com/" style="color:fuchsia">git</a></li>
+        <li>create a <a href="https://github.com/">github</a> account</li>
+        <li>install <a href="https://git-scm.com/">git</a></li>
         <li>make a folder for this project, open the folder in cmd/terminal, and type <span class="code">git init</span></li>
         <li>make a text file, save it as index.html</li>
         <li>open the project folder in terminal/cmd</li>
@@ -116,7 +139,7 @@
           &lt;/body&gt;<br>
           &lt;/html&gt;
         </span>
-        <br><a href=".\example.html" style="color:fuchsia">view the example here</a>
+        <br><a href=".\example.html">view the example here</a>
         <br>note to self: don't forget to copy and paste this into example.html
       </div>
     </div>
@@ -151,7 +174,7 @@
       <center><div style="border: 1px solid blue; padding: 5px; width: 300px">
         <center>special characters in html<br>are used like this:<br>
         <span style="border:1px solid white;padding:3px"><b>&</b><i>[character code]</i><b>;</b></span><br>
-        <a href="https://www.ascii-code.com/" style="color:fuchsia">list of ascii character codes</a></center><br>
+        <a href="https://www.ascii-code.com/">list of ascii character codes</a></center><br>
         < = &amp;lt;<br>
         > = &amp;gt;<br>
         ' ' = &amp;nbsp;<br>
@@ -168,6 +191,7 @@
       padding = space inside a box<br>
       margin = space outside a box<br><br>
       learn to use span instead of div<br>
+      <a href="https://www.w3.org/Style/Examples/007/center.en.html">centering things</a>
       </center>
     </div>
   </div>
@@ -175,17 +199,57 @@
   <div class="containerRow">
     <div class="child">
       <center>
-        this was useful for learning git: <a href="https://rogerdudler.github.io/git-guide/" style="color:fuchsia">git - the simple guide - no deep shit!</a><br>
+        this was useful for learning git: <a href="https://rogerdudler.github.io/git-guide/">git - the simple guide - no deep shit!</a><br>
       </center>
     </div>
     <div class="child">
       <center>
-        i use <a href="https://w3schools.com/" style="color:fuchsia">w3schools.com</a> a lot to understand tags for html better<br><br>
+        i use <a href="https://w3schools.com/">w3schools.com</a> a lot to understand tags for html better<br><br>
       </center>
     </div>
     links were being weird??? gonna learn and figure it out :|
   </div>
 
+  <!-- html color codes -->
+  <div class="containerRow">
+    <div class="child">
+
+      <div class="monospace wireframe" style="background-color:white; width:300px; height:150px">
+        <center style="background-color:teal">color codes for html</center>
+        <div class="containerRow">
+          <div class="child">
+            <span style="color:white;background-color:black;">#FFFFFF white</span>
+            <br><span style="color:silver;">#C0C0C0 silver</span>
+            <br><span style="color:gray;">#808080 gray</span>
+            <br><span style="color:black;">#000000 black</span>
+
+            <br><span style="color:red;">#FF0000 red</span>
+            <br><span style="color:blue;">#0000FF blue</span>
+            <br><span style="color:green;">#008000 green</span>
+            <br><span style="color:yellow;background-color:gray">#FFFF00 yellow</span>
+          </div>
+          <div class="child">
+            <span style="color:aqua;">#00FFFF aqua</span>
+            <br><span style="color:lime;">#00FF00 lime</span>
+            <br><span style="color:fuchsia;">#FF00FF fuchsia</span>
+            <br><span style="color:purple;">#800080 purple</span>
+
+            <br><span style="color:maroon;">#800000 maroon</span>
+            <br><span style="color:teal;">#008080 teal</span>
+            <br><span style="color:navy;">#000080 navy</span>
+            <br><span style="color:olive;">#808000 olive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="child">
+      <div class="pointerContainer">
+        <p style="cursor:wait;background-color:aqua">come over here to<br>turn into a circle<br>of pain</p>
+        <p style="cursor:crosshair;background-color:red">aim at me<br><br>o<br>/|\<br>/\</p>
+      </div>
+    </div>
+
+  </div>
 
 
   <script>

@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+  <title>services</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+  body {
+    text-align: center;
+    vertical-align: center;
+  }
+  a {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    border: 1px solid black;
+    padding: 50px;
+  }
+  #box.wide {
+    transition: all .5s;
+    transition-delay: 1s;
+    width: 300px;
+  }
+  button {
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <a href=".\home.html">home</a>
+  <br><br>
+
+  <div id="box">
+    hello yes i offer Services
+    <br><br>
+    <button onClick="notify()">click here to notify me of<br>your need for assistance</button>
+  </div>
+
+  <script>
+  function notify() {
+    alert("\nNotified\n\nI am en route to your location.");
+  }
+  document.getElementById('box').classList.add('wide')
+  </script>
+</body>
+</html>

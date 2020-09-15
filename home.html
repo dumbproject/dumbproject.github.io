@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>thanks for stopping by</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="css/app.css"> -->
+
   <link rel="icon" type="image/png" sizes="16x16" href=".\favicon-16x16.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>thanks for stopping by</title>
   <style>
   * {
     box-sizing: border-box;
@@ -15,296 +16,236 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 5px;
-    padding: 5px;
-    background-color: white;
+    /* background-color: white; */
+    background-color: black;
+    padding: 0;
+    margin: 0;
   }
-  a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  a:active {
-    text-decoration: underline;
-  }
-  /* header {
-    background-color: #c9f;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
+
+  /* div {
+    border: 3px solid black;
   } */
-  .containerRow {
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    /* width: 1000px; */
-    /* width: auto; */
+
+  .todo {
+    width: 500px;
   }
-  .child {
-  /* aka container column */
-    flex: 1;
-    /* border: 1px solid red; */
-    text-align: left;
+  .lists {
+    padding: 10px;
   }
-  .wireframe {
-    border: 1px solid green;
+
+
+
+  .navbar {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    background-color: #0ff;
+    /* opacity: 50%; */
   }
-  .center {
-    text-align: center;
+
+
+
+    /* The side navigation menu */
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
-  .right {
-    text-align: right;
-  }
-  .monospace {
-    /* font-family: "Courier"; */
-    font-family: "Lucida Console";
-  }
-  .hiddentext {
-    display: none;
-  }
-  .tableofcontents {
-    text-align:left;
-    width:400px;
-  }
-  .tableofcontents a {
-    color: #000
+  .sidenav a {
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
+    /* text-shadow: 1px 1px darkgray; */
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
   }
-  .tableofcontents a:hover {
-    text-decoration: underline;
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #000000;
   }
-  .purple {
-    color: purple;
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
   }
-  #green {
-    background-color: green;
+
+  #main {
+    /* transition: margin-left .5s; */
+    background-color: white;
+    transition: all .5s;
+    padding: 20px;
+    padding-top: 70px;
+    opacity: 1;
   }
-  #red {
-    background-color: red;
+  #main.dim {
+    opacity: 0.2;
+    background-color: black;
+
   }
-  .pointerContainer {
-    display: table-row;
-    margin: 20px
+
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 950px) {
+    .sidenav {padding-top: 15px;font-size:10px}
+    .sidenav a {font-size: 18px;}
   }
-  .pointerContainer p {
-    border:1px solid black;
-    margin: 20px;
-    width:200px;
-    height:200px;
-    display: table-cell;
-    align-items: center;
-    vertical-align: middle
+  @media screen and (max-width: 414px) {
   }
   </style>
 </head>
 <body>
-  <!-- top of site -->
-  <div class="containerRow" style="background-color:gray">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href=".\about.html">About</a>
+    <a href=".\services.html">Services</a>
+    <a href=".\clients.html">Clients</a>
+    <a href=".\contact.html">Contact</a>
+    <br><br><br><br>
+    <span style="color:white">links:</span><br><br>
+    <a href=".\selfhelp.html" style="background-color:fuchsia;color:black">self help checklist!!!</a>
+    <a href=".\alarm.html" style="background-color:black;color:red">me when i wake up</a>
+    <a href=".\money.html" style="background-color:red;color:black">hourly rate of death</a>
+    <a href=".\iching.html" style="background-color:white;color:black">☯ i ching hex generator ☯</a>
+    <a href=".\mood.html" style="background-color:black;color:fuchsia">✰ moodboard ✰</a>
+    <a href=".\color.html" style="background-color:pink;color:purple">a random color</a>
+    <a href=".\gradient.html" style="background-color:hotpink">a random gradient</a>
+    <a href=".\purple.html" style="background-color:#7d26cd;color:black">purple.com dedication page</a>
+    <!-- <a href=".\goodpictures.html">some good pictures</a> (delete/revise this) -->
+    <a href=".\movies.html" style="background-color:aqua;color:blue">movies i think are good</a>
+    <a href=".\wishlist.html" style="background-color:lime;color:green">things i need to buy</a>
+    <a href=".\tabs.html" style="background-color:silver;color:gray">tabs</a>
+    <a href=".\howto.html" style="background-color:black;color:lime">how to make this</a>
+    <!-- <a href=".\about.html" style="background-color:black;color:white">about</a> -->
+  </div>
 
-    <!-- table of contents -->
-    <div class="tableofcontents" style="background-color:teal;padding:5px">
-      table of contents <span style="color:grey">or index or whatever</span><br>
-      <ul>
-        <li><a href=".\selfhelp.html" style="background-color:fuchsia;color:black">self help checklist!!!</a></li>
-        <li><a href=".\alarm.html" style="background-color:black;color:red">me when i wake up every day</a></li>
-        <li><a href=".\money.html" style="background-color:red;color:black">hourly rate of death</a></li>
-        <li><a href=".\iching.html" style="background-color:white;color:black">☯ i ching hex generator ☯</a></li>
-        <li><a href=".\mood.html" style="background-color:black;color:fuchsia">✰ moodboard ✰</a></li>
-        <li><a href=".\color.html" style="background-color:pink;color:purple">a random color</a></li>
-        <li><a href=".\gradient.html" style="background-color:hotpink">a random gradient</a></li>
-        <li><a href=".\purple.html" style="background-color:#7d26cd;color:black">purple.com dedication page</a></li>
-        <li><a href=".\goodpictures.html">some good pictures</a> (delete/revise this)</li>
-        <li><a href=".\movies.html" style="background-color:aqua;color:blue">movies i think are good</a></li>
-        <li><a href=".\wishlist.html" style="background-color:lime;color:green">things i need to buy</a></li>
-        <li><a href=".\tabs.html" style="background-color:silver;color:gray">tabs to lift off my computer</a></li>
-        <li><a href=".\howto.html" style="background-color:black;color:lime">how to make this</a></li>
-        <li><a href=".\about.html" style="background-color:black;color:white">about</a></li>
-      </ul>
-    </div>
+  <div class="navbar" style="text-align: left; padding-left: 20px;">
+    <br><span onclick="openNav()">☰ Menu</span>
+  </div>
 
-    <!-- opening thesis -->
-    <div class="pointerContainer">
-      <p style="cursor:wait;background-color:aqua">come over here to<br>turn into a circle<br>of pain</p>
-      <p style="cursor:crosshair;background-color:red">aim at me<br><br>o<br>/|\<br>/\</p>
-    </div>
+  <div id="main">
 
-    <div class="containerRow" style="width:auto;height:auto;background-color:yellow">
-
-      <h1><br>sup mf</h1>
-
-      <div class="purple" style="width:auto;">
-        <h2><br>i'm makin this shit look ugly af<br>and it's taking too long to fix</h2>
+    <!-- title -->
+    <div class="containerRow" style="background-color:gray">
+      <div class="child" style="max-width: 600px; padding: 5px; height: auto; background-color: maroon">
+        <h1><br>sup mf<br>i'm changing this shit a lot</h1>
+        <!-- <h2>i'm makin this shit look ugly af<br>and it's taking too long to fix</h2> -->
       </div>
 
-      <!-- the date -->
+      <span id="time" style="padding: 40px;"></span>
+
+
       <div class="monospace" style="border:1px solid black">
-        <br>august&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2020
+        <br>september &nbsp; &nbsp; &nbsp; 2020
         <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
-        <br><strike><span style="color:gray">26&nbsp;27&nbsp;28&nbsp;29&nbsp;30&nbsp;31</span>&nbsp; 1</strike>
-        <br><strike>&nbsp;2&nbsp; 3&nbsp; 4&nbsp; 5&nbsp; 6&nbsp; 7&nbsp; 8</strike>
-        <br><strike>&nbsp;9&nbsp;10&nbsp;11&nbsp;12&nbsp;13&nbsp;14&nbsp;15</strike>
-        <br><strike>16&nbsp;17&nbsp;18&nbsp;19&nbsp;20&nbsp;21&nbsp;22</strike>
-        <br><strike>23&nbsp;24&nbsp;25&nbsp;26&nbsp;27&nbsp;28&nbsp;29</strike>
-        <br>30&nbsp;31&nbsp;<span style="color:gray"> 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5</span>
+        <br><strike><span style="color:gray">30&nbsp;31</span>&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5</strike>
+        <br><strike>&nbsp;6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp; 6&nbsp;10&nbsp;11</strike>
+        <br><strike>12&nbsp;13</strike>&nbsp;14&nbsp;15&nbsp;16&nbsp;17&nbsp;18
         <br><br>this is not useful<br>or well made<br><br>please fix it or<br>make it stop
       </div>
+    <!-- end title -->
     </div>
 
-  </div>
+    <!-- <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br><font color="red">still haven't put some mf shit here</font></h6> -->
+
+    <br>
+
+    <!-- start of page content -->
+    <div class="containerRow" style="padding: 5px; background-color:blue">
+
+      <!-- to do -->
+      <div class="child todo">
+        <div style="text-align: center; background-color:red">
+          to do list:
+        </div>
+        <div class="lists" style="background-color:purple">
+          for myself:
+          <ul>
+            <li>fix my resume</li>
+            <li><strike>fix my bike</strike> FIXED</li>
+            <li>fix my <strike>life</strike> eating habits and eat more</li>
+            <li>get a new laptop battery</li>
+            <li>get a new passport</li>
+            <li>post my ssn online</li>
+          </ul>
+        </div>
+        <div class="lists" style="background-color:beige">
+          for the site:
+          <ul>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" style="background-color:red">L E A R N ! F L E X ! W T F !</a></li>
+            <li>add more color codes tbh</li>
+            <li>make fake gif ads for my site</li>
+            <li>change site name</li>
+            <li>add interests, knowledge, updates</li>
+            <li>schedule?</li>
+            <li>how far am i trying to go with this</li>
+            <li>IMPORTANT PEOPLE</li>
+          </ul>
+        </div>
+      </div>
 
 
-  <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br><font color="red">still haven't put some mf shit here</font></h6>
-
-
-  <!-- picture, revolvermaps -->
-  <div class="containerRow" style="background-color:maroon">
-
-    <div style="padding-top:35px">
-      <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260" height="260" />
+    <!-- end page content -->
     </div>
 
-    <!-- dumb picture -->
-    <center><img src="intro.png" width="500" height="323" /></center>
-    <!-- <center><img src="intro.png" width="auto" height="auto" /></center> -->
+    <br>
 
-    <!-- earth thing -->
-    <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
-    <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
+    <!-- earth and picture -->
+    <div class="containerRow" style="background-color:maroon">
+      <div style="padding-top:35px">
+        <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260" height="260" />
+      </div>
+      <center><img src="intro.png" width="500px" height="323px" /></center>
+      <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
+      <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
+    </div>
 
-  </div>
+    <br>
 
-
-  <!-- start of page content -->
-  <div class="containerRow" style="background-color:blue">
-
-    <div class="child">
+    <!-- bottom of page -->
+    <footer>
       <div class="containerRow">
-
-        <!-- to do -->
-        <div class="child" style="width:340px">
-          <div style="background-color:red">
-            <center>to do list:</center>
-          </div>
-          <div class="wireframe" style="background-color:hotpink">
-            <br>for myself:
-            <ul>
-              <li>fix my resume</li>
-              <li><strike>fix my bike</strike> FIXED</li>
-              <li>fix my <strike>life</strike> eating habits and eat more</li>
-              <li>get a new laptop battery</li>
-              <li>get a new passport</li>
-              <li>post my ssn online</li>
-            </ul>
-
-            </div>
-            <div class="wireframe" style="background-color:beige">
-              <br>for the site:
-              <ul>
-                <li>add more color codes tbh</li>
-                <li>make fake gif ads for my site</li>
-                <li>change site name</li>
-                <li>add interests, knowledge, updates</li>
-                <li>schedule?</li>
-                <li>how far am i trying to go with this</li>
-                <li>IMPORTANT PEOPLE</li>
-              </ul>
-            </div>
-        </div>
-
-<!-- html color codes -->
-        <div class="monospace wireframe" style="background-color:white; width:300px; height:150px">
-          <center style="background-color:teal">color codes for html</center>
-          <div class="containerRow">
-            <div>
-              <span style="color:white;background-color:black;">#FFFFFF white</span>
-              <br><span style="color:silver;">#C0C0C0 silver</span>
-              <br><span style="color:gray;">#808080 gray</span>
-              <br><span style="color:black;">#000000 black</span>
-
-              <br><span style="color:red;">#FF0000 red</span>
-              <br><span style="color:blue;">#0000FF blue</span>
-              <br><span style="color:green;">#008000 green</span>
-              <br><span style="color:yellow;background-color:gray">#FFFF00 yellow</span>
-            </div>
-            <div>
-              <span style="color:aqua;">#00FFFF aqua</span>
-              <br><span style="color:lime;">#00FF00 lime</span>
-              <br><span style="color:fuchsia;">#FF00FF fuchsia</span>
-              <br><span style="color:purple;">#800080 purple</span>
-
-              <br><span style="color:maroon;">#800000 maroon</span>
-              <br><span style="color:teal;">#008080 teal</span>
-              <br><span style="color:navy;">#000080 navy</span>
-              <br><span style="color:olive;">#808000 olive</span>
-            </div>
-          </div>
-        </div>
-
+        <div class="child" style="background-color:green">sup</div>
+        <div class="child" style="background-color:red">mufucka</div>
       </div>
+    </footer>
 
-<!-- good sites -->
-      <div class="containerRow wireframe" style="background-color:aqua">
-        <div class="child wireframe">
-          <p>
-            <center>good sites:</Center>
-            <ul>
-              <li><a href="http://radio.garden/" target="_blank">radio.garden</a><br><i>worldwide radio</i></li><br>
-              <li><a href="https://vimm.net/" target="_blank">vimm.net</a><br><i>every single video game before 2006 for free</i></li><br>
-              <li><a href="http://submarinecablemap.com/" target="_blank">submarinecablemap.com</a><br><i>how you connect to websites overseas</i></li><br>
-              <li><a href="http://sometimesredsometimesblue.com/" target="_blank">sometimesredsometimesblue.com</a><br><i>very important</i></li><br>
-              <li><a href="http://zombo.com/" target="_blank">zombo.com</a><br><i>even more important</i></li><br>
-              <li><a href="http://thispersondoesnotexist.com/" target="_blank">thispersondoesnotexist.com</a><br><i>pictures of my friends</i></li><br>
-              <li><a href="http://thiscatdoesnotexist.com/" target="_blank">thiscatdoesnotexist.com</a><br><i>my pets</i></li><br>
-              <li><a href="http://thiswaifudoesnotexist.net/" target="_blank">thiswaifudoesnotexist.com</a><br><i>ai continued</i></li><br>
-              <li><a href="http://omegle.com/" target="_blank">omegle.com</a><br><i>a site to talk to usually terrible people</i></li><br>
-              <li><a href="https://www.marinetraffic.com/" target="_blank">marinetraffic.com</a><br><i>all the boats in the world right now</i></li><br>
-              <li><a href="https://www.flightradar24.com/" target="_blank">flightradar24.com</a><br><i>all the aircraft in the world right now</i></li><br>
-            </ul>
-          </p>
-        </div>
-        <div class="child wireframe" style="background-color:teal">
-          <p>
-            <center>sites i use a lot<center><br><br>
-            <a href="https://www.whosampled.com/" target="_blank">whosampled.com</a><br><br>
-            <a href="https://genius.com/" target="_blank">genius.com</a><br><br>
-            <a href="https://www.discogs.com/" target="_blank">discogs.com</a><br><br>
-            <a href="https://ezstems.com/" target="_blank">ezstems.com</a><br><br>
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-<!-- MACHINE GIRL -->
-    <div class="child right" style="background-image: url('https://f4.bcbits.com/img/a1638146004_10.jpg'); background-size:contain; background-color:green">
-      <a href="https://machinegirl.bandcamp.com/" style="color:red"><font size=16>MACHINE GIRL</font></a>
-
-      <center>
-      <div class="containerRow">
-        <!-- <iframe style="border: 0; width: 170px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe> -->
-        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1316924830/size=large/bgcol=333333/linkcol=e32c14/transparent=true/" seamless><a href="http://dredcollective.bandcamp.com/album/machine-girl-grlpwr-ep">GRLPWR EP by Machine Girl</a></iframe>
-        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=268484338/size=large/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/wlfgrl">WLFGRL+ by Machine Girl</a></iframe>
-        <iframe style="border: 0; width: 350px; height: 720px;" src="https://bandcamp.com/EmbeddedPlayer/album=1401193641/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="http://machinegirl.bandcamp.com/album/gemini">Gemini by Machine Girl</a></iframe>
-      </div>
-      </center>
-    </div>
+  <!-- end #main div -->
   </div>
 
-<!-- bottom of page -->
-  <div class="containerRow">
-    <div class="child" id="green">sup</div>
-    <div class="child" id="red">mufucka</div>
-    <div class="child" id="red"><a href="dream.html" style="color:red">psst</a></div>
-    <!-- <div class="child hiddentext"><a href="dream.html">psst</a></div> -->
-  </div>
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("main").classList.add('dim');
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("main").classList.remove('dim');
+    document.body.style.backgroundColor = "white";
+  }
+
+  var today = new Date();
+  document.getElementById('time').innerHTML = today.getDate() + '/' + today.getMonth() + '/' + today.getFullYear() + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + '<br>OOF fix this';
+
+  </script>
 
 </body>
 </html>
