@@ -1,19 +1,20 @@
-<!-- random color -->
 <!doctype html>
 <head>
-<title>a random color</title>
-<!-- <META HTTP-EQUIV="refresh" CONTENT=".001"> -->
-<link rel="stylesheet" type="text/css" href=".\css\styles.css"></link>
-<style>
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>a random color</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <META HTTP-EQUIV="refresh" CONTENT=".001"> -->
+  <style>
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  </style>
 </head>
 <body>
   <div class="center">
@@ -41,7 +42,6 @@
         colorOpposite += string[y]
         // console.log(colorCode, colorOpposite)
       }
-
       document.bgColor = colorCode
       var code = document.getElementById("code")
       code.innerHTML = '<div style="color:' + colorOpposite + '"><h2 style="' + colorOpposite + '">' + colorCode + '</h2><font size=3px>(text color: ' + colorOpposite + ')</font></div>'
@@ -52,7 +52,6 @@
         setTimeout(randColor(), 10)
       }
     }
-
       // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
       // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
   </script>

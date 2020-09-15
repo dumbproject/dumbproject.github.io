@@ -1,7 +1,10 @@
 <!doctype html>
 <head>
-<title>my i ching project</title>
-<style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>my i ching project</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
   body {
     padding: 0;
     margin: 0;
@@ -20,14 +23,18 @@
     width: 400px;
     height: 200px;
   }
-</style>
+  #output {
+    color: white;
+    font-family: Courier;
+  }
+  </style>
 </head>
 <body>
   <center>
   <a href=".\home.html" style="background-color:black;color:white;opacity:0.8;padding:5px">home</a>
   <div class="iching" style="background-color:black;opacity:0.8;width:400px;height:170px">
     <center><button onClick="run()" style="color:black">i ching</button></center>
-    <center><div id="output" style="color:white;font-family:Courier"></div></center>
+    <center><div id="output"></div></center>
     <script type="text/javascript" src="./javascript/iching.js"></script>
   </div>
   </center>

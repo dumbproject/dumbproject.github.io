@@ -1,15 +1,20 @@
 <!doctype html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>services</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
   body {
     text-align: center;
     vertical-align: center;
   }
   a {
+    /* border: 1px solid black; */
+    background-color: black;
+    padding: 5px;
     position: absolute;
-    top: 35%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -25,7 +30,7 @@
   #box.wide {
     transition: all .5s;
     transition-delay: 1s;
-    width: 300px;
+    width: 250px;
   }
   button {
     padding: 10px;
@@ -39,12 +44,12 @@
   <div id="box">
     hello yes i offer Services
     <br><br>
-    <button onClick="notify()">click here to notify me of<br>your need for assistance</button>
+    <button onClick="notify()">click here to notify me of<br>your request for service</button>
   </div>
 
   <script>
   function notify() {
-    alert("\nNotified\n\nI am en route to your location.");
+    alert("\nNotified, I am en route to your location.");
   }
   document.getElementById('box').classList.add('wide')
   </script>

@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>thanks for stopping by</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/png" sizes="16x16" href=".\favicon-16x16.png">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>thanks for stopping by</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
   * {
     box-sizing: border-box;
@@ -22,15 +22,16 @@
     margin: 0;
   }
 
-  /* div {
+  div {
     border: 3px solid black;
-  } */
+  }
 
   .todo {
-    width: 500px;
+
   }
   .lists {
     padding: 10px;
+    text-align: left;
   }
 
 
@@ -41,26 +42,25 @@
     position: fixed;
     z-index: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
     top: 0;
     left: 0;
-    background-color: #0ff;
+    background-color: black;
+    color: white;
     /* opacity: 50%; */
   }
 
-
-
-    /* The side navigation menu */
   .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: #111;
+    overflow-x: hidden;
     padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    transition: 0.5s;
   }
   .sidenav a {
     padding: 8px 8px 8px 8px;
@@ -95,17 +95,30 @@
   #main.dim {
     opacity: 0.2;
     background-color: black;
-
   }
 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    /* flex: 1; */
+  }
 
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 950px) {
-    .sidenav {padding-top: 15px;font-size:10px}
-    .sidenav a {font-size: 18px;}
+  h1, h2, h3, h4, h5, h6 {
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  @media screen and (max-width: 414px) {
+
+  @media screen and (max-width: 375px) {
+    body {
+      font-size: 17px;
+    }
+    /* .todo {
+      font-size: 17px;
+    } */
   }
+
   </style>
 </head>
 <body>
@@ -115,41 +128,56 @@
     <a href=".\services.html">Services</a>
     <a href=".\clients.html">Clients</a>
     <a href=".\contact.html">Contact</a>
-    <br><br><br><br>
-    <span style="color:white">links:</span><br><br>
+    <br><br>
+    <span style="color:white">links:</span>
+    <br><br>
     <a href=".\selfhelp.html" style="background-color:fuchsia;color:black">self help checklist!!!</a>
-    <a href=".\alarm.html" style="background-color:black;color:red">me when i wake up</a>
     <a href=".\money.html" style="background-color:red;color:black">hourly rate of death</a>
-    <a href=".\iching.html" style="background-color:white;color:black">☯ i ching hex generator ☯</a>
+    <a href=".\alarm.html" style="background-color:black;color:red">me when i wake up</a>
     <a href=".\mood.html" style="background-color:black;color:fuchsia">✰ moodboard ✰</a>
     <a href=".\color.html" style="background-color:pink;color:purple">a random color</a>
     <a href=".\gradient.html" style="background-color:hotpink">a random gradient</a>
-    <a href=".\purple.html" style="background-color:#7d26cd;color:black">purple.com dedication page</a>
+    <a href=".\iching.html" style="background-color:white;color:black">☯ i ching hex generator ☯</a>
+    <a href=".\purple.html" style="background-color:#7d26cd;color:black">purple.com clone</a>
+    <a href=".\mg.html" style="background-color:lime;color:black"><3 mg dedication page <3</a>
     <!-- <a href=".\goodpictures.html">some good pictures</a> (delete/revise this) -->
     <a href=".\movies.html" style="background-color:aqua;color:blue">movies i think are good</a>
-    <a href=".\wishlist.html" style="background-color:lime;color:green">things i need to buy</a>
+    <a href=".\wishlist.html" style="background-color:lime;color:green">things i need to buy :|</a>
     <a href=".\tabs.html" style="background-color:silver;color:gray">tabs</a>
     <a href=".\howto.html" style="background-color:black;color:lime">how to make this</a>
     <!-- <a href=".\about.html" style="background-color:black;color:white">about</a> -->
+
+    <!-- <a href=".\health.html" style="background-color:black;color:white">health</a>
+    <a href=".\install.html" style="background-color:black;color:white">install</a>
+    <a href=".\music.html" style="background-color:black;color:white">music</a>
+    <a href=".\notes.html" style="background-color:black;color:white">notes</a> -->
   </div>
 
-  <div class="navbar" style="text-align: left; padding-left: 20px;">
-    <br><span onclick="openNav()">☰ Menu</span>
+  <div class="navbar" onclick="openNav()" style="text-align: left; padding-left: 20px;">
+    <br>☰ Menu
+    <div class="right" style="font-size: 12px; padding-right: 20px; margin-top: -29px;">
+      Window height: <span id="height"></span>
+      <br>
+      Window width: <span id="width"></span>
+    </div>
   </div>
 
   <div id="main">
-
     <!-- title -->
-    <div class="containerRow" style="background-color:gray">
-      <div class="child" style="max-width: 600px; padding: 5px; height: auto; background-color: maroon">
-        <h1><br>sup mf<br>i'm changing this shit a lot</h1>
-        <!-- <h2>i'm makin this shit look ugly af<br>and it's taking too long to fix</h2> -->
+    <div style="display: flex; flex-wrap: wrap; background-color:gray">
+      <div class="" style="flex: 1; min-width: 300px; padding: 10px; height: auto; background-color: maroon">
+        <h1>sup mf<br>i'm changing this shit a lot</h1>
+        <h2>i'm makin this shit look ugly af<br>and it's taking too long to fix</h2>
+        <h3>but also welcome to my site<br>i hope to make it very cool in the future</h3>
+        <h4>i will add comments one day if anyone has something nice to say<br>i think that would be cool</h4>
+        <h5>hope u like it here</h5>
+        <h6>bc i'm enjoying making it</h6>
       </div>
 
-      <span id="time" style="padding: 40px;"></span>
+      <div id="time" class="" style="flex: 1; min-width: 40px; padding: 40px; background-color: cyan;"></div>
 
 
-      <div class="monospace" style="border:1px solid black">
+      <div class=" monospace" style="flex: 1; border:1px solid black; background-color: yellow;">
         <br>september &nbsp; &nbsp; &nbsp; 2020
         <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
         <br><strike><span style="color:gray">30&nbsp;31</span>&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5</strike>
@@ -163,9 +191,8 @@
     <!-- <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br><font color="red">still haven't put some mf shit here</font></h6> -->
 
     <br>
-
     <!-- start of page content -->
-    <div class="containerRow" style="padding: 5px; background-color:blue">
+    <div class="containerRow" style="display: flex; flex-wrap: wrap; padding: 5px; background-color:hotpink">
 
       <!-- to do -->
       <div class="child todo">
@@ -198,6 +225,10 @@
         </div>
       </div>
 
+      <div class="wireframe" style="flex:3"></div>
+      <div class="wireframe" style="flex:1"></div>
+
+
 
     <!-- end page content -->
     </div>
@@ -205,12 +236,12 @@
     <br>
 
     <!-- earth and picture -->
-    <div class="containerRow" style="background-color:maroon">
-      <div style="padding-top:35px">
+    <div class="containerRow" style="display: flex; flex-wrap: wrap; background-color:maroon">
+      <div style="flex: 1; padding-top:35px">
         <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260" height="260" />
       </div>
-      <center><img src="intro.png" width="500px" height="323px" /></center>
-      <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
+      <center><img src="intro.png" style="flex: 1; height: 100%; width: 100%; object-fit: contain;" /></center>
+      <iframe style="flex: 1; background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
       <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
     </div>
 
@@ -220,12 +251,15 @@
     <footer>
       <div class="containerRow">
         <div class="child" style="background-color:green">sup</div>
+        <span style="margin: 0 20px 0 20px">Copyright (c) 1996 Copyright Holder All Rights Reserved.</span>
         <div class="child" style="background-color:red">mufucka</div>
       </div>
     </footer>
 
   <!-- end #main div -->
   </div>
+
+
 
   <script>
   function openNav() {
@@ -245,7 +279,24 @@
   var today = new Date();
   document.getElementById('time').innerHTML = today.getDate() + '/' + today.getMonth() + '/' + today.getFullYear() + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + '<br>OOF fix this';
 
-  </script>
 
+
+
+
+  const heightOutput = document.querySelector('#height');
+  const widthOutput = document.querySelector('#width');
+
+  function reportWindowSize() {
+    heightOutput.textContent = window.innerHeight;
+    widthOutput.textContent = window.innerWidth;
+  }
+
+  window.onresize = reportWindowSize;
+  reportWindowSize()
+
+
+  console.log(window.localStorage)
+
+  </script>
 </body>
 </html>

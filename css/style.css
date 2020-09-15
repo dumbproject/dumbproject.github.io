@@ -1,10 +1,12 @@
 body {
+  height: 100%;
   /* font-family: "Courier"; */
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
+  color: green;
 }
 a:link {
   text-decoration: none;
@@ -18,7 +20,9 @@ a:hover {
 a:visited {
   text-decoration: none;
 }
-
+h1, h2, h3, h4, h5, h6 {
+  font-size: 17px;
+}
 
 .containerRow {
   display: flex;
@@ -30,22 +34,6 @@ a:visited {
   flex: 1;
   text-align: left;
 }
-
-.center {
-  text-align: center;
-}
-
-.monospace {
-  /* font-family: "Courier"; */
-  font-family: "Lucida Console";
-}
-.wireframe {
-  border: 1px solid black;
-}
-.hiddentext {
-  display: none;
-}
-
 .center {
   text-align: center;
 }
@@ -57,17 +45,35 @@ a:visited {
 }
 
 
+.monospace {
+  /* font-family: "Courier"; */
+  font-family: "Lucida Console";
+}
+.wireframe {
+  border: 1px solid black;
+}
+.hiddentext {
+  display: none;
+}
+.invisible {
+  display: none;
+}
 
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+
 @media screen and (max-height: 950px) {
   .sidenav {padding-top: 15px;font-size:10px}
   .sidenav a {font-size: 18px;}
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
   body {
     /* font-size: 20px; */
-    font-size: 17px; /* i think??? */
-    color: red;
+    font-size: 27px;
+    /* color: red; */
+  }
+  .navbar {
+    max-width: 375px;
   }
 }

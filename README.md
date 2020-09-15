@@ -13,4 +13,3 @@ to do list:
 -tired
 -schedule?
 -how far am i trying to go with this
--IMPORTANT PEOPLE
