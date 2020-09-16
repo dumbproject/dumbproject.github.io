@@ -5,38 +5,101 @@
   <title>my i ching project</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+  * {
+    font-size: 17px;
+  }
+  html, body {
+    height: 100%;
+  }
   body {
-    padding: 0;
-    margin: 0;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/21/20090510_Shanghai_Yuyan_6689.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 100%;
-    display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
   }
-  .iching {
+  a {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    padding: 5px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  button {
+    color: white;
+    background-color: black;
+    padding: 1px;
+  }
+  .description {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
     margin-top: 5px;
-    width: 400px;
-    height: 200px;
+    padding: 10px;
+    width: 320px;
+    height: 80px;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .iching {
+    border: 1px solid white;
+    background-color: black;
+    opacity: 0.8;
+    margin-top: 5px;
+    padding: 10px;
+    width: 340px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .rules {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    opacity: 0.6;
+    margin-top: 5px;
+    padding: 5px;
+    width: 210px;
+    height: 80px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   #output {
     color: white;
     font-family: Courier;
+    margin: 10px;
   }
   </style>
 </head>
 <body>
-  <center>
-  <a href=".\home.html" style="background-color:black;color:white;opacity:0.8;padding:5px">home</a>
-  <div class="iching" style="background-color:black;opacity:0.8;width:400px;height:170px">
-    <center><button onClick="run()" style="color:black">i ching</button></center>
-    <center><div id="output"></div></center>
+  <a href=".\home.html">home</a>
+
+  <div class="description">
+    the i ching is an ancient chinese divination text<br><br>divination is an attempt to get information<br>through omens or supernatural things
+  </div>
+
+  <div class="iching">
+    <button onClick="run()">flip coins to generate hex</button>
+    <div id="output"></div>
     <script type="text/javascript" src="./javascript/iching.js"></script>
   </div>
-  </center>
+
+  <div class="rules">
+    heads = 2<br>tails = 3<br>even numbers = broken lines<br>odd numbers = unbroken lines
+  </div>
 </body>
 </html>

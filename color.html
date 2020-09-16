@@ -6,25 +6,46 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- <META HTTP-EQUIV="refresh" CONTENT=".001"> -->
   <style>
-  .center {
-    margin: 0;
+  a {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    padding: 2px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  button {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* .center {
+    -ms-transform: translate(-50%, -50%);
+  } */
+  #code {
+    border: 1px solid black;
+    width: 150px;
+    height: 80px;
+    padding: 0px;
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+  /* div {
+    border: 1px solid black;
+  } */
   </style>
 </head>
 <body>
-  <div class="center">
-    <center>
-      <a href=".\home.html" style="background-color:white;padding:2px">home</a><br><br>
-      <button onclick="randColor()">random color please</button><br>
-      <!-- <button onclick="spaz()">spaz please</button><br> -->
-      <div id="code"></div>
-    </center>
-  </div>
+  <a href=".\home.html">home</a>
+  <button onclick="randColor()">random color please</button>
+  <div id="code">color codes here</div>
+  <!-- <button onclick="spaz()">spaz please</button><br> -->
 
   <!-- <script src="autorefresh.js"></script> -->
   <!-- <button id="spaz" onClick="refresh()">Refresh Page</button> -->
@@ -43,8 +64,9 @@
         // console.log(colorCode, colorOpposite)
       }
       document.bgColor = colorCode
+      // document.a.style.bgColor = colorOpposite
       var code = document.getElementById("code")
-      code.innerHTML = '<div style="color:' + colorOpposite + '"><h2 style="' + colorOpposite + '">' + colorCode + '</h2><font size=3px>(text color: ' + colorOpposite + ')</font></div>'
+      code.innerHTML = '<div style="color:' + colorOpposite + '"><h2>' + colorCode + '</h2><font size=3px>(text color: ' + colorOpposite + ')</font></div>'
     }
 
     function spaz() {

@@ -21,14 +21,18 @@
     padding: 0;
     margin: 0;
   }
-
   div {
     border: 3px solid black;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .todo {
 
   }
+
   .lists {
     padding: 10px;
     text-align: left;
@@ -39,6 +43,7 @@
   .navbar {
     height: 60px;
     width: 100%;
+    padding-top: 15px;
     position: fixed;
     z-index: 0;
     overflow-x: hidden;
@@ -97,26 +102,32 @@
     background-color: black;
   }
 
+  #time {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px;
+    background-color: cyan;
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
   }
   .item {
-    /* flex: 1; */
+    flex: 1;
+  }
+  .earthgif {
+    padding-top: 33px;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 
   @media screen and (max-width: 375px) {
     body {
       font-size: 17px;
     }
-    /* .todo {
-      font-size: 17px;
-    } */
+    .earthgif {
+      padding-top: 0px;
+    }
   }
 
   </style>
@@ -154,7 +165,7 @@
   </div>
 
   <div class="navbar" onclick="openNav()" style="text-align: left; padding-left: 20px;">
-    <br>☰ Menu
+    <div>☰ Menu</div>
     <div class="right" style="font-size: 12px; padding-right: 20px; margin-top: -29px;">
       Window height: <span id="height"></span>
       <br>
@@ -174,7 +185,7 @@
         <h6>bc i'm enjoying making it</h6>
       </div>
 
-      <div id="time" class="" style="flex: 1; min-width: 40px; padding: 40px; background-color: cyan;"></div>
+      <div id="time" class=""></div>
 
 
       <div class=" monospace" style="flex: 1; border:1px solid black; background-color: yellow;">
@@ -182,7 +193,7 @@
         <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
         <br><strike><span style="color:gray">30&nbsp;31</span>&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5</strike>
         <br><strike>&nbsp;6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp; 6&nbsp;10&nbsp;11</strike>
-        <br><strike>12&nbsp;13</strike>&nbsp;14&nbsp;15&nbsp;16&nbsp;17&nbsp;18
+        <br><strike>12&nbsp;13&nbsp;14&nbsp;15</strike>&nbsp;16&nbsp;17&nbsp;18
         <br><br>this is not useful<br>or well made<br><br>please fix it or<br>make it stop
       </div>
     <!-- end title -->
@@ -195,11 +206,11 @@
     <div class="containerRow" style="display: flex; flex-wrap: wrap; padding: 5px; background-color:hotpink">
 
       <!-- to do -->
-      <div class="child todo">
+      <div class="child todo" style="width: 350px;">
         <div style="text-align: center; background-color:red">
           to do list:
         </div>
-        <div class="lists" style="background-color:purple">
+        <div class="lists" style="background-color:pink">
           for myself:
           <ul>
             <li>fix my resume</li>
@@ -225,24 +236,23 @@
         </div>
       </div>
 
-      <div class="wireframe" style="flex:3"></div>
-      <div class="wireframe" style="flex:1"></div>
-
-
+      <!-- <div class="child wireframe" style="flex:3"></div>
+      <div class="child wireframe" style="flex:1"></div> -->
 
     <!-- end page content -->
     </div>
 
     <br>
-
     <!-- earth and picture -->
     <div class="containerRow" style="display: flex; flex-wrap: wrap; background-color:maroon">
-      <div style="flex: 1; padding-top:35px">
+      <div class="earthgif item">
         <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260" height="260" />
       </div>
       <center><img src="intro.png" style="flex: 1; height: 100%; width: 100%; object-fit: contain;" /></center>
-      <iframe style="flex: 1; background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
-      <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
+      <div style="flex: 1;">
+        <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
+        <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
+      </div>
     </div>
 
     <br>
@@ -251,7 +261,7 @@
     <footer>
       <div class="containerRow">
         <div class="child" style="background-color:green">sup</div>
-        <span style="margin: 0 20px 0 20px">Copyright (c) 1996 Copyright Holder All Rights Reserved.</span>
+        <span style="margin: 0 20px 0 20px">Copyright (c) 2030 Copyright Holder All Rights Reserved.</span>
         <div class="child" style="background-color:red">mufucka</div>
       </div>
     </footer>

@@ -5,53 +5,91 @@
   <title>self help checklist</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+  a {
+    border: 1px solid black;
+    color: black;
+    padding: 5px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   div {
     border: 1px solid black;
     padding: 10px;
+    vertical-align: center;
+  }
+  #main {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  span {
+    visibility: hidden;
+  }
+  .checklist {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
   </style>
 </head>
 <body>
-  <center>
-    <a href=".\home.html">home</a><br><br><br><br>
-    <div style="width:700px; text-align:center">
+  <a href=".\home.html">home</a>
 
-      <h1>if you find yourself not feeling good,<br>there are things that you can do!!<br><br>here is a list of helpful tasks :)<br></h1>
+  <div id="main">
+    <h1>if you find yourself not feeling good,<br>there are things that you can do!!<br><br>here is a list of helpful tasks :)</h1>
 
-      <center>
-        <div style="width:600px; text-align:left">
-          <input type="checkbox" id="task1" name="task1" value="food" onclick="checkFood()">
-          <label for="task1"> have you eaten enough today</label><br>
-          <span id="finished1" style="visibility:hidden; color:green"> you're doing amazing!!!</span><br>
+    <div class="checklist">
+      <input type="checkbox" id="task1" name="task1" value="food" onclick="checkFood()">
+      <label for="task1"> have you eaten enough today</label>
+      <br>
+      <span id="finished1" style="color:green"> you're doing amazing!!!</span>
+      <br>
 
-          <input type="checkbox" id="task2" name="task2" value="water" onclick="checkWater()">
-          <label for="task2"> have you been drinking enough water</label><br>
-          <span id="finished2" style="visibility:hidden; color:blue"> so important!!!</span><br>
+      <input type="checkbox" id="task2" name="task2" value="water" onclick="checkWater()">
+      <label for="task2"> have you been drinking enough water</label>
+      <br>
+      <span id="finished2" style="color:blue"> so important!!!</span>
+      <br>
 
-          <input type="checkbox" id="task3" name="task3" value="sunlight" onclick="checkSun()">
-          <label for="task3"> have you been outside today</label><br>
-          <span id="finished3" style="visibility:hidden; color:orange"> refreshing and energizing!!!</span><br>
+      <input type="checkbox" id="task3" name="task3" value="sunlight" onclick="checkSun()">
+      <label for="task3"> have you been outside today</label>
+      <br>
+      <span id="finished3" style="color:orange"> refreshing and energizing!!!</span>
+      <br>
 
-          <input type="checkbox" id="task4" name="task4" value="shower" onclick="checkShower()">
-          <label for="task4"> have you showered recently</label><br>
-          <span id="finished4" style="visibility:hidden; color:aqua"> makes you feel better 100% of the time!!!</span><br>
+      <input type="checkbox" id="task4" name="task4" value="shower" onclick="checkShower()">
+      <label for="task4"> have you showered recently</label>
+      <br>
+      <span id="finished4" style="color:aqua"> makes you feel better 100% of the time!!!</span>
+      <br>
 
-          <input type="checkbox" id="task5" name="task5" value="sleep" onclick="checkSleep()">
-          <label for="task5"> have you slept enough</label><br>
-          <span id="finished5" style="visibility:hidden; color:purple"> really important for your head!!!</span><br>
+      <input type="checkbox" id="task5" name="task5" value="sleep" onclick="checkSleep()">
+      <label for="task5"> have you slept enough</label>
+      <br>
+      <span id="finished5" style="color:hotpink"> really important for your head!!!</span>
+      <br>
 
-          <input type="checkbox" id="task6" name="task6" value="productive" onclick="checkProductive()">
-          <label for="task6"> is there a task you can complete that would make you feel productive or accomplished</label><br>
-          <span id="finished6" style="visibility:hidden; color:red"> you can tackle any obstacle!!!</span><br>
+      <input type="checkbox" id="task6" name="task6" value="productive" onclick="checkProductive()">
+      <label for="task6"> is there a task you can complete that<br>would make you feel productive/accomplished</label>
+      <br>
+      <span id="finished6" style="color:red"> you can tackle any obstacle!!!</span>
+      <br>
 
-          <input type="checkbox" id="task7" name="task7" value="space" onclick="checkSpace()">
-          <label for="task7"> have you given yourself enough space to just exist</label><br>
-          <span id="finished7" style="visibility:hidden; color:fuchsia"> you are a person just like all others that need to appreciate themselves!!!</span><br>
-        </div>
-        <br>
-      </center>
+      <input type="checkbox" id="task7" name="task7" value="space" onclick="checkSpace()">
+      <label for="task7"> have you given yourself enough space to just exist</label>
+      <br>
+      <span id="finished7" style="color:fuchsia"> you are a person just like all others that need to appreciate themselves!!!</span>
+      <br>
     </div>
-  </center>
+  </div>
 
   <script>
   // var checkFood = document.querySelector('input[value="food"]')
