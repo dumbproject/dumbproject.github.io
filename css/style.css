@@ -1,4 +1,4 @@
-body {
+html, body {
   height: 100%;
   /* font-family: "Courier"; */
   margin: 0;
@@ -11,17 +11,15 @@ a {
 a:link {
   text-decoration: none;
 }
-a:active {
-  background-color: hotpink;
+a:visited {
+  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
-a:visited {
-  text-decoration: none;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-size: 17px;
+a:active {
+  text-decoration: underline;
+  background-color: violet;
 }
 
 .containerRow {

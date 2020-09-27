@@ -6,45 +6,53 @@
   <title>thanks for stopping by</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="description" content="">
-
-  <link rel="icon" type="image/png" sizes="16x16" href=".\favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href=".\images\favicon-16x16.png">
   <link rel="stylesheet" href="css/style.css">
   <style>
-  * {
+  /* * {
     box-sizing: border-box;
-  }
+  } */
   body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     /* background-color: white; */
     background-color: black;
-    padding: 0;
-    margin: 0;
+    min-height: 100%;
   }
-  div {
-    border: 3px solid black;
+  /* div {
+    border: 1px solid white;
   }
+  span {
+    border: 1px solid white;
+  } */
+
   h1, h2, h3, h4, h5, h6 {
+    font-size: 17px;
+    color: violet;
     margin-left: 10px;
     margin-right: 10px;
   }
 
-  .todo {
-
+  footer {
+    /* clear: both;
+    position: relative; */
+    background-color: white;
+    margin-top: 139px;
+    height: 40px;
+    /* line-height: 50px; */
+    /* left: 0;
+    bottom: 0; */
   }
-
-  .lists {
-    padding: 10px;
-    text-align: left;
-  }
-
-
 
   .navbar {
     height: 60px;
     width: 100%;
-    padding-top: 15px;
+    /* padding-top: 15px; */
     position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
     z-index: 0;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -54,6 +62,12 @@
     color: white;
     /* opacity: 50%; */
   }
+  .navbar > * {
+    /* border: 1px solid white; */
+    display: inline-block;
+    flex: 0 1 auto;
+  }
+
 
   .sidenav {
     height: 100%;
@@ -62,15 +76,15 @@
     z-index: 1;
     top: 0;
     left: 0;
+    padding-top: 40px;
     background-color: #111;
     overflow-x: hidden;
-    padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s;
   }
   .sidenav a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
-    /* text-shadow: 1px 1px darkgray; */
+    text-shadow: 1px 1px darkgray;
     font-size: 20px;
     color: #818181;
     display: block;
@@ -80,34 +94,28 @@
     color: #f1f1f1;
     background-color: #000000;
   }
-
   .sidenav .closebtn {
+    border: 1px solid white;
     position: absolute;
+    font-size: 24px;
     top: 0;
-    right: 25px;
-    font-size: 36px;
+    right: 0px;
     margin-left: 50px;
   }
 
-  #main {
-    /* transition: margin-left .5s; */
-    background-color: white;
-    transition: all .5s;
-    padding: 20px;
-    padding-top: 70px;
-    opacity: 1;
+
+  .todo {
+    max-width: 300px;
+    min-width: 300px;
+    border: 2px solid black;
+    /* opacity: 50%; */
   }
-  #main.dim {
-    opacity: 0.2;
-    background-color: black;
+  .lists {
+    padding: 10px;
+    text-align: left;
   }
 
-  #time {
-    flex: 1;
-    min-width: 100px;
-    padding: 10px;
-    background-color: cyan;
-  }
+
 
   .container {
     display: flex;
@@ -116,17 +124,65 @@
   .item {
     flex: 1;
   }
-  .earthgif {
+
+  #intro {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    padding: 5px;
+    /* height: auto; */
+    background-color: maroon;
+    border: 10px solid #5D0000;
+    box-shadow: 10px 10px;
+  }
+
+  #main {
+    /* border: 1px solid fuchsia; */
+    background-color: white;
+    /* height: 100%; */
+    transition: all .5s;
+    padding: 20px;
+    padding-top: 70px;
+    opacity: 1;
+  }
+  #main.dim {
+    opacity: 0.2;
+    transition: .5s;
+    /* background-color: black; */
+  }
+
+  #windowSize {
+    opacity: 30%;
+    font-size: 12px;
+    /* margin-top: -45px; */
+  }
+
+  #earthgif {
     padding-top: 33px;
   }
+
 
 
   @media screen and (max-width: 375px) {
     body {
       font-size: 17px;
     }
+    footer {
+      margin-top: 0px;
+      height: 40px;
+    }
     .earthgif {
       padding-top: 0px;
+
+    }
+    #intro {
+      width: 330px;
+    }
+    #time {
+      font-size: 14px;
     }
   }
 
@@ -134,14 +190,14 @@
 </head>
 <body>
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&nbsp;&times;&nbsp;</a>
     <a href=".\about.html">About</a>
     <a href=".\services.html">Services</a>
     <a href=".\clients.html">Clients</a>
     <a href=".\contact.html">Contact</a>
-    <br><br>
-    <span style="color:white">links:</span>
-    <br><br>
+    <br /><br />
+    <span style="color: white; padding: 5px; border: 1px solid white;">links:</span>
+    <br /><br />
     <a href=".\selfhelp.html" style="background-color:fuchsia;color:black">self help checklist!!!</a>
     <a href=".\money.html" style="background-color:red;color:black">hourly rate of death</a>
     <a href=".\alarm.html" style="background-color:black;color:red">me when i wake up</a>
@@ -157,112 +213,128 @@
     <a href=".\tabs.html" style="background-color:silver;color:gray">tabs</a>
     <a href=".\howto.html" style="background-color:black;color:lime">how to make this</a>
     <!-- <a href=".\about.html" style="background-color:black;color:white">about</a> -->
-
+    <a href=".\links.html" style="background-color:black;color:white">websites i like</a>
+    <a href=".\places.html" style="background-color:black;color:white">places i like</a>
+    <!-- <a href=".\security.html" style="background-color:black;color:white">digital security</a> -->
     <!-- <a href=".\health.html" style="background-color:black;color:white">health</a>
     <a href=".\install.html" style="background-color:black;color:white">install</a>
     <a href=".\music.html" style="background-color:black;color:white">music</a>
     <a href=".\notes.html" style="background-color:black;color:white">notes</a> -->
   </div>
 
-  <div class="navbar" onclick="openNav()" style="text-align: left; padding-left: 20px;">
-    <div>☰ Menu</div>
-    <div class="right" style="font-size: 12px; padding-right: 20px; margin-top: -29px;">
-      Window height: <span id="height"></span>
-      <br>
-      Window width: <span id="width"></span>
+  <div class="navbar" id="navbar" onclick="e => checkNav(e)">
+    <span style="cursor: pointer; padding: 20px; width: 100px;">☰ Menu</span>
+
+    <div id="time" style="width: 200px"></div>
+
+    <div id="windowSize" class="right" style="width: 140px">
+      Window height: <span id="height"></span>px
+      <br />
+      Window width: <span id="width"></span>px
     </div>
   </div>
 
-  <div id="main">
-    <!-- title -->
-    <div style="display: flex; flex-wrap: wrap; background-color:gray">
-      <div class="" style="flex: 1; min-width: 300px; padding: 10px; height: auto; background-color: maroon">
-        <h1>sup mf<br>i'm changing this shit a lot</h1>
-        <h2>i'm makin this shit look ugly af<br>and it's taking too long to fix</h2>
-        <h3>but also welcome to my site<br>i hope to make it very cool in the future</h3>
-        <h4>i will add comments one day if anyone has something nice to say<br>i think that would be cool</h4>
-        <h5>hope u like it here</h5>
-        <h6>bc i'm enjoying making it</h6>
-      </div>
 
-      <div id="time" class=""></div>
-
-
-      <div class=" monospace" style="flex: 1; border:1px solid black; background-color: yellow;">
-        <br>september &nbsp; &nbsp; &nbsp; 2020
-        <br>&nbsp;s&nbsp; m&nbsp; t&nbsp; w&nbsp; d&nbsp; f&nbsp; s
-        <br><strike><span style="color:gray">30&nbsp;31</span>&nbsp; 1&nbsp; 2&nbsp; 3&nbsp; 4&nbsp; 5</strike>
-        <br><strike>&nbsp;6&nbsp; 7&nbsp; 8&nbsp; 9&nbsp; 6&nbsp;10&nbsp;11</strike>
-        <br><strike>12&nbsp;13&nbsp;14&nbsp;15</strike>&nbsp;16&nbsp;17&nbsp;18
-        <br><br>this is not useful<br>or well made<br><br>please fix it or<br>make it stop
-      </div>
-    <!-- end title -->
-    </div>
-
-    <!-- <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br><font color="red">still haven't put some mf shit here</font></h6> -->
-
+  <div id="intro">
+    <a href="javascript:void(0)" onclick="closeIntro()" class="right" style="position: absolute; font-size: 20px; color: black; right: 20px;">&times; close</a>
     <br>
-    <!-- start of page content -->
-    <div class="containerRow" style="display: flex; flex-wrap: wrap; padding: 5px; background-color:hotpink">
+    <h1>sup mf<br />thanks for looking at my site :)</h1>
+    <h2>i'm trying to make it look better</h2>
+    <h3>it's a work in progress<br />i hope to make it very cool in the future</h3>
+    <h4>i will add comments one day<br />if anyone has something nice to say<br />i think that would be cool</h4>
+    <h5>hope u like it here</h5>
+    <h6>bc i'm enjoying making it</h6>
+    <h1 style="font-size: 12px;">-some words from me 9/16/20</h1>
+    <br>
+  </div>
+
+
+  <!-- start of page content -->
+  <div id="main" onClick="closeAll()">
+
+    <!-- <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br /><font color="red">still haven't put some mf shit here</font></h6> -->
+
+    <div class="containerRow">
+      <div style="flex: 2; padding: 20px;">
+        hi welcome to my site
+        <br>
+        <br>
+        i moved a lot of things from this page to their own page
+        <br>
+        <br>
+        (this is where content is going to go)
+        <br>
+        still fixing a LOT of things
+        <br>
+        also i messed the FUC outta my main page by moving everything to its own page
+        <br>
+        i have to add content again so it's not a barren wasteland
+        <br>
+        gonna add an 'updates' section soon
+        <br>
+        <br>
+        thanks for visiting!!!!!!!!!!!!!!!!
+        <br>
+        <br>
+        <br>
+        <br>
+        fix all this<br>|<br>|<br>V
+      </div>
 
       <!-- to do -->
-      <div class="child todo" style="width: 350px;">
+      <div class="item todo">
         <div style="text-align: center; background-color:red">
           to do list:
         </div>
-        <div class="lists" style="background-color:pink">
+        <div class="lists" style="background-color: pink">
           for myself:
           <ul>
-            <li>fix my resume</li>
-            <li><strike>fix my bike</strike> FIXED</li>
-            <li>fix my <strike>life</strike> eating habits and eat more</li>
             <li>get a new laptop battery</li>
+            <li>fix my <s>life</s> eating habits and eat more</li>
+            <li>fix my resume</li>
+            <li><s>fix my bike</s> FIXED</li>
             <li>get a new passport</li>
             <li>post my ssn online</li>
           </ul>
         </div>
-        <div class="lists" style="background-color:beige">
+        <div class="lists" style="background-color: beige">
           for the site:
           <ul>
-            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" style="background-color:red">L E A R N ! F L E X ! W T F !</a></li>
-            <li>add more color codes tbh</li>
-            <li>make fake gif ads for my site</li>
             <li>change site name</li>
-            <li>add interests, knowledge, updates</li>
-            <li>schedule?</li>
+            <li>make fake gif ads for my site</li>
+            <li>add updates</li>
             <li>how far am i trying to go with this</li>
             <li>IMPORTANT PEOPLE</li>
           </ul>
         </div>
       </div>
 
-      <!-- <div class="child wireframe" style="flex:3"></div>
-      <div class="child wireframe" style="flex:1"></div> -->
-
-    <!-- end page content -->
     </div>
 
-    <br>
+
+    <br />
     <!-- earth and picture -->
-    <div class="containerRow" style="display: flex; flex-wrap: wrap; background-color:maroon">
-      <div class="earthgif item">
-        <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260" height="260" />
+    <div class="containerRow" style="display: flex; flex-wrap: wrap; background-color: maroon">
+      <div id="earthgif" class="item">
+        <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260px" height="260px" />
       </div>
-      <center><img src="intro.png" style="flex: 1; height: 100%; width: 100%; object-fit: contain;" /></center>
+
+      <img src="./images/confused.png" style="flex: 1; max-width: 100%; object-fit: contain;" />
+
       <div style="flex: 1;">
         <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
         <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
       </div>
     </div>
 
-    <br>
+    <br />
 
     <!-- bottom of page -->
     <footer>
       <div class="containerRow">
-        <div class="child" style="background-color:green">sup</div>
-        <span style="margin: 0 20px 0 20px">Copyright (c) 2030 Copyright Holder All Rights Reserved.</span>
-        <div class="child" style="background-color:red">mufucka</div>
+        <div class="child" style="text-align: center; padding: 2px; background-color:mediumpurple;">thanks for visiting!</div>
+        <span style="font-size: 12.5px; margin: 5px">Copyright (c) 2030 Copyright Holder All Rights Reserved.</span>
+        <div class="child" style="text-align: center; padding: 2px; background-color:mediumorchid">come back anytime!!</div>
       </div>
     </footer>
 
@@ -272,24 +344,76 @@
 
 
   <script>
+  var introVisible = true;
+
+  var nav = false;
+
   function openNav() {
+    nav = true;
+    console.log('open nav')
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("main").style.marginRight = "-250px";
     document.getElementById("main").classList.add('dim');
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
   function closeNav() {
+    nav = false;
+    console.log('close nav')
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("main").style.marginRight = "0";
     document.getElementById("main").classList.remove('dim');
     document.body.style.backgroundColor = "white";
   }
 
-  var today = new Date();
-  document.getElementById('time').innerHTML = today.getDate() + '/' + today.getMonth() + '/' + today.getFullYear() + ' ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds() + '<br>OOF fix this';
+  function checkNav(event) {
+    console.log(event)
+    console.log('check nav')
+    if (nav) {
+      closeNav()
+    } else {
+      openNav()
+      if (introVisible) closeIntro()
+    }
+  }
+
+  document.getElementById('navbar').onclick = checkNav;
+  document.getElementById("main").classList.add('dim');
+
+  function closeIntro() {
+    introVisible = false;
+    document.getElementById("intro").style.visibility = "hidden";
+    document.getElementById("main").classList.remove('dim');
+  }
+
+  function closeAll() {
+    closeIntro()
+    closeNav()
+  }
 
 
+
+  function updateClock() {
+      var now = new Date(),
+          months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+          hours = ('0' + now.getHours()).slice(-2)
+          minutes = ('0' + now.getMinutes()).slice(-2)
+          seconds = ('0' + now.getSeconds()).slice(-2)
+          milliseconds = ('00' + now.getMilliseconds()).slice(-3)
+
+          time = [hours, minutes, seconds, milliseconds].join(':'),
+
+          date = [now.getDate(),
+                  months[now.getMonth()],
+                  now.getFullYear()].join(' ')
+
+      document.getElementById('time').innerHTML = [date, time].join('<br>');
+
+      setTimeout(updateClock, 1);
+  }
+  updateClock();
 
 
 
@@ -300,8 +424,7 @@
     heightOutput.textContent = window.innerHeight;
     widthOutput.textContent = window.innerWidth;
   }
-
-  window.onresize = reportWindowSize;
+  window.onresize = reportWindowSize();
   reportWindowSize()
 
 

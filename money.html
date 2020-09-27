@@ -10,20 +10,22 @@
     height: 100%;
   }
   body {
-    background: linear-gradient(red, black 100%)
+    background: linear-gradient(red, black 100%);
   }
   body {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    /* text-align: center;
-    vertical-align: middle
+    /* vertical-align: middle
     display: table-cell; */
   }
   a {
     color: white;
     background-color: black;
     padding: 2px;
+    margin-top: 10px;
   }
   /* Chrome, Safari, Edge, Opera */
   input::-webkit-outer-spin-button,
@@ -41,14 +43,16 @@
     border: 2px solid black;
     /* position: absolute; */
     /* z-index: 0; */
-    background: linear-gradient(white, black 100%);
+    background: linear-gradient(white 40%, black 100%);
     /* text-align: center; */
     width: 350px;
     height: 530px;
     margin: 10px;
     padding: 10px;
   }
+
   .buttons {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color: black;
     color: red;
     padding: 10px;
@@ -93,20 +97,19 @@
     <div id="boss">
       fuck you
     </div> -->
-  <center>
-    <a href=".\home.html">home</a>
-    <h1>this is how much money i make<br>at the rate that i make it</h1>
-    <!-- i make $16.30 an hour -->
+  <a href=".\home.html">home</a>
 
-    <div class="square">
-      i make $<input type="number" id="rateInput" value="16.30" style="width: 35px; padding: 0;"/> an hour
-      <br>
-      <button class="buttons" onClick="run()">clock in</button>
-      <button class="buttons" onClick="stop()">clock out</button>
-      <div id="paycheck" style="font-family:Courier;"></div>
-      <!-- <script type="text/javascript" src=".\javascript\money.js"></script> -->
-    </div>
-  </center>
+  <h1>this is how much money i make<br>at the rate that i make it</h1>
+  <!-- i make $16.30 an hour -->
+
+  <div class="square">
+    i make $<input type="number" id="rateInput" value="16.30" style="width: 35px; padding: 0;"/> an hour
+    <br>
+    <button class="buttons" onClick="run()">clock in</button>
+    <button class="buttons" onClick="stop()">clock out</button>
+    <div id="paycheck" style="font-family:Courier;"></div>
+    <!-- <script type="text/javascript" src=".\javascript\money.js"></script> -->
+  </div>
   <!-- </div> -->
 
 

@@ -5,6 +5,9 @@
   <title>tab dump</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+  a {
+    /* text-align: center; */
+  }
   .containerRow {
     border: 1px solid black;
     display: flex;
@@ -19,14 +22,40 @@
     border: 1px solid red;
     text-align: left;
   }
+
+  .center {
+    border: 1px solid black;
+    padding: 2px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #main {
+    /* display: block; */
+    /* margin: 0 auto; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+  }
+
   </style>
 </head>
 <body>
-  <center>
-    <a href=".\home.html">home</a><br><br>
-    i really need a place to put all my tabs,<br>
-    so i'm creating a tab dump here<br><br>
+  <a href=".\home.html" class="center">home</a>
+
+  <div id="main">
+    <br>
+    <br>
+    i really need a place to put all my tabs,
+    <br>
+    so i'm creating a tab dump here
+    <br>
+    <br>
+
     <button onclick="showYoutube()">youtube:</button>
+    
     <div id="youtube" class="containerRow" style="background-color:black;">
       <div class="child" style="width:560px">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/aq5xw4Qsy5M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -60,13 +89,17 @@
       </div>
     </div>
 
-    <br>misc:<br>
-    <a href="https://www.myabandonware.com/game/johnny-mnemonic-cjl">johnny mnemonic game via myabandonware.com</a><br><br>
+    <br>
+    misc:
+    <br>
+    <a href="https://www.myabandonware.com/game/johnny-mnemonic-cjl">johnny mnemonic game via myabandonware.com</a>
+    <br>
+    <br>
     <video controls>
       <source src="https://va.media.tumblr.com/tumblr_q4y2610k311u8qrq3_480.mp4" type="video/mp4">
     </video>
 
-  </center>
+  </div>
 
   <script>
   function showYoutube() {

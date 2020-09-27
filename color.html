@@ -22,13 +22,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  /* .center {
-    -ms-transform: translate(-50%, -50%);
-  } */
   #code {
     border: 1px solid black;
     width: 150px;
-    height: 80px;
+    height: 100px;
     padding: 0px;
     text-align: center;
     position: absolute;
@@ -43,6 +40,7 @@
 </head>
 <body>
   <a href=".\home.html">home</a>
+
   <button onclick="randColor()">random color please</button>
   <div id="code">color codes here</div>
   <!-- <button onclick="spaz()">spaz please</button><br> -->
@@ -51,31 +49,31 @@
   <!-- <button id="spaz" onClick="refresh()">Refresh Page</button> -->
 
   <script>
-    function randColor() {
-      var string = "0123456789abcdef"
-      var colorCode = '#'
-      var colorOpposite = '#'
+  function randColor() {
+    var string = "0123456789abcdef"
+    var colorCode = '#'
+    var colorOpposite = '#'
 
-      for (i=0; i<6; i++) {
-        var x = Math.floor(Math.random() * string.length)
-        var y = 15 - x
-        colorCode += string[x]
-        colorOpposite += string[y]
-        // console.log(colorCode, colorOpposite)
-      }
-      document.bgColor = colorCode
-      // document.a.style.bgColor = colorOpposite
-      var code = document.getElementById("code")
-      code.innerHTML = '<div style="color:' + colorOpposite + '"><h2>' + colorCode + '</h2><font size=3px>(text color: ' + colorOpposite + ')</font></div>'
+    for (i=0; i<6; i++) {
+      var x = Math.floor(Math.random() * string.length)
+      var y = 15 - x
+      colorCode += string[x]
+      colorOpposite += string[y]
+      // console.log(colorCode, colorOpposite)
     }
+    document.bgColor = colorCode
+    // document.a.style.bgColor = colorOpposite
+    var code = document.getElementById("code")
+    code.innerHTML = '<div style="color:' + colorOpposite + '"><h2>' + colorCode + '</h2><span size=3px>(text color: ' + colorOpposite + ')</span></div>'
+  }
 
-    function spaz() {
-      for (i=0;i<100;i++) {
-        setTimeout(randColor(), 10)
-      }
+  function spaz() {
+    for (i=0;i<100;i++) {
+      setTimeout(randColor(), 10)
     }
-      // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
-      // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
+  }
+    // <!-- document.bgColor = (Math.random() < 0.5) ? '#00F' : '#F00'; -->
+    // document.bgColor = (Math.random() < 0.5) ? '#ccc' : '#f0f';
   </script>
 </body>
 </html>

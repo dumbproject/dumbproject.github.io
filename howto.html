@@ -12,24 +12,32 @@
     box-sizing: border-box;
   }
   body {
+    padding: 5px;
+    margin: 5px;
     background-color: black;
     color: lime;
     font-size: 20px;
   }
-  body a {
+  a {
     color: fuchsia;
   }
+  h1, h2, h3 {
+    margin: 0 auto;
+    /* border: 1px solid white; */
+    text-align: center;
+    /* display: block; */
+  }
+
+
   .containerRow {
     border: 1px solid white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     margin: 10px auto;
     padding: 10px;
   }
   .containerRow:hover {
-    background-color:white;
-    color:black;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
   }
   .child {
     border: 1px solid green;
@@ -37,29 +45,29 @@
     color: lime;
     padding: 10px;
     margin: 10px;
-    flex: 1;
-    text-align: left;
   }
   .child:hover {
-    background-color:lime;
-    color:black;
+    border: 1px solid black;
+    background-color: lime;
+    color: black;
   }
+
+
   .monospace {
-    /* font-family: "Courier"; */
-    font-family: "Lucida Console";
     height: 200px;
   }
   .code {
     font-family: "Lucida Console";
+    font-size: 18px;
     color: black;
-    background-color:#fff;
-    border:none!important;
-    padding:5px!important;
-    margin:0;
-    max-height:400px;
-    max-width:600px;
-    display:inline-block;
-    overflow-x:auto;
+    background-color: #fff;
+    border: none!important;
+    padding: 2px!important;
+    margin: 0;
+    max-height: 400px;
+    max-width: 600px;
+    display: inline-block;
+    overflow-x: auto;
   }
 
 
@@ -78,177 +86,468 @@
     align-items: center;
     vertical-align: middle
   }
+  .buttons {
+    max-width: 400px;
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
 
+
+  .center {
+    text-align: center;
+  }
+
+
+
+
+  #home {
+    border: 1px solid white;
+    padding: 5px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #main {
+    margin-top: 5%;
+  }
+  #bubble {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    display: block;
+    text-align: center;
+    /* margin: 0 auto; */
+  }
+  @media screen and (max-width: 375px) {
+    body {
+      /* font-size: 17px; */
+    }
+    #main {
+      margin-top: 60px;
+    }
+    /* .child {
+      font-size: 12px;
+    } */
+  }
   </style>
 </head>
-
 <body>
-  <center><a href=".\home.html">home</a></center>
-  <div class="containerRow" style="width:300px;height:300px;border-radius:200px">
-    <center><br>
-    shit is <span style="color:red">easy af!!!!</span>
-    <br><br>
-    you just gotta get the general<br>
-    idea of what the sections are<br>
-    <br>
-    and after THAT you can learn<br>
-    how to make it look pretty or<br>
-    literally legible at all<br>
-    (very much unlike my site)
-    </center>
-  </div>
+  <a href=".\home.html" id="home" class="containerRow">home</a>
 
-  <div class="containerRow">
-    <div class="child">
-      <p>how i made this website
-      </p>
-      <ol>
-        <li>create a <a href="https://github.com/">github</a> account</li>
-        <li>install <a href="https://git-scm.com/">git</a></li>
-        <li>make a folder for this project, open the folder in cmd/terminal, and type <span class="code">git init</span></li>
-        <li>make a text file, save it as index.html</li>
-        <li>open the project folder in terminal/cmd</li>
-        <li>type <span class="code">git status</span> (optional, helpful)</li>
-        <li><span class="code">git add</span> the files you create</li>
-        <li><span class="code">git commit</span> the changes you made</li>
-        <li><span class="code">git push</span> your updated version to github</li>
-        <li>wait a few minutes for the changes to take effect and browse your own site at sitename.github.io</li>
-      </ol><br>
-      this section needs to be revamped a lot
-    </div>
+  <div id="main">
     <div class="containerRow">
-      <div class="child">
-        every .html file starts with <span class="code">&lt;!doctype html&gt;</span> at the top<br>
-        this tells the computer what kind of file it is<br>
-        make a closing &lt;html&gt; tag at the bottom<br><br>
 
-        put an opening and closing &lt;head&gt; tag in between the two<br>
-        for info about the page<br>
-        and &lt;body&gt; tags under the &lt;head&gt; tags, before the closing html tag<br>
-        and inside the head you put a &lt;title&gt;title for your page&lt;/title&gt;<br>
-        and also &lt;style&gt;css styles&lt;/style&gt; to make your page look fancy<br>
-      </div>
       <div class="child">
-        <span class="code">
-          &lt;!doctype html&gt;<br>
-          &lt;head&gt;<br>
-          &nbsp;&nbsp;&lt;title&gt;example title&lt;/title&gt;<br>
-          &lt;/head&gt;<br>
-          &lt;body&gt;<br>
-          &nbsp;&nbsp;here is me saying things in my example html page<br>
-          &lt;/body&gt;<br>
-          &lt;/html&gt;
-        </span>
-        <br><a href=".\example.html">view the example here</a>
-        <br>note to self: don't forget to copy and paste this into example.html
+        <h1 style="max-width: 500px;">how i made this website</h1>
+        <div id="bubble" class="containerRow">
+          <br>
+          shit is <span style="color:red">easy af!!!!</span>
+          <br>
+          <br>
+          you just gotta get basics
+          <br>
+          and everything else is easy
+          <br>
+          <br>
+          and afterwards you can learn
+          <br>
+          how to make it look pretty
+          <br>
+          (or literally legible at all)
+          <br>
+          <br>
+          (unlike my site)
+        </div>
+      </div>
+
+      <div class="child">
+        <h3>table of contents</h3>
+        <ol>
+          <li><a href="#github-website-tut">how to make a free website through github</a></li>
+          <li><a href="#html-tut">how to make an html file</a></li>
+          <ol type="a">
+            <li><a href="#html-basics">the basics</a></li>
+            <li><a href="#html-required">required for every html file</a></li>
+            <li><a href="#html-example">basic example html file</a></li>
+          </ol>
+          <li><a href="#"> </a></li>
+          <li><a href="#"> </a></li>
+          <li><a href="#"> </a></li>
+
+        </ol>
+      </div>
+    <!-- end title content -->
+    </div>
+
+    <br><br><br><br>
+
+    <h3 id="">how to use the command line</h3>
+    <div class="containerRow">
+      <div class="child monospace">
+        <!-- key:
+        <br>
+        linux = windows
+        <br>
+        <br>
+        man = /?
+        <br>
+        <br>
+        ls = dir
+        <br>
+        cd = chdir
+        <br>
+        cd = cd
+        <br>
+        pwd = chdir
+        <br>
+        <br>
+        cat = type
+        <br>
+        less = more
+        <br>
+        <br>
+        clear = cls
+        <br>
+        date = time
+        <br>
+        <br>
+        mv = move
+        <br>
+        mv = ren [renames file]
+        <br>
+        rm = del
+        <br>
+        <br>
+        grep = findstr
+        <br>
+        wc -l = find /c /v ""
+        <br>
+        traceroute = tracert
+        <br>
+        diff = fc
+        <br>
+        touch = echo.> example.txt |||||||| fsutil ?
+        <br>
+        <br>
+        uname = ver (or systeminfo)
+        <br>
+        ps = tasklist
+        <br>
+        cat .bash_history = doskey /history
+        <br>
+        get windows license key: wmic path softwarelicensingservice get OA3xOriginalProductKey
+        <br>
+        check battery health on windows: powercfg /batteryreport -->
       </div>
     </div>
-  </div>
 
-  <div class="containerRow" style="width:400px">
-    <div>
-      <center><button><a href="javascript:alert('Hello');" style="color:black;text-decoration:none;">click here to say hi</a></button><center>
+    <div class="containerRow">
+      <div class="child center">
+        this was useful for learning git: <a href="https://rogerdudler.github.io/git-guide/">git - the simple guide - no deep shit!</a>
+        <br>
+        <a href="https://web.mit.edu/mprat/Public/web/Terminus/Web/main.html">this is a cool game to get used to terminal on mac</a>
+      </div>
+    </div>
+
+    <br><br><br><br>
+
+    <h3 id="github-website-tut">how to make a free website through github</h3>
+    <div class="containerRow" style="max-width: 550px;">
+      <div class="child" style="max-width: 500px;">
+        <ol>
+          <li>create a <a href="https://github.com/">github</a> account</li>
+          (name it what you want your site named)
+          <li>install <a href="https://git-scm.com/">git</a></li>
+          <li>make a folder for this project<br>open the folder in the command line<br>and type <span class="code">git init</span></li>
+          <li>make a text file, save it as index.html</li>
+          <li>open the project folder in terminal/cmd</li>
+          <li>type <span class="code">git status</span> (optional, helpful)</li>
+          <li><span class="code">git add</span> the files you create</li>
+          <li><span class="code">git commit</span> the changes you made</li>
+          <li><span class="code">git push</span> your updated version to github</li>
+          <li>wait a few minutes for the changes to take effect<br>and browse your own site at sitename.github.io</li>
+        </ol>
+      </div>
+    </div>
+
+    <br><br><br><br>
+
+    <h3 id="html-tut">how to make an html file</h3>
+    <div class="containerRow">
+
+      <div class="child">
+        <h3 id="html-basics">the basics</h3>
+        <ul>
+          <li>html files are text files saved as name.html and viewed in a browser as a web page</li>
+          <li>html uses "elements" that tell a web browser how to structure the page</li>
+          <ul>
+            <li>elements let you style or alter the contents of your page</li>
+            <li>elements use an opening <span class="code">&lt;tag&gt;</span> and closing <span class="code">&lt;/tag&gt;</span></li>
+            <li>content inside the tags are affected by what element is used</li>
+          </ul>
+          <li>html files use css files ("stylesheets") and javascript files ("scripts")</li>
+          <ul>
+            <li>css is for changing colors or fonts or structuring the layout of the page</li>
+            <li>javascript is a programming language useful for many things</li>
+            <li>css or javascript is not required for a basic html page</li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="child">
+        <h3 id="html-required">required for every html file</h3>
+        <ul>
+          <li>all html files start with <span class="code">&lt;!DOCTYPE html&gt;</span> at the very top and end with a closing <span class="code">&lt;/html&gt;</span> tag at the very bottom</li>
+            (this tells the computer what kind of file it is)
+          <li>opening <span class="code">&lt;head&gt;</span> and closing <span class="code">&lt;/head&gt;</span> tags between the html tags</li>
+          <ul>
+            <li>this is where you put your <span class="code">&lt;title&gt;</span>website name<span class="code">&lt;/title&gt;</span> or other important details</li>
+            <li>you can also put <span class="code">&lt;style&gt;</span>css<span class="code">&lt;/style&gt;</span> inside style tags to add design to your site (i'll explain css later)</li>
+          </ul>
+          <li>and <span class="code">&lt;body&gt;</span> tags under the <span class="code">&lt;head&gt;</span> tags, before the closing html tag</li>
+        </ul>
+      </div>
+
+      <div class="child">
+        <h3 id="html-example">basic example html file</h3>
+        <div class="code" style="margin: 10px;">
+          &lt;!DOCTYPE html&gt;
+          <br>
+          &lt;head&gt;
+          <br>
+          &nbsp;&nbsp;&lt;title&gt;example title&lt;/title&gt;
+          <br>
+          &lt;/head&gt;
+          <br>
+          &lt;body&gt;
+          <br>
+          &nbsp;&nbsp;here is me saying things in my example html page
+          <br>
+          &lt;/body&gt;
+          <br>
+          &lt;/html&gt;
+        </div>
+        <a href=".\example.html">view the example here</a>
+        <br>
+        note to self: don't forget to copy and paste this into example.html
+      </div>
+    </div>
+
+    <br><br><br><br>
+
+    <h3>html continued</h3>
+    <div class="containerRow">
+      <div class="child center" style="font-family: Courier;">
+        &lt;b&gt;<b>this is how to bold text</b>&lt;b&gt;
+        <br>
+        &lt;i&gt;<i>this is how to italicize text</i>&lt;i&gt;
+        <br>
+        &lt;u&gt;<u>this is how to underline text</u>&lt;u&gt;
+        <br>
+        &lt;s&gt;<s>this is how to cross out text</s>&lt;/s&gt;
+        <br>
+        &lt;sub&gt;<sub>this is how to make subscript text</sub>&lt;sub&gt;
+        <br>
+        &lt;sup&gt;<sup>this is how to make superscript text</sup>&lt;sup&gt;
+        <br>
+        <br>
+        this is how to&lt;br&gt;<br>make a line break
+        <br>
+        <br>
+        it can also&lt;br /&gt;<br>look like this
+        <br>
+        <br>
+        links look like this:
+        <br>
+        &lt;a href="www.google.com"&gt;this is a link&lt;/a&gt;
+      </div>
+
+      <div class="child center" style="width: 250px">
+        special characters in html
+        <br>
+        are used like this:
+        <br>
+        <br>
+        <span style="border:1px solid white;padding:3px">
+          <b>&</b><i>[character code]</i><b>;</b>
+        </span>
+        <br>
+        <br>
+        <a href="https://www.ascii-code.com/">list of ascii character codes</a>
+        <br>
+        & = &amp;amp;
+        <br>
+        &times; = &amp;times;
+        <br>
+        < = &amp;lt;
+        <br>
+        > = &amp;gt;
+        <br>
+        ' ' (a blank space) = &amp;nbsp;
+      </div>
+
+      <div class="child center">
+        - notes -
+        <br>
+        <br>
+        i am putting this here as a placeholder
+        <br>
+        <br>
+        <a href="https://www.w3.org/Style/Examples/007/center.en.html">centering things</a>
+        <br>
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">a guide to flexbox</a>
+        <br>
+        <a href="https://coolors.co/generate">color scheme generator</a>
+        <br>
+        <a href="https://screensiz.es/">screen sizes for different devices</a>
+        <br>
+        <a href="https://www.w3schools.com/react/">react tutorial</a>
+        <br>
+        <a href="https://reactjs.org/docs/hello-world.html">react.js hello world</a>
+        <br>
+        <a href="https://sass-lang.com/">sass syntactically awesome style sheets</a>
+        <br>
+        yarn is important
+        <br>
+        <a href="https://codepen.io/pen">codepen</a>
+        <br>
+        <a href="https://www.freecodecamp.org/">good resource i think</a>
+        <br>
+        i use <a href="https://w3schools.com/">w3schools.com</a> a lot to understand tags for html better
+      </div>
+    </div>
+    <!-- end html continued -->
+    <!-- end html section -->
+    <br><br><br><br>
+    <!-- start css section -->
+    <h3>how to make a css file</h3>
+    <div class="containerRow">
+      <div class="child center">
+        css is really easy
+      </div>
+      <div class="child center">
+        css is really easy
+      </div>
+      <div class="child center">
+        css is really easy
+      </div>
+    </div>
+
+    <div class="containerRow">
+      <div class="child monospace wireframe" style="background-color: white; max-width: 370px; height: 150px; padding: 0; margin: 0;">
+        <div style="text-align: center; background-color: teal;">
+          color codes for html
+        </div>
+        <div class="containerRow" style="padding: 0; margin: 0;">
+          <div class="child" style="padding: 0; margin: 0;">
+            <span style="color:white;background-color:black;">#FFFFFF white</span>
+            <br>
+            <span style="color:silver;">#C0C0C0 silver</span>
+            <br>
+            <span style="color:gray;">#808080 gray</span>
+            <br>
+            <span style="color:black; background-color: white;">#000000 black</span>
+            <br>
+            <span style="color:red;">#FF0000 red</span>
+            <br>
+            <span style="color:blue;">#0000FF blue</span>
+            <br>
+            <span style="color:green;">#008000 green</span>
+            <br>
+            <span style="color:yellow;background-color:gray">#FFFF00 yellow</span>
+          </div>
+          <div class="child" style="padding: 0; margin: 0;">
+            <span style="color:aqua;">#00FFFF aqua</span>
+            <br>
+            <span style="color:lime;">#00FF00 lime</span>
+            <br>
+            <span style="color:fuchsia;">#FF00FF fuchsia</span>
+            <br>
+            <span style="color:purple;">#800080 purple</span>
+            <br>
+            <span style="color:maroon;">#800000 maroon</span>
+            <br>
+            <span style="color:teal;">#008080 teal</span>
+            <br>
+            <span style="color:navy;">#000080 navy</span>
+            <br>
+            <span style="color:olive;">#808000 olive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="child">
+        <div class="pointerContainer" style="margin: 0 auto;">
+          <p style="cursor: wait; background-color: aqua">come over here to<br>turn into a circle<br>of pain</p>
+          <p style="cursor: crosshair; background-color: red">aim at me<br><br>o<br>/|\<br>/\</p>
+        </div>
+      </div>
+    </div>
+    <!-- end css section -->
+
+    <br><br><br><br>
+
+    <!-- start javascript section -->
+    <h3>how to make a javascript file</h3>
+    <div class="containerRow">
+      <div class="child center">
+        javascript is less easy but still really really easy
+      </div>
+      <div class="child center">
+        javascript is a high-level programming language, which means that it's easier to learn and more "abstract" than low-level languages (like C)
+        <br>
+        javascript, like most (all?) programming languages, has just a few different rules you need to know
+        <br>
+        you use "statements" to tell it what to do, like if-then (or if-then-else)
+        <br>
+        it also uses "variables" which store data for the statements to use
+        <br>
+        <br>
+        in a simplified sense, it works like this:
+        <br>
+        <br>
+        var = food
+        <br>
+        <br>
+        if (i am hungry) {
+          eat food
+        } else (if i am not hungry) {
+          keep the food for later
+        }
+      </div>
+    </div>
+
+    <div class="containerRow buttons">
+      <button onClick="javascript:alert('Hello');">click here to say hi</button>
       <div id="imgbox1">
         <button onclick="removeElement()">click here to remove this entirely</button>
       </div>
       <div id="imgbox2">
         <button onclick="changeVisibility()">click here to be unable to see this</button>
       </div>
-      <div>
-        <button onclick="resetElement()">click here to reset the above buttons</button>
+      <button onclick="resetElement()">click here to reset the above buttons</button>
+    </div>
+
+    <br><br><br><br>
+
+    <h3>now put all three together</h3>
+    <div class="containerRow">
+      <div class="child center">
+        html file
       </div>
-    </div>
-  </div>
 
-  <div class="containerRow">
-    <div class="child">
-      <center>
-        &lt;b&gt;<b>this is how to bold text</b>&lt;b&gt;<br>
-        &lt;i&gt;<i>this is how to italicize text</i>&lt;i&gt;<br>
-        &lt;u&gt;<u>this is how to underline text</u>&lt;u&gt;<br>
-        &lt;strike&gt;<strike>this is how to strike things</strike>&lt;/strike&gt;<br>
-        &lt;sub&gt;<sub>this is how to make subscript text</sub>&lt;sub&gt;<br>
-        &lt;sup&gt;<sup>this is how to make superscript text</sup>&lt;sup&gt;<br>
-      </center><br>
-      apparently strike is no longer supported in HTML5 and you use del or s instead<br><br>
-      <center><div style="border: 1px solid blue; padding: 5px; width: 300px">
-        <center>special characters in html<br>are used like this:<br>
-        <span style="border:1px solid white;padding:3px"><b>&</b><i>[character code]</i><b>;</b></span><br>
-        <a href="https://www.ascii-code.com/">list of ascii character codes</a></center><br>
-        < = &amp;lt;<br>
-        > = &amp;gt;<br>
-        ' ' = &amp;nbsp;<br>
-        & = &amp;amp;<br>
-      </div></center>
-    </div>
-
-    <div class="child">
-      <br><br><br><center>
-      - notes -<br><br>
-      i am putting this here as a placeholder<br><br>
-      something i need to learn DESPERATELY is flex, a css property(?)<br>
-      also learn a better understanding of clean code<br><br>
-      padding = space inside a box<br>
-      margin = space outside a box<br><br>
-      learn to use span instead of div<br>
-      <a href="https://www.w3.org/Style/Examples/007/center.en.html">centering things</a>
-      </center>
-    </div>
-  </div>
-
-  <div class="containerRow">
-    <div class="child">
-      <center>
-        this was useful for learning git: <a href="https://rogerdudler.github.io/git-guide/">git - the simple guide - no deep shit!</a><br>
-      </center>
-    </div>
-    <div class="child">
-      <center>
-        i use <a href="https://w3schools.com/">w3schools.com</a> a lot to understand tags for html better<br><br>
-      </center>
-    </div>
-    links were being weird??? gonna learn and figure it out :|
-  </div>
-
-  <!-- html color codes -->
-  <div class="containerRow">
-    <div class="child">
-
-      <div class="monospace wireframe" style="background-color:white; width:300px; height:150px">
-        <center style="background-color:teal">color codes for html</center>
-        <div class="containerRow">
-          <div class="child">
-            <span style="color:white;background-color:black;">#FFFFFF white</span>
-            <br><span style="color:silver;">#C0C0C0 silver</span>
-            <br><span style="color:gray;">#808080 gray</span>
-            <br><span style="color:black;">#000000 black</span>
-
-            <br><span style="color:red;">#FF0000 red</span>
-            <br><span style="color:blue;">#0000FF blue</span>
-            <br><span style="color:green;">#008000 green</span>
-            <br><span style="color:yellow;background-color:gray">#FFFF00 yellow</span>
-          </div>
-          <div class="child">
-            <span style="color:aqua;">#00FFFF aqua</span>
-            <br><span style="color:lime;">#00FF00 lime</span>
-            <br><span style="color:fuchsia;">#FF00FF fuchsia</span>
-            <br><span style="color:purple;">#800080 purple</span>
-
-            <br><span style="color:maroon;">#800000 maroon</span>
-            <br><span style="color:teal;">#008080 teal</span>
-            <br><span style="color:navy;">#000080 navy</span>
-            <br><span style="color:olive;">#808000 olive</span>
-          </div>
-        </div>
+      <div class="child center">
+        css file
       </div>
-    </div>
-    <div class="child">
-      <div class="pointerContainer">
-        <p style="cursor:wait;background-color:aqua">come over here to<br>turn into a circle<br>of pain</p>
-        <p style="cursor:crosshair;background-color:red">aim at me<br><br>o<br>/|\<br>/\</p>
+
+      <div class="child center">
+        js file
       </div>
     </div>
 
+  <!-- end main div -->
   </div>
 
 
