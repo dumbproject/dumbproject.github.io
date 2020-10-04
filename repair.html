@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer Repair</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" sizes="16x16" href=".\images\favicon-16x16.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  div {
+    display: block;
+  }
+  p {
+    display: block;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+    text-align: center;
+    top: 50%;
+    margin-left: 30px;
+    margin-right: 30px;
+    /* min-height: 200px; */
+  }
+  ul {
+
+  }
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bgimg-1 {
+    background-image: url(https://images.unsplash.com/photo-1591238372338-22d30c883a86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80);
+    min-height: 100%;
+  }
+  .bgimg-2 {
+    background-image: url(https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    min-height: 600px;
+  }
+  .bgimg-3 {
+    background-image: url(https://images.unsplash.com/photo-1544281679-32a3de086805?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    min-height: 300px;
+  }
+  .bgimg-4 {
+    background-image: url(https://images.unsplash.com/photo-1591238372408-8b98667c0460?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80);
+    min-height: 300px;
+  }
+  .bgimg-5 {
+    background-image: url(https://images.unsplash.com/photo-1552585155-f5c1efa32555?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);
+    min-height: 100%;
+  }
+
+  .containerRow {
+      /* background-color: white; */
+  }
+  .child {
+    /* background-color: white; */
+    /* text-shadow: 2px 2px 4px #000000; */
+  }
+  .boxshadow {
+    flex: 1;
+    margin: 20px 200px;
+    /* max-height: 300px; */
+    background-color: black;
+    color: white;
+    box-shadow: 10px 10px gray;
+    width: 400px;
+    height: 280px;
+  }
+
+  .caption {
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .caption span.border {
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    /* border: 10px solid gray; */
+  }
+
+
+  #menu {
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+  }
+  #menu > * {
+    /* border: 1px solid white; */
+    padding: 30px;
+    display: inline-block;
+    flex: 0 1 auto;
+  }
+  #main {
+    padding-top: 40px;
+  }
+  @media screen and (max-width: 375px;) {
+    .caption {
+      font-size: 12px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div id="menu">
+    <div class="child">
+      ☰ Menu   that i haven't added yet
+    </div>
+    this is a mockup
+    <div class="child">
+      contact: (510) 000-0000
+    </div>
+  </div>
+  <!-- menu -->
+
+  <div class="bgimg-1">
+    <div class="caption">
+      <span class="border">BAY AREA COMPUTER REPAIR</span>
+    </div>
+  </div>
+
+  <div class="containerRow">
+    <div class="boxshadow">
+      <p>
+        We are local Bay Area residents experienced in computer repair and diagnostics. Working out of our mobile and home workshops, we can diagnose and repair hardware and software issues in a timely manner.
+        <br>
+        <br>
+        <br>
+        Charging low rates while we get our operation started and build a reputation in the area.
+      </p>
+    </div>
+    <div class="boxshadow">
+      Specifically, we can:
+      <ul>
+        <li>Fix broken screens and parts</li>
+        <li>Recover or back up data</li>
+        <li>Fix boot errors and OS / software issues</li>
+        <li>Upgrade or install operating systems</li>
+        <li>Upgrade any components on desktops and hard drives or RAM in laptops</li>
+        <li>Full assembly and installation of desktops</li>
+        <li>Installation of antivirus and ad-block softwares</li>
+        <li>Malware and cookie/tracker removal</li>
+        <li>Provice solutions to software or network issues</li>
+        <li>Encrypt your data, drives, and services</li>
+        <li>Provide VPN installation and procedures</li>
+        <li>Offer free advice and consultation!</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption">
+      <span class="border">we can help build your gaming desktop</span>
+    </div>
+  </div>
+
+  <div>
+    <p>these are common issues<br><br>and these are our solutions and services</p>
+  </div>
+
+  <div class="bgimg-3">
+    <div class="caption">
+      <span class="border">we work on macs</span>
+    </div>
+  </div>
+
+  <div class="bgimg-4">
+    <div class="caption">
+      <span class="border">as well as PCs</span>
+    </div>
+  </div>
+
+  <div>
+    <p>
+      repairing your own stuff should be easy, affordable, and accessible
+    </p>
+  </div>
+
+  <div class="bgimg-5">
+    <div class="caption">
+      <span class="border">we hate capitalism</span>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+  <style>
+  div {
+    display: block;
+  }
+  p {
+    display: block;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+    text-align: center;
+    top: 50%;
+    margin-left: 300px;
+    margin-right: 300px;
+    /* min-height: 200px; */
+  }
+  ul {
+
+  }
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bgimg-1 {
+    background-image: url(https://images.unsplash.com/photo-1591238372338-22d30c883a86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80);
+    min-height: 100%;
+  }
+  .bgimg-2 {
+    background-image: url(https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    min-height: 600px;
+  }
+  .bgimg-3 {
+    background-image: url(https://images.unsplash.com/photo-1544281679-32a3de086805?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    min-height: 300px;
+  }
+  .bgimg-4 {
+    background-image: url(https://images.unsplash.com/photo-1591238372408-8b98667c0460?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80);
+    min-height: 300px;
+  }
+  .bgimg-5 {
+    background-image: url(https://images.unsplash.com/photo-1552585155-f5c1efa32555?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80);
+    min-height: 100%;
+  }
+
+  .containerRow {
+      /* background-color: white; */
+  }
+  .child {
+    /* background-color: white; */
+    /* text-shadow: 2px 2px 4px #000000; */
+  }
+  .boxshadow {
+    flex: 1;
+    margin: 20px 200px;
+    max-height: 50px;
+    background-color: black;
+    color: white;
+    box-shadow: 10px 10px gray;
+    width: 400px;
+    height: 600px;
+  }
+
+  .caption {
+    /* position: absolute; */
+    left: 50%;
+    /* top: 50%; */
+    transform: translate(-50%, -50%);
+    width: auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .caption span.border {
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    opacity: 100%;
+    letter-spacing: 10px;
+    /* border: 10px solid gray;
+    padding: 10px; */
+  }
+
+
+  #menu {
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+    opacity: 100%;
+  }
+  #menu > * {
+    /* border: 1px solid white; */
+    padding: 30px;
+    display: inline-block;
+    flex: 0 1 auto;
+  }
+  #main {
+    padding-top: 40px;
+  }
+  @media screen and (max-width: 375px;) {
+    .caption {
+      font-size: 12px;
+    }
+  }
+  </style> -->
