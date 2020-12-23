@@ -4,42 +4,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>steps for a fresh install</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  a {
+    border: 1px solid white;
+    color: green;
+    background-color: black;
+    padding: 5px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .child {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 5px;
+  }
+  #main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    /* align-items: center; */
+    /* vertical-align: middle; */
+  }
+  </style>
 </head>
 <body>
-  <a href="./home.html" style="color:green; background-color:black">home</a><br><br>
-  these are the programs and things i dl after a fresh install-<br><br>
-  <ul>
-    <li>speccy
-      <!-- <i>
-        <br>- shows your hardware/software specs
-        <br>- shows cpu / gpu / drive temps! convenient
-        <br>- apparently phones home data after scanning your hardware+full directory :(
-      </i> -->
-    <li>windirstat
-      <!-- <i>
-        <br>- graphical disk usage, convenient for staying organized
-      </i> -->
-    <li>7zip
-    <li>vlc
-    <li>atom
-    <li>winmerge
-    <li>recuva
-    <li>qbittorrent
-    <li>hdtune
-    <li>chrome / firefox
-    <li>virtualbox
-    <li>
-    <li>
-    <li>
-    <li>
-    <li>musicbee
-    <li>krita / photopea
-    <li>discord
-    <li>hexchat
-    <li>
-    <li>ableton / fl
-    <li>streamlabs obs / obs
-    <li>
-  </ul>
+  <a href="./home.html">home</a>
+
+  <div id="main">
+    <h1>these are the programs and things i dl after a fresh install</h1>
+
+    <h6>note to self: learn how to create a link that leads to download links for each program for conveniency</h6>
+
+    <div class="containerRow">
+      <div class="child">
+        utilities-
+        <ul>
+          <li>speccy
+            <!-- <i>
+            <br>- shows your hardware/software specs
+            <br>- shows cpu / gpu / drive temps! convenient
+            <br>- apparently phones home data after scanning your hardware+full directory :(
+          </i> -->
+          <li>windirstat
+            <!-- <i>
+            <br>- graphical disk usage, convenient for staying organized
+          </i> -->
+          <li>7zip
+          <li>qbittorrent
+          <li>chrome / firefox
+          <li>vlc
+          <li>atom / vscode
+          <li>winmerge
+          <li>recuva
+          <li>hdtune
+          <li>virtualbox
+          <li>everything?
+        </ul>
+      </div>
+
+      <div class="child">
+        programs-
+        <ul>
+          <li>musicbee
+          <li>krita / photopea
+          <li>discord
+          <li>hexchat
+          <li>oculus
+          <li>
+          <li>ableton / fl
+          <li>audio interface software/drivers
+          <li>voicemeeter
+          <li>streamlabs obs / obs / virtualcam
+        </ul>
+      </div>
+
+      <div class="child">
+        meta programs-
+        <ul>
+          <li>keyfinder (for windows licenses)
+          <li>graphics software for drivers
+          <li>java / python
+          <li>cygwin?
+        </ul>
+      </div>
+
+      <div class="child">
+        other-
+        <ul>
+          <li>malwarebytes?
+        </ul>
+      </div>
+
+    </div>
+  <!-- end main -->
+  </div>
 </body>
 </html>

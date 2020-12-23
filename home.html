@@ -15,7 +15,6 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    /* background-color: white; */
     background-image: url("https://64.media.tumblr.com/3eb5528804534ef982814699543a1a5b/tumblr_mjxdhh05Nd1qzztlko1_400.gif");
     background-repeat: no-repeat;
     background-size: contain;
@@ -41,7 +40,7 @@
   footer {
     /* clear: both;
     position: relative; */
-    background-color: white;
+    /* background-color: white; */
     margin-top: 139px;
     height: 40px;
     /* line-height: 50px; */
@@ -63,8 +62,8 @@
     overflow-y: hidden;
     top: 0;
     left: 0;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     /* opacity: 50%; */
   }
   .navbar > * {
@@ -112,16 +111,32 @@
 
   .todo {
     /* max-width: 300px; */
-    min-width: 300px;
+    position: absolute;
+    left: 80%;
+    color: black;
+    max-width: 350px;
+    max-height: 452px;
     border: 2px solid black;
     /* opacity: 50%; */
   }
   .lists {
     padding: 10px;
     text-align: left;
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
-
+  .updates {
+    /* border: 1px solid white; */
+    background-color: tan;
+    padding: 10px 0 10px;
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    left: 80%;
+    top: 33%;
+  }
 
   .container {
     display: flex;
@@ -147,7 +162,8 @@
 
   #main {
     /* border: 1px solid fuchsia; */
-    background-color: white;
+    background-color: black;
+    color: white;
     /* height: 100%; */
     transition: all .5s;
     padding: 20px;
@@ -194,7 +210,6 @@
       font-size: 14px;
     }
   }
-
   </style>
 </head>
 <body>
@@ -208,13 +223,13 @@
     <span style="color: white; padding: 5px; border: 1px solid white;">links:</span>
     <br /><br />
     <a href=".\selfhelp.html" style="background-color:fuchsia;color:black">self help checklist!!!</a>
-    <a href=".\money.html" style="background-color:red;color:black">hourly rate of death</a>
-    <a href=".\alarm.html" style="background-color:black;color:red">me when i wake up</a>
-    <a href=".\mood.html" style="background-color:black;color:fuchsia">✰ moodboard ✰</a>
+    <!-- <a href=".\alarm.html" style="background-color:black;color:red">me when i wake up</a>
+    <a href=".\mood.html" style="background-color:black;color:fuchsia">✰ moodboard ✰</a> -->
+    <!-- <a href=".\money.html" style="background-color:red;color:black">hourly rate of death</a>
     <a href=".\color.html" style="background-color:pink;color:purple">a random color</a>
     <a href=".\gradient.html" style="background-color:hotpink">a random gradient</a>
     <a href=".\iching.html" style="background-color:white;color:black">☯ i ching hex generator ☯</a>
-    <a href=".\purple.html" style="background-color:#7d26cd;color:black">purple.com clone</a>
+    <a href=".\purple.html" style="background-color:#7d26cd;color:black">purple.com clone</a> -->
     <a href=".\mg.html" style="background-color:lime;color:black"><3 mg dedication page <3</a>
     <!-- <a href=".\goodpictures.html">some good pictures</a> (delete/revise this) -->
     <a href=".\movies.html" style="background-color:aqua;color:blue">movies i think are good</a>
@@ -269,35 +284,25 @@
     <!-- <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br /><font color="red">still haven't put some mf shit here</font></h6> -->
 
     <div class="containerRow">
-      <div style="flex: 2; padding: 20px;">
+      <div style="flex: 2; padding: 20px; min-height: 338px;">
         <div class="containerRow">
-          <img src="https://blog.corp-site.envato.com/cdn-cgi/image/width=820,quality=85,format=auto/uploads/2020/03/My-website-is-terrible.gif" height=200px width="auto">
-          <!-- <img src="https://i.pinimg.com/originals/be/b5/41/beb541eeb1ee06ba00ef55d5baa60773.gif" height=200px width=auto>
-          <img src="https://www.animatedgif.net/welcome/dhhomepage_e0.gif" height=200px width=auto> -->
+          <!-- <img src="https://blog.corp-site.envato.com/cdn-cgi/image/width=820,quality=85,format=auto/uploads/2020/03/My-website-is-terrible.gif" height=200px width="auto"> -->
+          <img src="https://i.pinimg.com/originals/be/b5/41/beb541eeb1ee06ba00ef55d5baa60773.gif" height=200px width=auto>
+          <!-- <img src="https://www.animatedgif.net/welcome/dhhomepage_e0.gif" height=200px width=auto> -->
         </div>
-        <br>
-        hi welcome to my site
-        <br>
-        <br>
-        still fixing a LOT of things
-        <br>
-        gonna add an 'updates' section soon
+        hi
         <br>
         <br>
         thanks for visiting!!!!!!!!!!!!!!!!
-        <br>
-        <br>
-        <br>
-        <br>
-        fix all this<br>|<br>|<br>V
       </div>
+
 
       <!-- to do -->
       <div class="item todo">
-        <div style="text-align: center; background-color:red">
+        <div style="text-align: center; background-color: red;">
           to do list:
         </div>
-        <div class="lists" style="background-color: beige">
+        <div class="lists" style="background-color: beige;">
           for the site:
           <ul>
             <li>short term</li>
@@ -349,11 +354,12 @@
             </ul>
           </ul>
         </div>
-        <div class="lists" style="background-color: pink">
+
+        <div class="lists" style="background-color: pink;">
           for myself:
           <ul>
             <li><a href="https://www.hplaptopbattery.us/rz09-0195-battery-razer.htm">get a new laptop battery</a></li>
-            <li><a href="https://www.s-config.com/ableton-push-gen-1-breakage/">fix my ableton push 1</a></li>
+            <li><a href="https://www.s-config.com/ableton-push-gen-1-breakage/">fix my ableton push 1</a> (learn 2 solder)</li>
             <li><a href="https://www.reddit.com/r/hackintosh/comments/f6esa8/getting_started_with_hackintoshes/">learn about this again</a></li>
             <li>fix my <s>life</s> eating habits and eat more</li>
             <li>fix my resume</li>
@@ -362,9 +368,23 @@
             <li>post my ssn online</li>
           </ul>
         </div>
+
+        <!-- updates -->
+        <div class="lists" style="background-color: tan;">
+          ~ updates ~
+          <br><br>
+          12172020-
+          <br>
+          trying to better organize my table of contents?
+          <br><br>
+          12232020
+          <br>
+          fixin links + fashion
+        </div>
       </div>
 
     </div>
+
 
 
     <br />

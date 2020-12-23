@@ -5,6 +5,16 @@
   <title>good websites</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+  html {
+    font-family: Arial, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+
   body {
     display: flex;
     flex-direction: column;
@@ -12,22 +22,40 @@
     align-items: center;
     justify-content: center;
   }
+  h3 button {
+    all: inherit;
+  }
+
+  button svg {
+    height: 1em;
+    margin: 0 0.5em 0;
+  }
+
+  h3 button {
+    all: inherit;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0.5em 0;
+  }
+
+
+  h3 button:focus svg {
+    outline: 2px solid;
+  }
+
+  [aria-expanded="true"] .vert {
+    display: none;
+  }
+
   .box {
     border: 1px solid black;
     margin: 5px;
-    padding: 10px;
+    padding: 0 10px 0;
+    /* max-height: 500px; */
   }
-  .containerRow {
-    /* border: 2px solid green; */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin: 0 auto;
-  }
-  .child {
-    flex: 1;
-    text-align: left;
-  }
+
   #home {
     border: 1px solid black;
     padding: 5px;
@@ -46,130 +74,208 @@
   <a href=".\home.html" id="home">home</a>
 
   <div id="main">
-    these are websites that i think are cool or good
-    <br>
-    <br>
-    <div>
-      <div class="containerRow">
-        <div class="box child">
-          music related links:
-          <br>
-          <ul>
-            <li><a href="https://www.neverendingchartrendering.org/" target="_blank">https://www.neverendingchartrendering.org/</a></li>
-            chart creator site
-            <br><br>
-            <li><a href="https://djen.co/" target="_blank">https://djen.co/</a></li>
-            djent generator
-            <br><br>
-            <li><a href="http://radio.garden/" target="_blank">http://radio.garden/</a></li>
-            <i>worldwide radio</i>
-            <br><br>
-            <li><a href="https://www.whosampled.com/" target="_blank">https://www.whosampled.com/</a></li>
-            whosampled.com
-            <br><br>
-            <li><a href="https://genius.com/" target="_blank">https://genius.com/</a></li>
-            genius.com
-            <br><br>
-            <li><a href="https://www.discogs.com/" target="_blank">https://www.discogs.com/</a></li>
-            discogs.com
-            <br><br>
-            <li><a href="https://ezstems.com/" target="_blank">https://ezstems.com/</a></li>
+    <h4>these are websites that i think are cool or good</h4>
 
-          </ul>
-        </div>
-
-        <div class="box child">
-          computer related links:
-          <ul>
-            <li><a href="https://vimm.net/" target="_blank">https://vimm.net/</a></li>
-            <i>every video game before 2006 for free</i>
-            <br><br>
-            <li><a href="https://alternativeto.net/" target="_blank">https://alternativeto.net/</a></li>
-            good website for finding (free) software alternatives
-            <br><br>
-            <li><a href="https://www.photopea.com/" target="_blank">https://www.photopea.com/</a></li>
-            cool online photoshop clone
-            <br><br>
-            <li><a href="https://www.leapchat.org/" target="_blank">https://www.leapchat.org/</a></li>
-            secure chat website that i read about
-            <br><br>
-            <li><a href="https://github.com/miegl/PiFmAdv" target="_blank">https://github.com/miegl/PiFmAdv</a></li>
-            fm broadcasting software
-            <br><br>
-            <li><a href="http://thispersondoesnotexist.com/" target="_blank">http://thispersondoesnotexist.com/</a></li>
-            <i>pictures of my friends</i>
-            <br><br>
-            <li><a href="http://thiscatdoesnotexist.com/" target="_blank">http://thiscatdoesnotexist.com/</a></li>
-            <i>my pets</i>
-            <br><br>
-            <li><a href="http://thiswaifudoesnotexist.net/" target="_blank">http://thiswaifudoesnotexist.net/</a></li>
-            <i>procedural generation continued</i>
-            <br><br>
-            <li><a href="http://omegle.com/" target="_blank">http://omegle.com/</a></li>
-            <i>a site to talk to usually terrible people</i>
-            <br><br>
-            <li><a href="https://www.hackthebox.eu/" target="_blank">https://www.hackthebox.eu/</a></li>
-            <i>hack the box</i>
-            <br><br>
-            <li><a href="https://clickclickclick.click/" target="_blank">https://clickclickclick.click/</a></li>
-            <i>a creepy website</i>
-            <br><br>
-            <li><a href="howmanyofme.com" target="_blank">https://howmanyofme.com/</a></li>
-            <i>united states people with your name</i>
-            <br><br>
-            <a href="http://sometimesredsometimesblue.com/" target="_blank">sometimesredsometimesblue.com</a>
-            <i>very important</i>
-            <br><br>
-            <a href="http://zombo.com/" target="_blank">zombo.com</a>
-            <i>even more important</i>
-            <br><br>
-
-          </ul>
-        </div>
-
-        <div class="box child">
-          movie related links:
-          <ul>
-            <li><a href="https://www.doesthedogdie.com/" target="_blank">https://www.doesthedogdie.com/</a></li>
-            does the dog die (trigger warning site)
-            <br><br>
-            <li><a href="https://letterboxd.com/" target="_blank">https://letterboxd.com/</a></li>
-            letterboxd
-          </ul>
-        </div>
-        <div class="box child">
+    <div class="box child">
+      <h3>
+        <button aria-expanded="false">
           things about the world:
-          <br><br>
-          <a href="https://thetruesizeof.com/" target="_blank">country size comparison map</a>
-          <br><br>
-          <a href="http://submarinecablemap.com/" target="_blank">submarinecablemap.com</a>
-          <br>
-          <i>how you connect to websites overseas</i>
-          <br><br>
-          <a href="https://www.marinetraffic.com/" target="_blank">marinetraffic.com</a>
-          <br>
-          <i>all the boats in the world right now</i>
-          <br><br>
-          <a href="https://www.flightradar24.com/" target="_blank">flightradar24.com</a>
-          <br>
-          <i>all the aircraft in the world right now</i>
-          <br><br>
-          <a href="https://weather.cod.edu/satrad/?parms=continental-conus-02-24-0-100-1&checked=map&colorbar=undefined" target="_blank">weather by college of dupage</a>
-          <br>
-          i'm not really sure? weather map
-          <br><br>
-          <a href="http://www.dominickbrana.com/p/fish-cam.html">fish cam fish cam</a>
-          <i>fish cam fish cam</i>
-          <br><br>
-          <a href="http://www.abevigoda.com/" target="_blank">abe vigoda status</a>
-          <br><br>
-        </div>
-      </div>
-
-      <div class="containerRow">
+          <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+            <rect class="vert" height="8" width="2" y="1" x="4" />
+            <rect height="2" width="8" y="4" x="1" />
+          </svg>
+        </button>
+      </h3>
+      <div hidden>
+        <ul>
+          <li><a href="http://radio.garden/" target="_blank">http://radio.garden/</a>
+            <br><i>worldwide radio</i><br><br>
+          <li><a href="https://thetruesizeof.com/" target="_blank">https://thetruesizeof.com/</a>
+            <br><i>country size comparison map</i><br><br>
+          <li><a href="https://submarinecablemap.com/" target="_blank">https://submarinecablemap.com/</a>
+            <br><i>how you connect to websites overseas</i><br><br>
+          <li><a href="https://www.marinetraffic.com/" target="_blank">https://marinetraffic.com/</a>
+            <br><i>all the boats in the world right now</i><br><br>
+          <li><a href="https://www.flightradar24.com/" target="_blank">https://flightradar24.com/</a>
+            <br><i>all the aircraft in the world right now</i><br><br>
+          <li><a href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank">https://earthquake.usgs.gov/earthquakes/map/</a>
+            <br><i>latest earthquakes in the world</i><br><br>
+          <li><a href="https://www.airnow.gov/" target="_blank">https://www.airnow.gov/</a>
+            <br><i>site for air quality data</i><br><br>
+          <li><a href="https://www.weather.gov/" target="_blank">https://www.weather.gov/</a>
+            <br><i>weather map by national weather service</i><br><br>
+          <li><a href="https://weather.cod.edu/satrad/?parms=continental-conus-02-24-0-100-1&checked=map&colorbar=undefined" target="_blank">https://weather.cod.edu/</a>
+            <br><i>weather map by college of dupage</i><br><br>
+          <li><a href="https://bpearthwatch.com/" target="_blank">https://bpearthwatch.com/</a>
+            <br><i>site with links to many cool world monitoring sites</i><br><br>
+          <li><a href="http://www.dominickbrana.com/p/fish-cam.html">fish cam fish cam</a>
+            <br><i>fish cam fish cam</i><br><br>
+          <li><a href="http://www.abevigoda.com/" target="_blank">http://www.abevigoda.com/</a>
+            <br><i>status of actor abe vigoda</i>
+        </ul>
       </div>
     </div>
-    <!-- end main -->
+
+
+    <div class="box child">
+      <h3>
+        <button aria-epanded="false">
+          useful links if you have a computer:
+          <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+            <rect class="vert" height="8" width="2" y="1" x="4" />
+            <rect height="2" width="8" y="4" x="1" />
+          </svg>
+        </button>
+      </h3>
+      <div hidden>
+        <ul>
+          <li><a href="https://vimm.net/" target="_blank">https://vimm.net/</a>
+            <br><i>downloads for every video game before 2006 for free</i><br><br>
+          <li><a href="https://alternativeto.net/" target="_blank">https://alternativeto.net/</a>
+            <br><i>good website for finding (free) software alternatives</i><br><br>
+          <li><a href="https://www.photopea.com/" target="_blank">https://www.photopea.com/</a>
+            <br><i>cool online photoshop clone</i><br><br>
+          <li><a href="https://www.leapchat.org/" target="_blank">https://www.leapchat.org/</a>
+            <br><i>secure chat website that i have read about</i><br><br>
+          <li><a href="https://github.com/miegl/PiFmAdv" target="_blank">https://github.com/miegl/PiFmAdv</a>
+            <br><i>fm broadcasting software</i><br><br>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="box child">
+      <h3>
+        <button aria-expanded="false">
+          internet related links:
+          <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+            <rect class="vert" height="8" width="2" y="1" x="4" />
+            <rect height="2" width="8" y="4" x="1" />
+          </svg>
+        </button>
+      </h3>
+      <div hidden>
+        <ul>
+          <li><a href="http://omegle.com/" target="_blank">http://omegle.com/</a>
+            <br><i>a site to talk to usually terrible people</i><br><br>
+          <li><a href="http://thispersondoesnotexist.com/" target="_blank">http://thispersondoesnotexist.com/</a>
+            <br><i>pictures of my friends</i><br><br>
+          <li><a href="http://thiscatdoesnotexist.com/" target="_blank">http://thiscatdoesnotexist.com/</a>
+            <br><i>pictures of my pets</i><br><br>
+          <li><a href="http://thiswaifudoesnotexist.net/" target="_blank">http://thiswaifudoesnotexist.net/</a>
+            <br><i>procedural generation continued</i><br><br>
+          <li><a href="https://www.hackthebox.eu/" target="_blank">https://www.hackthebox.eu/</a>
+            <br><i>hack the box</i><br><br>
+          <li><a href="https://clickclickclick.click/" target="_blank">https://clickclickclick.click/</a>
+            <br><i>a creepy website</i><br><br>
+          <li><a href="https://howmanyofme.com/" target="_blank">https://howmanyofme.com/</a>
+            <br><i>united states citizens with your name</i><br><br>
+          <li><a href="http://sometimesredsometimesblue.com/" target="_blank">http://sometimesredsometimesblue.com/</a>
+            <br><i>very important</i><br><br>
+          <li><a href="http://zombo.com/" target="_blank">http://zombo.com/</a>
+            <br><i>even more important</i><br><br>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box child">
+      <h3>
+        <button aria-expanded="false">
+          music related links:
+          <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+            <rect class="vert" height="8" width="2" y="1" x="4" />
+            <rect height="2" width="8" y="4" x="1" />
+          </svg>
+        </button>
+      </h3>
+      <div hidden>
+        <ul>
+          <li><a href="https://www.neverendingchartrendering.org/" target="_blank">https://www.neverendingchartrendering.org/</a>
+            <br><i>chart creator site</i><br><br>
+          <li><a href="https://www.whosampled.com/" target="_blank">https://www.whosampled.com/</a>
+            <br><i>site for tracing samples in music</i><br><br>
+          <li><a href="https://genius.com/" target="_blank">https://genius.com/</a>
+            <br><i>song lyrics and interpretation site</i><br><br>
+          <li><a href="https://www.discogs.com/" target="_blank">https://www.discogs.com/</a>
+            <br><i>site for info about and marketplace for music releases</i><br><br>
+          <li><a href="https://ezstems.com/" target="_blank">https://ezstems.com/</a>
+            <br><i>ai-based song dissection site (attempts to pull vocals and more from audio)</i><br><br>
+          <li><a href="https://djen.co/" target="_blank">https://djen.co/</a>
+            <br><i>djent generator</i><br><br>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="box child">
+      <h3>
+        <button aria-epanded="false">
+          movie related links:
+          <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+            <rect class="vert" height="8" width="2" y="1" x="4" />
+            <rect height="2" width="8" y="4" x="1" />
+          </svg>
+        </button>
+      </h3>
+      <div hidden>
+        <ul>
+          <li><a href="https://www.doesthedogdie.com/" target="_blank">https://www.doesthedogdie.com/</a>
+            <br><i>does the dog die (trigger warning site)</i><br><br>
+          <li><a href="https://letterboxd.com/" target="_blank">https://letterboxd.com/</a>
+            <br><i>movie rating and cataloguing site</i>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="box child">
+      <h3>
+        <button aria-expanded="false">
+          people that are cool:
+          <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+            <rect class="vert" height="8" width="2" y="1" x="4" />
+            <rect height="2" width="8" y="4" x="1" />
+          </svg>
+        </button>
+      </h3>
+      <div hidden>
+        <ul>
+          <li><a href="https://www.hackers.xxx/">https://www.hackers.xxx/</a>
+            <br><i>website of a cool hacker named gummo</i><br><br>
+          <li><a href="https://100r.co/site/home.html">https://100r.co/site/home.html</a>
+            <br><i>website of 100 rabbits, two people dating n living on a boat</i><br><br>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+    https://inclusive-components.design/collapsible-sections/ using this a lot
+    <br>
+    https://stackoverflow.com/questions/11514242/add-css3-transition-expand-collapse figure out how to use this to animate it
+  <!-- end main -->
   </div>
+
+
+  <script>
+    (function() {
+      const headings = document.querySelectorAll('h3');
+
+      Array.prototype.forEach.call(headings, h => {
+        let btn = h.querySelector('button');
+        let target = h.nextElementSibling;
+
+        btn.onclick = () => {
+          let expanded = btn.getAttribute('aria-expanded') === 'true';
+
+          btn.setAttribute('aria-expanded', !expanded);
+          target.hidden = expanded;
+        }
+      });
+    })()
+  </script>
 </body>
 </html>

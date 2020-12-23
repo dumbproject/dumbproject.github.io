@@ -24,6 +24,7 @@ a:active {
 
 .containerRow {
   display: flex;
+  /* flex-flow: row wrap; */
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
