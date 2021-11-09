@@ -1,4 +1,4 @@
-# zzivnuska.github.io
+# dumbproject.github.io
 dumb website
 
 adventures in learning about frontend and css

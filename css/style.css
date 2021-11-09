@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.containerRow {
+  display: flex;
+  /* flex-flow: row wrap; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.child {
+  flex: 1;
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+
+
+.monospace {
+  /* font-family: "Courier"; */
+  font-family: "Lucida Console";
+}
+.wireframe {
+  border: 1px solid black;
+}
+.invisible {
+  display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 17;
+  }
+}
