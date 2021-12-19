@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>thanks for stopping by</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" sizes="16x16" href=".\images\favicon-16x16.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  /* * {
+    box-sizing: border-box;
+  } */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: url("https://64.media.tumblr.com/3eb5528804534ef982814699543a1a5b/tumblr_mjxdhh05Nd1qzztlko1_400.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    min-height: 100%;
+  }
+  /* div {
+    border: 1px solid white;
+  }
+  span {
+    border: 1px solid white;
+  } */
+  header {
+    margin: 0 auto;
+    max-width: 600px;
+    border: 1px solid white;
+  }
+  header a {
+    color: white;
+    background: gray;
+    /* justify-content: space-evenly; */
+    width: 100%;
+    padding: 5px;
+
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 17px;
+    color: violet;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  footer {
+    /* clear: both;
+    position: relative; */
+    /* background-color: white; */
+    margin-top: 139px;
+    height: 40px;
+    /* line-height: 50px; */
+    /* left: 0;
+    bottom: 0; */
+  }
+
+
+  .navbar {
+    height: 60px;
+    width: 100%;
+    /* padding-top: 15px; */
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: black;
+    /* opacity: 50%; */
+  }
+  .navbar > * {
+    /* border: 1px solid white; */
+    display: inline-block;
+    flex: 0 1 auto;
+  }
+
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 40px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    text-shadow: 1px 1px darkgray;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    border: .1px solid white;
+    color: #f1f1f1;
+    background-color: #000000;
+  }
+  .sidenav .closebtn {
+    border: 1px solid white;
+    position: absolute;
+    font-size: 24px;
+    top: 0;
+    right: 0px;
+    margin-left: 50px;
+  }
+
+
+  .todo {
+    /* max-width: 300px; */
+    position: absolute;
+    left: 80%;
+    color: black;
+    max-width: 350px;
+    max-height: 452px;
+    border: 2px solid black;
+    /* opacity: 50%; */
+  }
+  .lists {
+    padding: 10px;
+    text-align: left;
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .updates {
+    /* border: 1px solid white; */
+    background-color: tan;
+    padding: 10px 0 10px;
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    left: 80%;
+    top: 33%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    flex: 1;
+  }
+
+  #intro {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    padding: 5px;
+    /* height: auto; */
+    background-color: maroon;
+    border: 10px solid #5D0000;
+    box-shadow: 10px 10px;
+  }
+
+  #main {
+    /* border: 1px solid fuchsia; */
+    background-color: black;
+    color: white;
+    /* height: 100%; */
+    transition: all .5s;
+    padding: 20px;
+    padding-top: 70px;
+    opacity: 1;
+  }
+  #main.dim {
+    opacity: 0.2;
+    transition: .5s;
+    /* background-color: black; */
+  }
+
+  #windowSize {
+    opacity: 30%;
+    font-size: 12px;
+    /* margin-top: -45px; */
+  }
+
+  #earthgif {
+    padding-top: 33px;
+  }
+
+
+
+  @media screen and (max-width: 375px) {
+    body {
+      font-size: 17px;
+    }
+    footer {
+      margin-top: 0px;
+      height: 40px;
+    }
+    .mySidenav {
+      padding-bottom: 4000px;
+    }
+    .earthgif {
+      padding-top: 0px;
+
+    }
+    #intro {
+      width: 330px;
+    }
+    #time {
+      font-size: 14px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&nbsp;&times;&nbsp;</a>
+    <a href=".\about.html">About</a>
+    <a href=".\services.html">Services</a>
+    <a href=".\clients.html">Clients</a>
+    <a href=".\contact.html">Contact</a>
+    <br /><br />
+    <span style="color: white; padding: 5px; border: 1px solid white;">links:</span>
+    <br /><br />
+    <a href=".\selfhelp.html" style="background-color:fuchsia;color:black">self help checklist!!!</a>
+    <a href=".\movies.html" style="background-color:aqua;color:blue">movies i think are good</a>
+    <a href=".\wishlist.html" style="background-color:lime;color:green">things i need to buy :|</a>
+    <a href=".\tabs.html" style="background-color:silver;color:gray">tabs</a>
+    <a href=".\howto.html" style="background-color:black;color:lime">how to make this</a>
+    <a href=".\links.html" style="background-color:black;color:white">websites i like</a>
+    <a href=".\places.html" style="background-color:black;color:white">places i like</a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <a href=""></a>
+    <!-- <a href=".\security.html" style="background-color:black;color:white">digital security</a> -->
+    <!-- <a href=".\health.html" style="background-color:black;color:white">health</a>
+    <a href=".\install.html" style="background-color:black;color:white">install</a>
+    <a href=".\music.html" style="background-color:black;color:white">music</a>
+    <a href=".\notes.html" style="background-color:black;color:white">notes</a> -->
+  </div>
+
+  <div class="navbar" id="navbar" onclick="e => checkNav(e)">
+    <span style="cursor: pointer; padding: 20px; width: 100px;">☰ Menu</span>
+
+    <div id="time" style="width: 200px"></div>
+
+    <div id="windowSize" class="right" style="width: 140px">
+      Window height: <span id="height"></span>px
+      <br />
+      Window width: <span id="width"></span>px
+    </div>
+  </div>
+
+
+  <div id="intro">
+    <a href="javascript:void(0)" onclick="closeIntro()" class="right" style="position: absolute; font-size: 20px; color: black; right: 20px;">&times; close</a>
+    <br>
+    <h1>sup mf<br />thanks for looking at my site :)</h1>
+    <h2>i'm trying to make it look better</h2>
+    <h3>it's a work in progress<br />i hope to make it very cool in the future</h3>
+    <h4>i will add comments one day<br />if anyone has something nice to say<br />i think that would be cool</h4>
+    <h5>hope u like it here</h5>
+    <h6>bc i'm enjoying making it</h6>
+    <h1 style="font-size: 12px;">-some words from me 9/16/20</h1>
+    <br>
+  </div>
+
+
+  <!-- start of page content -->
+  <div id="main" onClick="closeAll()">
+
+    <header>
+      <div class="containerRow">
+        <div class="child">
+          <a href=".\projects.html">Projects</a>
+        </div>
+        <div class="child">
+          <a href=".\interests.html">Interests</a>
+        </div>
+        <div class="child">
+          <a href=".\about.html">About</a>
+        </div>
+        <div class="child">
+          <a href=".\services.html">Services</a>
+        </div>
+        <div class="child">
+          <a href=".\clients.html">Clients</a>
+        </div>
+        <div class="child">
+          <a href=".\contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- <h6 style="background-color:#c9f;padding:3px">ion know what to put here yet<br /><font color="red">still haven't put some mf shit here</font></h6> -->
+
+    <div class="containerRow">
+      <div style="flex: 2; padding: 20px; min-height: 338px;">
+        <div class="containerRow">
+          <!-- <img src="https://blog.corp-site.envato.com/cdn-cgi/image/width=820,quality=85,format=auto/uploads/2020/03/My-website-is-terrible.gif" height=200px width="auto"> -->
+          <img src="https://i.pinimg.com/originals/be/b5/41/beb541eeb1ee06ba00ef55d5baa60773.gif" height=200px width=auto>
+          <!-- <img src="https://www.animatedgif.net/welcome/dhhomepage_e0.gif" height=200px width=auto> -->
+        </div>
+        hi
+        <br>
+        this site lookin like a pile of shit
+        <br>
+        <br>
+        thanks for visiting!!!!!!!!!!!!!!!!
+      </div>
+
+
+      <!-- to do -->
+      <div class="item todo">
+        <div style="text-align: center; background-color: red;">
+          to do list:
+        </div>
+        <div class="lists" style="background-color: beige;">
+          for the site:
+          <ul>
+            <li>short term</li>
+            <ul>
+              <li><a href="https://css-tricks.com/lazy-load-embedded-youtube-videos/">use this for links page</a></li>
+              <li>add info about css box-sizing (for myself) in howto</li>
+              <li>also inline-block</li>
+              <li><a href="http://jsfiddle.net/as5ZU/">use this for the repair page somehow</a></li>
+              <li><a href="https://webmadewell.com/background-image-moving-as-scrolling/">and maybe this somehow</a></li>
+              <li><a href="https://www.w3schools.com/bootstrap/bootstrap_scrollspy.asp">learn about data-spy scroll</a></li>
+              <li>click target? ? ?? ?? ?</li>
+              <li><a href="https://css-tricks.com/css3-gradients/">this is good about gradients and compatability</a> ... <a href="https://cssgradient.io/">also this</a></li>
+              <li>???? maps in js ??? and foreach</li>
+              <li>css techniques</li>
+              <li><a href="https://www.w3schools.com/howto/howto_js_draggable.asp">use this draggable js</a></li>
+              <li><a href="https://www.w3schools.com/cssref/css_default_values.asp">look thru this values thing</a></li>
+              <li><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer">fix my footer</a></li>
+              <li><a href="https://www.w3schools.com/html/html5_webstorage.asp">figure out how to make</a> ... <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webstorage_local_clickcount">sticky go away</a> ... <a href="https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/">also learn bout localstorage</a> ... <a href="https://www.sitepoint.com/community/t/hiding-a-div-once-user-has-closed-it/247005">also this</a></li>
+              <li><a href="https://www.w3schools.com/tags/att_link_sizes.asp">learn bout this (and img)</a></li>
+              <li>get a better grip on slice(-2) and splice and split and etc</li>
+              <li>and pointer-events and classlist property and css transitions and onload and marquee tag and css tooltip</li>
+              <li>and also confirm() method and prompt() and input and event.target (and font-stretch)</li>
+              <li><a href="https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp">lookit ths</a></li>
+              <li>change favicon for individual pages</li>
+              <li><a href="https://stackoverflow.com/questions/44502243/single-navigation-bar-across-website">read this jquery navbar</a></li>
+              <li>put this on howto https://html.com/</li>
+              <li><a href="https://andrejgajdos.com/how-to-create-a-link-preview/">link preview</a></li>
+              <li><a href="https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript?page=1&tab=votes#tab-top">numbers with commas</a></li>
+              <li><a href="http://www.idev101.com/code/Marketing/iphone_friendly.html">iphone friendly web dev</a></li>
+              <li>make self help checklist better</li>
+            </ul>
+            <br>
+            <li>long term</li>
+            <ul>
+              <li><a href="https://react-bootstrap.github.io/">LEARN ABOUT REACT</a><li>
+              <li><a href="https://sass-lang.com/">LEARN ABOUT SASS</a></li>
+              <li>LEARN JQUERY</li>
+              <li><a href="https://www.w3schools.com/jsref/event_onresize.asp">use onresize more</a></li>
+              <li><a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp">and eventlistener</a></li>
+              <li><a href="https://www.smashingmagazine.com/2012/05/building-real-time-commenting-system/">learn commenting system howto</a></li>
+              <li>change site name</li>
+              <li>make fake gif ads for my site</li>
+              <li>add updates</li>
+              <li>how far am i trying to go with this</li>
+              <li>IMPORTANT PEOPLE</li>
+              <li><a href="https://anidiots.guide/first-bot/your-first-bot">read this for my discord bot just bc</a></li>
+              <li>list all used css attributes(?) of my site (and more)</li>
+              <li><a href="https://www.w3schools.com/cssref/css_colors.asp">add more colors..</a></li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="lists" style="background-color: pink;">
+          for myself:
+          <ul>
+            <li><a href="https://www.hplaptopbattery.us/rz09-0195-battery-razer.htm">get a new laptop battery</a></li>
+            <li><a href="https://www.s-config.com/ableton-push-gen-1-breakage/">fix my ableton push 1</a> (learn 2 solder)</li>
+            <li><a href="https://www.reddit.com/r/hackintosh/comments/f6esa8/getting_started_with_hackintoshes/">learn about this again</a></li>
+            <li>fix my <s>life</s> eating habits and eat more</li>
+            <li>fix my resume</li>
+            <li><s>fix my bike</s> FIXED</li>
+            <li>get a new passport</li>
+            <li>post my ssn online</li>
+          </ul>
+        </div>
+
+        <!-- updates -->
+        <div class="lists" style="background-color: tan;">
+          ~ updates ~
+          <br><br>
+          12172020-
+          <br>
+          trying to better organize my table of contents?
+          <br><br>
+          12232020
+          <br>
+          fixin links + fashion
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <br />
+    <!-- earth and picture -->
+    <div class="containerRow" style="display: flex; flex-wrap: wrap; background-color: maroon">
+      <div id="earthgif" class="item">
+        <img src="https://media1.giphy.com/media/WQZpXz8Y8eKgGIxrSP/giphy.gif" width="260px" height="260px" />
+      </div>
+
+      <img src="./images/confused.png" style="flex: 1; max-width: 100%; object-fit: contain;" />
+
+      <div style="flex: 1;">
+        <iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="320" height="320" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33"></iframe>
+        <script type="text/javascript" src="https://rf.revolvermaps.com/w/8/a/a2.php?i=5p1na3do498&m=0&c=ff0000&cr1=ffffff&f=arial&l=33" async="async"></script>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- bottom of page -->
+    <footer>
+      <div class="containerRow">
+        <div class="child" style="text-align: center; padding: 2px; background-color:mediumpurple;">thanks for visiting!</div>
+        <span style="font-size: 12.5px; margin: 5px">Copyright (c) 2030 Copyright Holder All Rights Reserved.</span>
+        <div class="child" style="text-align: center; padding: 2px; background-color:mediumorchid">come back anytime!!</div>
+      </div>
+    </footer>
+
+  <!-- end #main div -->
+  </div>
+
+
+
+  <script>
+  var introVisible = true;
+
+  var nav = false;
+
+  function openNav() {
+    nav = true;
+    console.log('open nav')
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("main").style.marginRight = "-250px";
+    document.getElementById("main").classList.add('dim');
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    nav = false;
+    console.log('close nav')
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("main").style.marginRight = "0";
+    document.getElementById("main").classList.remove('dim');
+    document.body.style.backgroundColor = "white";
+  }
+
+  function checkNav(event) {
+    console.log(event)
+    console.log('check nav')
+    if (nav) {
+      closeNav()
+    } else {
+      openNav()
+      if (introVisible) closeIntro()
+    }
+  }
+
+  document.getElementById('navbar').onclick = checkNav;
+  document.getElementById("main").classList.add('dim');
+
+  function closeIntro() {
+    introVisible = false;
+    document.getElementById("intro").style.visibility = "hidden";
+    document.getElementById("main").classList.remove('dim');
+  }
+
+  function closeAll() {
+    closeIntro()
+    closeNav()
+  }
+
+
+
+  function updateClock() {
+      var now = new Date(),
+          months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+          hours = ('0' + now.getHours()).slice(-2)
+          minutes = ('0' + now.getMinutes()).slice(-2)
+          seconds = ('0' + now.getSeconds()).slice(-2)
+          milliseconds = ('00' + now.getMilliseconds()).slice(-3)
+
+          time = [hours, minutes, seconds, milliseconds].join(':'),
+
+          date = [now.getDate(),
+                  months[now.getMonth()],
+                  now.getFullYear()].join(' ')
+
+      document.getElementById('time').innerHTML = [date, time].join('<br>');
+
+      setTimeout(updateClock, 1);
+  }
+  updateClock();
+
+
+
+  const heightOutput = document.querySelector('#height');
+  const widthOutput = document.querySelector('#width');
+
+  function reportWindowSize() {
+    heightOutput.textContent = window.innerHeight;
+    widthOutput.textContent = window.innerWidth;
+  }
+  window.onresize = reportWindowSize();
+  reportWindowSize()
+
+
+  console.log(window.localStorage)
+
+  </script>
+</body>
+</html>

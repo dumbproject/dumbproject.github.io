@@ -1,0 +1,98 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>crying when i wake up</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  body {
+    background-image: url('https://momentousinstitute.org/assets/site/blog/clouds.jpg');
+    background-size: 300%;
+    /* background-size: 300% 300%; */     /* this makes it look better on iphone x */
+    background-repeat: no-repeat;
+  }
+  a {
+    color: black;
+    border: 1px solid white;
+    padding: 5px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  video {
+    /* border: 1px solid red; */
+    position: absolute;
+    /* height: auto;
+    width: auto; */
+    height: 540px;
+    width: 304px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container {
+    /* border: 1px solid black; */
+    position: relative;
+    /* margin: 120px auto 0; */
+    margin: 300px auto 0;
+    height: 437.5px;
+    width: 304px;
+    /* margin: 100px auto 0;
+    height: 875px;
+    width: 608px; */
+    overflow: hidden;
+  }
+  span {
+    font-size: 15px;
+    color: black;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+  @media screen and (width: 375px) {
+    /* a {
+      top: 10%;
+    } */
+    video {
+      height: 270px;
+      width: 152px;
+      /* height: 540px;       smaller size
+      width: 304px; */
+      /* height: 1080px;      original size
+      width: 608px; */
+    }
+    .container {
+      /* margin: 120px auto 0;
+      height: 437.5px;
+      width: 304px; */
+      margin: 220px auto 0;
+      height: 218.75px;
+      width: 152px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <a href="..\projects.html">back</a>
+  <!-- <button onclick="playPause()">Play/Pause</button> -->
+  <span>😔 if this is firefox or chrome it won't autoplay</span>
+  <div class="container">
+    <video controls autoplay loop>
+      <source id="" src=".\video\alarm.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- <div>
+    <button onClick="">tiny version</button>
+    <button onClick="">zoom version</button>
+  </div> -->
+
+</body>
+</html>

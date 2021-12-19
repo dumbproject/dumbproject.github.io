@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>reasons to keep living</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href=".\images\favicon-16x16.png"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  #background1 {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    background-size:
+    /* transform: translate(-50%, -50%); */
+  }
+  #background2 {
+    background-image: url('https://apod.nasa.gov/apod/image/1904/JMD_Rosette_Rotated.jpg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    z-index: -1;
+  }
+  </style>
+</head>
+<body>
+  <div id="background1"></div>
+  <div id="background2"></div>
+
+  <a href=".\home.html">home</a>
+
+  <header>these are reasons to keep living</header>
+
+  add fading cycling background urls of galaxies
+
+
+
+
+  <script>
+  // setTimeout(function(){
+  //   $("#background2").fadeIn();
+  // }, 2000);
+
+
+  var index = 0;
+  var imagesArray = ["https://apod.nasa.gov/apod/image/1904/JMD_Rosette_Rotated.jpg",
+                     "https://cdn11.bigcommerce.com/s-3hzp5/product_images/uploaded_images/rosette-nebula-hi-res-stan-smith.jpg",
+                     "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ngc2244c.jpg",
+                     "https://apod.nasa.gov/apod/image/1606/NGC-6888-6-3-16MillerWalker2048.jpg",
+                     "https://apod.nasa.gov/apod/image/0909/NGC6888_Lopez.jpg",
+                     "https://cdn.spacetelescope.org/archives/images/screen/heic1608a.jpg",
+                     "https://upload.wikimedia.org/wikipedia/commons/3/36/NASA-FlameNebula-NGC2024-20140507.jpg",
+                     "https://placekitten.com/g/700/300"];
+  var background1 = document.getElementById('background1');
+  var background2 = document.getElementById('background2');
+  // $("#background2");
+
+  //Set the starting background
+  document.getElementById("background2").style.backgroundImage="url('"+ imagesArray[index] +"')";
+  setInterval(changeImage, 2000);
+
+  function changeImage(){
+      document.getElementById("background2").style.backgroundImage="url('"+ imagesArray[index] +"')";
+      // background1.hide();
+      background1.style.display="none";
+      index++;
+      if(index >= imagesArray.length){
+          index = 0;
+      }
+      document.getElementById("background1").style.backgroundImage="url('"+ imagesArray[index] +"')";
+      background1.fadeIn();
+  }
+  </script>
+
+
+</body>
+</html>
